@@ -84,42 +84,8 @@ Coupling a high-throughput, discrete-time flow simulator with an asynchronous du
 
 ## Research Paper Alignment (5 High-Impact Target Papers)
 
-NetTwin 3.0 provides experimental validation, empirical figures, and dedicated automated test suites across five premier computer systems and security publications organized under [`papers/`](papers/):
+NetTwin 3.0 provides experimental validation, empirical figures, and dedicated automated test suites across five premier computer systems and security publications organized
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                           NETTWIN 3.0 HIGH-IMPACT RESEARCH PAPERS STRATEGY                                      │
-├──────────────────────────────────────┬───────────────────────────────┬─────────────┬─────────────┬──────────────┤
-│ Paper Title & Target Venue           │ Directory                     │ Test Suite  │ Visuals     │ Exp. Cites   │
-├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ Paper 1: 28 Years Elapsed [29 Years  │ papers/                       │ 46 Tests    │ 7 Figures   │ 500+ Cites   │
-│ Inclusive] (1998-2026, 30 Benchmarks)│ paper1_usenix_sec_30datasets/ │ 100% Passed │ Dual PNG+PDF│ (Benchmark   │
-│ DARPA 1998 to ASEADOS-SDN-IoT 2026   │                               │             │ (All 30 Sets│  Evaluation) │
-├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ Paper 2: NetTwin Zero-Disk Streaming │ papers/                       │ 27 Tests    │ 7 Figures   │ 150+ Cites   │
-│ Across 78ms WAN for High-Fidelity    │ paper2_nsdi_zerodisk_sync/    │ 100% Passed │ Dual PNG+PDF│ (Artifact    │
-│ Target: USENIX NSDI / ACM SIGCOMM    │                               │             │ (Table C)   │  Badges)     │
-├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ Paper 3: Edge-IIoTset to CIC IoT 2024│ papers/                       │ 18 Tests    │ 6 Figures   │ 200+ Cites   │
-│ Generalization Across 12 IoT/5G Sets │ paper3_ieee_iot_generalization│ 100% Passed │ Dual PNG+PDF│ (Hot IoT     │
-│ Target: IEEE IoT Journal (IF: 10.6)  │                               │             │ (12 Next-Gen│  2020-2026)  │
-├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ Paper 4: Sandbox-Gated Thompson      │ papers/                       │ 19 Tests    │ 6 Figures   │ 100+ Cites   │
-│ Sampling: Safe Autonomous Response   │ paper4_ccs_safe_autonomous_res│ 100% Passed │ Dual PNG+PDF│ (Zero Outage │
-│ Target: ACM CCS / NDSS               │                               │             │ (Table B)   │  Actuation)  │
-├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ Paper 5: When LLMs Meet Conformal    │ papers/                       │ 53 Tests    │ 6 Figures   │ 150+ Cites   │
-│ Prediction: Uncertainty-Aware SOC    │ paper5_tifs_conformal_llm_soc/│ 100% Passed │ Dual PNG+PDF│ (Stops LLM   │
-│ Target: IEEE TIFS / IEEE TNSM        │                               │             │ (Sub-Second)│  Hallucin.)  │
-├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
-│ Master Evaluation Suite              │ papers/                       │ 171 Tests   │ 32 Figures  │ 1,100+ Cites │
-│ 30 Benchmarks (1998-2026, 430K recs) │ README.md                     │ 100% Green  │ 64 Files    │ Total Impact │
-└──────────────────────────────────────┴───────────────────────────────┴─────────────┴─────────────┴──────────────┘
-```
-
-See the [Master Research Papers Catalog](papers/README.md) for full reproduction commands, dataset mappings, and itemized figure analyses.
-
----
 
 ## System Architecture
 
