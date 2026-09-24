@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""NetTwin 2.0 — Automated AWS 96-Core High-Performance Experiment Runner.
+"""NetTwin 3.0 — Automated AWS 96-Core High-Performance Experiment Runner.
 
 Orchestrates the full lifecycle on AWS EC2 (eu-north-1):
 1. Launches p4d.24xlarge (96 vCPUs, 1,152 GB RAM, 8x A100 GPUs) in eu-north-1c.
@@ -215,7 +215,7 @@ def terminate_instance(ec2_client, instance_id: str) -> None:
 
 def main():
     print("=" * 78)
-    print("  NetTwin 2.0: Automated AWS High-Performance Dedicated Compute Run")
+    print("  NetTwin 3.0: Automated AWS High-Performance Dedicated Compute Run")
     print(f"  Target Instance: {INSTANCE_TYPE} (16 vCPUs, 32 GB RAM, Xeon Ice Lake)")
     print(f"  Region: {REGION} ({AZ})")
     print("=" * 78)

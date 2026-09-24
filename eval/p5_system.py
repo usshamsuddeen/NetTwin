@@ -1,4 +1,4 @@
-"""Paper 5 — NetTwin 2.0: Full-Stack Prescriptive Network Digital Twin.
+"""Paper 5 — NetTwin 3.0: Full-Stack Prescriptive Network Digital Twin.
 
 Target Venues: IEEE Transactions on Network and Service Management (TNSM) / ACM SoCC
 Experiments E1–E8 + 15 Publication-Grade Figures (v3).
@@ -461,11 +461,11 @@ def fig_system_resource_profile():
 
     if simulated:
         f.suptitle(
-            f"NetTwin 2.0 Runtime Characterization{model_suffix}",
+            f"NetTwin 3.0 Runtime Characterization{model_suffix}",
             fontsize=10.5, fontweight="bold", y=0.99)
     else:
         f.suptitle(
-            f"NetTwin 2.0 Runtime Characterization ({source})",
+            f"NetTwin 3.0 Runtime Characterization ({source})",
             fontsize=10.5, fontweight="bold", y=0.99)
     save(f, PAPER, "nettwin_fig0b_system_resource_profile")
 
@@ -475,7 +475,7 @@ def fig_system_resource_profile():
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def fig_architecture():
-    """Figure 1: Full-stack NetTwin 2.0 System Architecture with data flow and latencies."""
+    """Figure 1: Full-stack NetTwin 3.0 System Architecture with data flow and latencies."""
     print("  [P5-F1] Full-Stack System Architecture...")
     f, ax = fig(size=(7.2, 4.6))
     ax.set_xlim(0, 14)
@@ -549,7 +549,7 @@ def fig_architecture():
             ha="center", va="center", fontsize=7, fontweight="bold", color="#111111",
             bbox=dict(boxstyle="round,pad=0.2", facecolor="#FFF9C4", edgecolor="#FBC02D", linewidth=0.7))
 
-    f.suptitle("NetTwin 2.0 Full-Stack Architecture & Multi-Stage Telemetry Pipeline",
+    f.suptitle("NetTwin 3.0 Full-Stack Architecture & Multi-Stage Telemetry Pipeline",
                fontsize=10.5, fontweight="bold", y=0.98)
     save(f, "p5", "nettwin_fig1_architecture")
 
@@ -640,7 +640,7 @@ def exp_e1_benign_fpr(quick: bool = False):
     for roll in fpr_rolling_seeds:
         ax.plot(time_x, roll, color=C_PRIMARY, alpha=0.18, linewidth=0.6)
     roll_mat = np.array(fpr_rolling_seeds)
-    plot_ci_line(ax, time_x, roll_mat, label="NetTwin 2.0 (Mean ± 95% CI)", color=C_PRIMARY)
+    plot_ci_line(ax, time_x, roll_mat, label="NetTwin 3.0 (Mean ± 95% CI)", color=C_PRIMARY)
     ax.axhline(y=1.0, color=C_ACCENT, linestyle="--", linewidth=0.8, label="1.0% Threshold")
     ax.set_xlabel("Progression (10³ Ticks)")
     ax.set_ylabel("Rolling FPR (%)")
@@ -667,7 +667,7 @@ def exp_e1_benign_fpr(quick: bool = False):
     # (d) FPR vs Published Baselines
     ax = axes[1, 1]
     panel_label(ax, "(d)")
-    baselines = ["Static Thresh.", "Raw iForest", "CUSUM Monitor", "NetTwin 2.0"]
+    baselines = ["Static Thresh.", "Raw iForest", "CUSUM Monitor", "NetTwin 3.0"]
     base_fprs = [4.85, 2.92, 1.74, float(np.mean(overall_fprs))]
     base_colors = [C_BASELINE, C_BASELINE, C_WARNING, C_SUCCESS]
     bx = np.arange(len(baselines))
@@ -1556,7 +1556,7 @@ def fig_related_dt_comparison():
         ["CyberTwin", "IEEE TDSC'22", "No (Offline)", "No", "Bayesian", "Rule-based", "Partial", "80"],
         ["Azure Digital Twins", "Commercial", "Yes (PubSub)", "No", "No", "Manual", "No", "500"],
         ["GNS3 / Mininet", "Open Source", "Emulation", "No", "No", "No", "No", "150"],
-        ["NetTwin 2.0 (Ours)", TARGET_VENUE[:9], "Yes (<2ms)", "Yes (ACI)", "Yes (CausalNet)", "Yes (Bandit)", "Yes (Formal)", "2,000"],
+        ["NetTwin 3.0 (Ours)", TARGET_VENUE[:9], "Yes (<2ms)", "Yes (ACI)", "Yes (CausalNet)", "Yes (Bandit)", "Yes (Formal)", "2,000"],
     ]
     row_colors = ["#F5F5F5", "#FFFFFF", "#F5F5F5", "#FFFFFF", "#F5F5F5", "#E8F5E9"]
     plot_results_table(ax_a, headers, rows, row_colors=row_colors, highlight_col=0)
@@ -1566,7 +1566,7 @@ def fig_related_dt_comparison():
     # Panel (b): ISO 23247 Maturity Ladder
     ax_b = f.add_subplot(gs[1, 0])
     panel_label(ax_b, "(b)")
-    systems = ["Mininet", "CyberTwin", "DTwins", "Verdone'24", "NetTwin 2.0"]
+    systems = ["Mininet", "CyberTwin", "DTwins", "Verdone'24", "NetTwin 3.0"]
     implemented = [25, 45, 60, 68, 92]
     planned = [10, 15, 15, 12, 6]
     gap = [65, 40, 25, 20, 2]
@@ -1588,7 +1588,7 @@ def fig_related_dt_comparison():
     panel_label(ax_c, "(c)", x=-0.2, y=1.15)
     categories = ["Detection F1", "RCA Hit@1", "Resp. TTB", "Low FPR", "Scale (Nodes)", "Sync Rate"]
     datasets = {
-        "NetTwin 2.0": [0.96, 0.94, 0.92, 0.95, 0.98, 0.95],
+        "NetTwin 3.0": [0.96, 0.94, 0.92, 0.95, 0.98, 0.95],
         "Verdone et al.": [0.78, 0.58, 0.52, 0.72, 0.60, 0.70],
         "DTwins": [0.72, 0.62, 0.40, 0.65, 0.68, 0.62],
     }
@@ -1817,7 +1817,7 @@ def fig_summary_dashboard():
         ax_c.text(imp + 3.0, i, f"+{imp:.1f}%", va="center", fontsize=6.5, color="#222222", fontweight="bold")
     despine(ax_c)
 
-    f.suptitle("NetTwin 2.0 System Performance Dashboard & Benchmark Summary",
+    f.suptitle("NetTwin 3.0 System Performance Dashboard & Benchmark Summary",
                fontsize=10.5, fontweight="bold", y=1.0)
     save(f, "p5", "nettwin_fig12_summary_dashboard")
 
@@ -1877,7 +1877,7 @@ def run_all(quick: bool | None = None):
         quick = "--quick" in sys.argv or os.environ.get("QUICK_EVAL", "").lower() in ("1", "true")
     """Execute all Paper 5 experiments and generate all 15 publication figures."""
     print("\n" + "=" * 78)
-    print(f"  PAPER 5: NetTwin 2.0 Full System Evaluation ({TARGET_VENUE})")
+    print(f"  PAPER 5: NetTwin 3.0 Full System Evaluation ({TARGET_VENUE})")
     print(f"  Total Figures: 15 (was 10)  •  Mode: {'QUICK TEST' if quick else 'FULL RIGOR'}")
     print("=" * 78)
     t0 = time.time()

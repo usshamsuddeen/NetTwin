@@ -1,4 +1,4 @@
-"""NetTwin 2.0 — Headless Experiment Runner v3.
+"""NetTwin 3.0 — Headless Experiment Runner.
 
 Orchestrates simulation runs with configurable seeds, tick counts, and attack
 schedules. Collects per-tick metrics into structured arrays for figure generation.

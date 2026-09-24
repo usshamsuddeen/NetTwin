@@ -1,4 +1,4 @@
-"""Capture live AWS telemetry for NetTwin 2.0 Paper 5 figures.
+"""Capture live AWS telemetry for NetTwin 3.0 Paper 5 figures.
 
 This script uses the existing ``AWSAdapter`` (``nettwin/ingestion/adapters/aws_adapter.py``)
 to record real VPC Flow Log volumes and CloudWatch EC2 metrics over a configurable
@@ -296,7 +296,7 @@ async def _capture(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Capture live AWS telemetry for NetTwin 2.0 Paper 5 figures.",
+        description="Capture live AWS telemetry for NetTwin 3.0 Paper 5 figures.",
     )
     parser.add_argument(
         "--window-minutes",

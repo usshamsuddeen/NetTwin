@@ -1,4 +1,4 @@
-"""NetTwin 2.0 — Publication Design System v3.
+"""NetTwin 3.0 — Publication Design System.
 
 Inch-perfect, camera-ready figure styling for all 5 research papers.
 Single source of truth for colors, fonts, sizes, export settings, and

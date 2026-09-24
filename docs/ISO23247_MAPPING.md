@@ -3,8 +3,8 @@
 ISO 23247 (Digital twin — Framework for manufacturing) defines a reference
 architecture with four core dimensions.  Although the standard is manufacturing
 oriented, its structure maps cleanly to NetTwin, a network-security digital
-twin.  This document provides the formal mapping used in the NetTwin 2.0/3.0
-system paper (Paper 5).
+twin.  This document provides the formal mapping used in the NetTwin 3.0
+system architecture.
 
 ## The Four ISO 23247 Dimensions
 
@@ -33,7 +33,7 @@ and published research protocols.
 | Compute nodes | `web1`, `app1`, `db1`, `attacker` | `nettwin/simulator/topology.py` |
 | Network links | `edge3-web1`, `core1-dist2` | `nettwin/simulator/topology.py` |
 | Logical roles | core router, firewall, internet gateway | `nettwin/simulator/topology.py` |
-| Real AWS resources | EC2 instances, subnets, security groups | `infra/main.tf`, `nettwin/ingestion/adapters/aws_discovery.py` |
+| Real AWS resources | EC2 instances, subnets, security groups | `infra/terraform/`, `nettwin/ingestion/adapters/aws_discovery.py` |
 
 ### 1.2 Mapping rules
 
@@ -120,14 +120,14 @@ See `nettwin/ingestion/sync.py` and `tests/test_sync.py`.
 
 ### 4.2 Cloud infrastructure
 
-All AWS resources are declared in `infra/main.tf`:
+All AWS resources are declared in `infra/terraform/`:
 
-- VPC, subnets, route tables, security groups
-- EC2 instances (web1, app1, db1, attacker, nettwin engine, NAT)
+- Dual-region VPCs, subnets, route tables, security groups
+- EC2 instances (web1, web2, app1, app2, traffic-gen)
+- ALB + AWS WAF v2 + RDS MySQL Free Tier
 - VPC Flow Logs → CloudWatch Logs
-- Optional Traffic Mirroring session
-- IAM least-privilege roles
-- Billing alarm via CloudWatch EstimatedCharges + SNS
+- S3 Gateway VPC Endpoint ($0 data transfer fees)
+- Automated zero-cost teardown via `shutdown.ps1`
 
 ---
 
@@ -164,10 +164,10 @@ predictive → prescriptive ladder referenced in Paper 5:
 
 | ISO 23247 Dimension | Primary Files |
 |---|---|
-| Reference Resources | `nettwin/simulator/topology.py`, `infra/main.tf`, `nettwin/ingestion/adapters/aws_discovery.py` |
+| Reference Resources | `nettwin/simulator/topology.py`, `infra/terraform/`, `nettwin/ingestion/adapters/aws_discovery.py` |
 | Reference Activities | `nettwin/simulator/engine.py`, `nettwin/ingestion/sync.py`, `nettwin/response/agent.py`, `nettwin/actuation/` |
 | Reference Information | `nettwin/twin/state.py`, `nettwin/twin/detector.py`, `nettwin/twin/causal.py`, `nettwin/twin/predictor.py`, `nettwin/alerts.py` |
-| Reference Infrastructure | `nettwin/api/app.py`, `nettwin/ingestion/server.py`, `infra/main.tf`, `dashboard/`, `studio/` |
+| Reference Infrastructure | `nettwin/api/app.py`, `nettwin/ingestion/server.py`, `infra/terraform/`, `dashboard/`, `studio/` |
 | Reference Services | `nettwin/api/`, `eval/`, `tests/` |
 
 ---
