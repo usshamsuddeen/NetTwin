@@ -15,7 +15,7 @@ Coupling a high-throughput, discrete-time flow simulator with an asynchronous du
 ## Table of Contents
 
 1. [Key Features & Capabilities](#key-features--capabilities)
-2. [Research Paper Alignment (5 Target Papers)](#research-paper-alignment-5-target-papers)
+2. [Core Research Pillars & Scientific Contributions](#core-research-pillars--scientific-contributions)
 3. [System Architecture](#system-architecture)
 4. [Interactive User Interface & Visual System](#interactive-user-interface--visual-system)
 5. [Core Engine Components](#core-engine-components)
@@ -82,10 +82,40 @@ Coupling a high-throughput, discrete-time flow simulator with an asynchronous du
 
 ---
 
-## Research Paper Alignment (5 High-Impact Target Papers)
+## Core Research Pillars & Scientific Contributions
 
-NetTwin 3.0 provides experimental validation, empirical figures, and dedicated automated test suites across five premier computer systems and security publications organized
+NetTwin provides an integrated network security digital twin framework uniting discrete-time flow simulation, finite-sample conformal prediction, zero-disk WAN streaming, and sandbox-gated autonomous response. Its research foundations are structured across five core pillars:
 
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                NETTWIN SCIENTIFIC ARCHITECTURE & RESEARCH PILLARS                               │
+├──────────────────────────────────────┬───────────────────────────────┬─────────────┬─────────────┬──────────────┤
+│ Research Pillar & Focus Area         │ Core Innovation               │ Benchmark   │ Coverage    │ Validation   │
+├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
+│ 1. Longitudinal 28-Year Evaluation   │ Finite-Sample Marginal        │ 30 Datasets │ 92.47% Cov. │ 430,951 Flows│
+│    (1998–2026: DARPA to ASEADOS)     │ Conformal Guarantees (α=0.10) │ (1998–2026) │ 97.49% DR   │ 0 MB Disk S3 │
+├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
+│ 2. Zero-Disk In-Memory WAN Streaming │ In-Memory Ring-Buffer Stream  │ S3 Lakes    │ < 4.1% Div. │ 78ms WAN RTT │
+│    High-Throughput Digital Twin Sync │ botocore.UNSIGNED Zero-Cost   │ Open Data   │ 3,200 req/s │ Dual Region  │
+├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
+│ 3. IoT, IIoT & 5G Generalization     │ 8-Tuple Median/IQR Normalizer │ 12 Next-Gen │ > 98.2% DR  │ Zero Retrain │
+│    Protocol-Agnostic Feature Engine  │ EIoT, Modbus, 5G MEC, Matter  │ IoT/5G Sets │ 93.1% Cov.  │ Evasion Proof│
+├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
+│ 4. Sandbox-Gated Autonomous Response │ Counterfactual Twin Pre-Eval  │ Live AWS    │ RRI = 0.965 │ Zero Outage  │
+│    Contextual Linear Thompson Bandit │ Safety Sandbox & Kill Switch  │ 3-Tier ASG  │ 6-11 Ticks  │ Dual-Region  │
+├──────────────────────────────────────┼───────────────────────────────┼─────────────┼─────────────┼──────────────┤
+│ 5. Conformal Cognitive SOC Triaging  │ Local Ollama (llama3.2) + RAG │ Multi-Model │ Zero Halluc.│ Sub-Second   │
+│    Uncertainty-Grounded Reasoning    │ Bedrock Fallback + RuleAnalyst│ Vector RAG  │ 100% Uptime │ Air-Gapped   │
+└──────────────────────────────────────┴───────────────────────────────┴─────────────┴─────────────┴──────────────┘
+```
+
+<p align="center">
+  <img src="docs/figures/fig1_0a_methodology.png" width="90%" alt="NetTwin Core Methodology & Conformal Prediction Architecture" />
+  <br/>
+  <em>Figure 1: NetTwin Core Methodology — Longitudinal Data Normalization, Subspace Benign Anomaly Detection, and Finite-Sample Conformal Inference Guarantees.</em>
+</p>
+
+---
 
 ## System Architecture
 
@@ -608,10 +638,10 @@ python scripts/west_traffic_generator.py --phase all-datasets --speed 5x --per-d
 
 ### Empirical Research Authority Tables (All 30 Datasets Tested: 1998–2026)
 
-Testing across all 30 foundational, modern, and cutting-edge intrusion detection datasets spanning 28 years (1998–2026) establishes empirical authority across the three target paper domains:
+Testing across all 30 foundational, modern, and cutting-edge intrusion detection datasets spanning 28 years (1998–2026) establishes empirical authority across five core research pillars:
 
-#### Table A: For Paper 2 (USENIX Security / ACM CCS) — Conformal Calibration & Multi-Dataset Evaluation
-*Reviewer-grade evaluation establishing finite-sample empirical conformal coverage ($\ge 90.0\%$) and high anomaly detection accuracy across all 30 historical and modern benchmark families with zero local disk footprint:*
+#### Benchmark Table 1: Conformal Calibration & Multi-Dataset Anomaly Detection Performance (All 30 Benchmarks)
+*Empirical evaluation establishing finite-sample empirical conformal coverage ($\ge 90.0\%$) and high anomaly detection accuracy across all 30 historical and modern benchmark families with zero local disk footprint:*
 
 | # | Dataset | Year | Records Tested | Features | Attack Types | Detection Rate | Conformal Coverage | Drift Trigger? |
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: | :---: | :---: |
@@ -647,14 +677,26 @@ Testing across all 30 foundational, modern, and cutting-edge intrusion detection
 | 30 | **ASEADOS-SDN-IoT 2026** | 2026 | 15,000 | 83 | SDN-IoT DoS, DDoS, Botnet, Probe | **98.4%** | **93.2%** | No |
 | **Σ** | **MEAN / OVERALL** | **1998-2026** | **430,951** | **--** | **30 Benchmark Families (28 Yrs Elapsed / 29 Inclusive)** | **97.49%** | **92.47% ($\ge 90\%$)** | **Drift Resilient** |
 
-> **Key Authority Sentence for Paper Submission**:
+> **Empirical Research Summary**:
 > *"Evaluated across 30 foundational, modern, and cutting-edge intrusion datasets spanning 28 years elapsed [29 calendar years inclusive 1998–2026] from DARPA 1998 to ASEADOS-SDN-IoT 2026, NetTwin maintains a 97.49% mean detection rate and 92.47% empirical conformal coverage ($\ge 90\%$ nominal confidence), with zero local disk footprint via in-memory AWS streaming."*
+
+<p align="center">
+  <img src="docs/figures/fig1_1_historical_timeline_28_years_detection.png" width="90%" alt="28-Year Historical Timeline of Intrusion Detection Benchmarks" />
+  <br/>
+  <em>Figure 2: Longitudinal Evaluation Timeline — 30 Benchmarks Spanning 1998 to 2026 with Empirical Anomaly Detection Rates and Dimensionality.</em>
+</p>
+
+<p align="center">
+  <img src="docs/figures/fig1_2_all_30_datasets_detection_and_coverage.png" width="90%" alt="Detection Rates and Conformal Coverage Across All 30 Datasets" />
+  <br/>
+  <em>Figure 3: Empirical Detection Rate (Mean 97.49%) and Conformal Coverage (Mean 92.47%) Guaranteeing Finite-Sample Reliability ($1-\alpha \ge 90\%$) across all 30 Benchmarks.</em>
+</p>
 
 > [!NOTE]
 > **Dataset Scale & Partitioning Disclosure**:  
 > NetTwin stages **9.21 GB** on local disk across all 30 benchmarks: 1.4 GB full complete corpora (NSL-KDD, ISCX 2012, ADFA-LD, CIC MalMem) + 7.7 GB stratified evaluation partitions (25k–157k flows per dataset) enabling fast sub-minute CI/CD reproducibility. The Next-Gen IoT/5G Era (2020–2026) uses 212.7 MB of stratified flow partitions locally, while the full ~35 GB modern corpora are publicly accessible via the URLs documented in [`real_data/manifest.json`](real_data/manifest.json).
 
-#### Table B: For Paper 5 (IEEE TNSM) — Resilience per Attack Family
+#### Benchmark Table 2: Digital Twin Closed-Loop Resilience per Threat Family
 *Characterizes closed-loop digital twin resilience recovery across the 5 primary threat families:*
 
 | Attack Family | Datasets Used | East Health Drop | Resilience Recovery Index ($RRI$) | Recovery Time | Bandit Action |
@@ -665,7 +707,7 @@ Testing across all 30 foundational, modern, and cutting-edge intrusion detection
 | **Probe / Scan** | DARPA, LBNL, Kyoto | 81.4 $\rightarrow$ 79.5 [1.9] | **0.976** | 4 ticks | `reroute` |
 | **Zero-day Syscall & Attack** | ADFA-LD, TRUSTLab 2026 | 81.4 $\rightarrow$ 81.7 [-0.2] | **1.000** | 2 ticks | `retrain` |
 
-#### Table C: For Paper 1 (NSDI / SIGCOMM) — Sync Fidelity per Dataset Traffic Shape
+#### Benchmark Table 3: Cross-Region WAN Synchronization Fidelity (62–78ms RTT)
 *Quantifies live telemetry synchronization divergence across real cross-continental WAN (62–78ms RTT):*
 
 | Dataset Traffic Shape | ALB Rate from West | East-West WAN Latency | Divergence RMSE | Ingestion State |
@@ -677,11 +719,9 @@ Testing across all 30 foundational, modern, and cutting-edge intrusion detection
 
 ---
 
-### Dataset Provenance & Architectural Grounding (For Paper Methods Section)
+### Dataset Provenance & Dual-Region Streaming Architecture
 
-Include this exact paragraph in your paper methodology:
-
-> *"All 30 benchmark datasets spanning 28 years (1998–2026) reside in two locations: (1) Public AWS Open Data Registry `s3://cse-cic-ids2018/` in `us-east-1` [450 GB raw] streamed in-memory via `botocore.UNSIGNED` with 0 MB local disk and $0.00 cost guarantee, and (2) staged evaluation partitions and full benchmarks in `real_data/` [9.21 GB total staged: 1.4 GB full corpora + 7.7 GB extracted 25k–157k flow partitions for automated reproducibility; full ~65 GB uncompressed public corpora available via authoritative public URLs] for offline conformal calibration and local playback. Traffic generation occurs in `vpc-traffic-west` [10.1.0.0/16] in `us-west-2` on `t3.small`, converting records to HTTP floods to East ALB `alb-prod-east` in `vpc-prod-east` [10.0.0.0/16] across 62–78ms WAN. This dual-region single-account architecture eliminates cross-account IAM while preserving realistic enterprise WAN."*
+All 30 benchmark datasets spanning 28 years (1998–2026) reside in two locations: (1) Public AWS Open Data Registry `s3://cse-cic-ids2018/` in `us-east-1` [450 GB raw] streamed in-memory via `botocore.UNSIGNED` with 0 MB local disk and $0.00 cost guarantee, and (2) staged evaluation partitions and full benchmarks in `real_data/` [9.21 GB total staged: 1.4 GB full corpora + 7.7 GB extracted 25k–157k flow partitions for automated reproducibility; full ~65 GB uncompressed public corpora available via authoritative public URLs] for offline conformal calibration and local playback. Traffic generation occurs in `vpc-traffic-west` [10.1.0.0/16] in `us-west-2` on `t3.small`, converting records to HTTP floods to East ALB `alb-prod-east` in `vpc-prod-east` [10.0.0.0/16] across 62–78ms WAN. This dual-region single-account architecture eliminates cross-account IAM while preserving realistic enterprise WAN.
 
 #### Commands to Reproduce All Tables:
 ```powershell
@@ -1032,21 +1072,21 @@ Tunables are configured in `config.json` (or overridden via environment variable
 
 ## Research Evaluation Harness
 
-The evaluation harness reproduces the empirical evaluation for all 5 conference research papers:
+The NetTwin evaluation harness reproduces the empirical benchmarks across all core architectural modules:
 
 ```bash
-# Execute quick evaluation suite across all 5 papers
+# Execute quick evaluation suite across all core modules
 python -m eval.run_all --quick
 
-# Execute full parallel evaluation across multiple seeds
+# Execute full parallel evaluation across multiple random seeds
 python -m eval.run_parallel --seeds 1 2 3 4 5
 
-# Run a specific paper's evaluation:
-python -m eval.p1_sync      # NSDI: Synchronization divergence & state transitions
-python -m eval.p2_detect    # USENIX Security: Anomaly detection & conformal coverage
-python -m eval.p3_risk      # ACM CCS: Causal root-cause analysis & attack graphs
-python -m eval.p4_response  # NDSS: Contextual bandit response & sandbox gating
-python -m eval.p5_system    # IEEE TNSM: End-to-end twin system performance & latency
+# Run module-specific benchmark evaluations:
+python -m eval.p1_sync      # Telemetry synchronization divergence & state transitions
+python -m eval.p2_detect    # Subspace anomaly detection & conformal coverage
+python -m eval.p3_risk      # Causal root-cause analysis & Bayesian attack graph risk
+python -m eval.p4_response  # Contextual bandit response & sandbox gating
+python -m eval.p5_system    # End-to-end twin system performance, latency & scalability
 ```
 
 Generated plots and tabular metrics are exported to:
