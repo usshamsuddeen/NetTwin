@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050a12">
+<meta name="description" content="NetTwin 3.0 — Network Security Digital Twin with real-time topology, anomaly detection, conformal calibration, and autonomous response.">
+<title>NetTwin 3.0 — Network Security Digital Twin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css?v=3.0.5">
+</head>
+<body>
+
+<!-- ========= FLOATING TOAST NOTIFICATIONS ========= -->
+<div id="toast-container"></div>
+
+<!-- ========= ORGANIZATION NETWORK ONBOARDING MODAL (WINDOWS 11 FLUENT) ========= -->
+<div id="org-modal" class="modal-overlay hidden">
+  <div class="win11-modal-card">
+    <div class="modal-header">
+      <div class="modal-title-group">
+        <span class="modal-brand-icon">❖</span>
+        <div>
+          <h2>Connect Organization Network</h2>
+          <p class="modal-subtitle">Synthesize and synchronize an enterprise digital twin for your cloud or on-premises infrastructure.</p>
+        </div>
+      </div>
+      <button id="org-modal-close" class="modal-close-btn" title="Close dialog">✕</button>
+    </div>
+
+    <!-- Segmented Navigation Tabs -->
+    <div class="modal-tabs">
+      <button class="tab-btn active" data-tab="tab-aws">☁ AWS Cloud VPC Mirror</button>
+      <button class="tab-btn" data-tab="tab-live">🔌 Live Ingestion Collector</button>
+      <button class="tab-btn" data-tab="tab-profiles">🏢 Enterprise Architectures</button>
+      <button class="tab-btn" data-tab="tab-upload">📁 Upload Network Config</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- TAB 1: AWS CLOUD DISCOVERY -->
+      <div id="tab-aws" class="tab-content active">
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label>ORGANIZATION / TENANT NAME</label>
+            <input type="text" id="org-aws-name" class="win11-input" value="Acme Financial Corp" placeholder="e.g. Acme Financial Corp, CloudCorp Global">
+          </div>
+          <div class="form-group">
+            <label>TARGET AWS REGION</label>
+            <select id="org-aws-region" class="win11-select full-width">
+              <option value="us-east-1" selected>us-east-1 (N. Virginia - Primary)</option>
+              <option value="us-west-2">us-west-2 (Oregon)</option>
+              <option value="eu-west-1">eu-west-1 (Ireland)</option>
+              <option value="ap-southeast-1">ap-southeast-1 (Singapore)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>TARGET VPC ID</label>
+            <input type="text" id="org-aws-vpc" class="win11-input" value="vpc-07b94a12ec8" placeholder="vpc-xxxxxxxxxxxxxxxxx">
+          </div>
+          <div class="form-group">
+            <label>PRIMARY CIDR BLOCK</label>
+            <input type="text" id="org-aws-cidr" class="win11-input" value="10.0.0.0/16" placeholder="10.0.0.0/16">
+          </div>
+          <div class="form-group">
+            <label>ENVIRONMENT TIER</label>
+            <select id="org-aws-env" class="win11-select full-width">
+              <option value="AWS Production (us-east-1)" selected>AWS Production (High Availability Multi-AZ)</option>
+              <option value="AWS Staging / Pre-Prod">AWS Staging / Pre-Production</option>
+              <option value="AWS Disaster Recovery Standby">AWS Disaster Recovery Warm Standby</option>
+            </select>
+          </div>
+        </div>
+        <div class="info-banner">
+          <span class="info-icon">💡</span>
+          <div>
+            <strong>Automated AWS VPC Graph Discovery:</strong>
+            Synthesizes 12 production nodes (WAF v2, ALB, Dual-AZ EC2 ASG, ECS microservices, Aurora PostgreSQL RDS, S3 Lakehouse) across 5 isolated VPC tiers with zero local storage overhead.
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: LIVE INGESTION COLLECTOR -->
+      <div id="tab-live" class="tab-content">
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label>ORGANIZATION NAME</label>
+            <input type="text" id="org-live-name" class="win11-input" value="Global Data Center" placeholder="e.g. Acme Enterprise DC">
+          </div>
+          <div class="form-group">
+            <label>COLLECTOR PROTOCOL</label>
+            <select id="org-live-proto" class="win11-select full-width">
+              <option value="rfc5425_tls" selected>RFC5425 TLS Syslog (Port 5514)</option>
+              <option value="netflow_ipfix">NetFlow v9 / IPFIX (UDP 2055)</option>
+              <option value="rest_hmac">REST JSON Ingestion API (/api/ingest/telemetry)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>DEVICE GATEWAY IP</label>
+            <input type="text" id="org-live-gateway" class="win11-input" value="10.0.1.1" placeholder="e.g. 10.0.1.1">
+          </div>
+          <div class="form-group full-width">
+            <label>HMAC AUTHENTICATION SECRET TOKEN</label>
+            <input type="text" id="org-live-token" class="win11-input" value="nt_sec_99a8b7c6d5e4f3a2b1c0d9e8f7a6" readonly>
+          </div>
+        </div>
+        <div class="info-banner">
+          <span class="info-icon">🔒</span>
+          <div>
+            <strong>Zero-Trust Ingestion Security:</strong>
+            Active on UDP port 5514. All incoming packets are validated with constant-time HMAC-SHA256 signatures, replay timestamp windows, and client certificate fingerprint pinning.
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: ENTERPRISE ARCHITECTURES -->
+      <div id="tab-profiles" class="tab-content">
+        <div class="profile-cards-grid">
+          <div class="profile-card selected" data-profile="aws-3tier">
+            <div class="profile-header">
+              <span class="profile-icon">☁</span>
+              <div>
+                <h4>AWS 3-Tier Enterprise Cloud</h4>
+                <span class="badge-pill">Recommended</span>
+              </div>
+            </div>
+            <p>Public Ingress (WAF v2, ALB), Dual-AZ Web Tier (EC2 ASG), Microservice App Tier (ECS), Aurora RDS PostgreSQL, and Amazon S3 Lakehouse.</p>
+            <div class="profile-stats">
+              <span>12 Cloud Nodes</span> • <span>5 VPC Subnets</span> • <span>Multi-AZ Resilience</span>
+            </div>
+          </div>
+
+          <div class="profile-card" data-profile="default">
+            <div class="profile-header">
+              <span class="profile-icon">🏢</span>
+              <div>
+                <h4>Enterprise Campus &amp; Core</h4>
+                <span class="badge-pill campus">Campus</span>
+              </div>
+            </div>
+            <p>Multi-tier enterprise topology spanning Core Routers, Distribution Switches, Access Edges, and Workstation/Server Endpoints.</p>
+            <div class="profile-stats">
+              <span>35 Physical Nodes</span> • <span>8 Subnets</span> • <span>Full L2/L3 Adjacency</span>
+            </div>
+          </div>
+
+          <div class="profile-card" data-profile="fintech-zero-trust">
+            <div class="profile-header">
+              <span class="profile-icon">🔒</span>
+              <div>
+                <h4>FinTech Zero-Trust Cloud</h4>
+                <span class="badge-pill security">Isolated</span>
+              </div>
+            </div>
+            <p>Regulated banking cloud enclave featuring mutual TLS, PrivateLink endpoints, and strict PCI-DSS network microsegmentation.</p>
+            <div class="profile-stats">
+              <span>12 Enclave Nodes</span> • <span>6 Micro-segments</span> • <span>100% Zero Trust</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: UPLOAD NETWORK CONFIG -->
+      <div id="tab-upload" class="tab-content">
+        <div class="upload-dropzone" id="org-dropzone">
+          <span class="upload-icon">📁</span>
+          <h4>Drop Network Architecture or Topology File</h4>
+          <p>Supports JSON topology specifications (`topology.json`), Terraform state (`.tfstate`), or CloudFormation templates.</p>
+          <input type="file" id="org-file-input" accept=".json" class="hidden">
+          <button type="button" class="win11-btn-subtle" id="org-browse-btn">Browse Local File</button>
+          <div id="upload-status" class="upload-status hidden"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Synthesis Progress Overlay (shown during digital twin generation) -->
+    <div id="org-synthesis-overlay" class="synthesis-overlay hidden">
+      <div class="synthesis-card">
+        <div class="synthesis-spinner">
+          <div class="spinner-ring"></div>
+          <span class="spinner-icon">❖</span>
+        </div>
+        <h3 id="synthesis-title">Synthesizing Digital Twin...</h3>
+        <p id="synthesis-subtitle">Discovering nodes and calibrating conformal anomaly baselines</p>
+        <div class="synthesis-steps">
+          <div class="step-item" id="step-auth">
+            <span class="step-dot"></span>
+            <span class="step-text">Authenticating Organization Credentials &amp; Handshake</span>
+          </div>
+          <div class="step-item" id="step-discover">
+            <span class="step-dot"></span>
+            <span class="step-text">Discovering VPC Subnets, Route Tables, ALB &amp; Instances</span>
+          </div>
+          <div class="step-item" id="step-topology">
+            <span class="step-dot"></span>
+            <span class="step-text">Synthesizing Graph Topology &amp; Adjacency Matrix</span>
+          </div>
+          <div class="step-item" id="step-conformal">
+            <span class="step-dot"></span>
+            <span class="step-text">Calibrating Conformal Prediction Interval Baselines</span>
+          </div>
+          <div class="step-item" id="step-online">
+            <span class="step-dot"></span>
+            <span class="step-text">Digital Twin Online &amp; Synchronized with Organization Network</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="modal-footer">
+      <button id="org-quick-connect-btn" class="win11-btn-secondary" title="Connect immediately to AWS 3-Tier Enterprise Cloud demo">⚡ Demo Quick-Connect (AWS 3-Tier)</button>
+      <div class="footer-right">
+        <button id="org-cancel-btn" class="win11-btn-subtle">Cancel</button>
+        <button id="org-submit-btn" class="win11-btn-primary">Synthesize Digital Twin ➔</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========= TOP BAR ========= -->
+<header id="topbar">
+  <div class="brand">
+    <span class="win11-icon" title="Windows 11 Fluent Digital Twin Architecture">❖</span>
+    <div>
+      <span class="title">NETTWIN <span class="win11-subbadge">WIN 11 BLUE</span></span>
+      <span class="subtitle">Cloud-Native Network Security Digital Twin v3.0</span>
+    </div>
+  </div>
+
+  <!-- Active Organization Badge (Scoped Digital Twin) -->
+  <div class="org-status-badge" id="org-badge-container" title="Click to switch organization or reconnect network">
+    <span class="org-icon">🏢</span>
+    <div class="org-details">
+      <span class="org-label">ORGANIZATION TWIN</span>
+      <span class="org-name" id="topbar-org-name">Acme Financial Corp</span>
+    </div>
+    <span class="org-vpc-tag" id="topbar-org-vpc">VPC: vpc-07b94a12ec8</span>
+    <span class="org-sync-pill" id="topbar-org-sync">SYNC 99.4%</span>
+    <button id="reconnect-org-btn" class="win11-btn-subtle" title="Switch Organization or Reconnect Network">🔄 Switch</button>
+  </div>
+
+  <!-- Navigation Links, Scenario Studio & Topology Switcher -->
+  <div class="nav-links">
+    <div class="topology-switcher-container" title="Switch between cloud-native and enterprise campus twins">
+      <label class="switcher-label">TWIN TOPOLOGY</label>
+      <select id="topology-select" class="win11-select">
+        <option value="aws-3tier" selected>☁ AWS 3-Tier Enterprise Cloud (12 Nodes)</option>
+        <option value="default">🏢 Enterprise Campus Network (35 Nodes)</option>
+      </select>
+    </div>
+    <a href="/studio/" target="_blank" class="nav-link-btn" title="Open Scenario Studio in new tab">⚡ Scenario Studio</a>
+    <a href="/docs" target="_blank" class="nav-link-btn" title="Open Swagger API documentation">📖 API Docs</a>
+  </div>
+
+  <div class="status-cluster">
+    <!-- Base Sim Stats -->
+    <div class="stat"><label>SIM CLOCK</label><span id="sim-clock">--:--</span></div>
+    <div class="stat"><label>TICK</label><span id="tick-count">0</span></div>
+    <div class="stat"><label>RATE</label><span id="tick-rate">1.0s</span></div>
+
+    <!-- Specialized AWS Cloud Metrics (active in aws-3tier mode) -->
+    <div class="stat cloud-kpi" id="cloud-alb-stat"><label>ALB RATE</label><span id="alb-reqs" class="kpi-blue">1.2k req/s</span></div>
+    <div class="stat cloud-kpi" id="cloud-err-stat"><label>500 ERRORS</label><span id="alb-500s" class="kpi-green">0.0%</span></div>
+    <div class="stat cloud-kpi" id="cloud-rds-stat"><label>RDS CONNS</label><span id="rds-conns" class="kpi-blue">89</span></div>
+
+    <div class="stat conn"><label>LINK</label><span id="conn-dot" class="dot down"></span><span id="conn-label">offline</span></div>
+    <div class="stat llm"><label>ANALYST</label><span id="llm-badge" class="badge fallback">fallback</span></div>
+    <div class="health-gauge">
+      <canvas id="health-gauge" width="120" height="64"></canvas>
+      <div class="gauge-val"><span id="health-val">100</span><label>HEALTH</label></div>
+    </div>
+  </div>
+</header>
+
+<!-- ========= CONTROL BAR ========= -->
+<nav id="control-bar">
+  <div class="ctl-group">
+    <span class="ctl-title">ATTACKS</span>
+    <button class="atk-btn" data-atk="ddos" title="Launch Distributed Denial of Service">DDoS</button>
+    <button class="atk-btn" data-atk="portscan" title="Launch Network Port Scan">Port Scan</button>
+    <button class="atk-btn" data-atk="exfiltration" title="Launch Data Exfiltration">Exfiltration</button>
+    <button class="atk-btn" data-atk="lateral" title="Launch Lateral Movement">Lateral</button>
+    <button class="atk-btn" data-atk="bruteforce" title="Launch SSH/RDP Brute Force">Brute Force</button>
+    <select id="atk-target" title="Target entity for attack">
+      <option value="alb">ALB (alb)</option>
+      <option value="web1">Web Srv 1 (web1)</option>
+      <option value="web2">Web Srv 2 (web2)</option>
+      <option value="app1">Order Svc (app1)</option>
+      <option value="app2">Auth Svc (app2)</option>
+      <option value="db1">Aurora RDS (db1)</option>
+      <option value="s3">S3 Lakehouse (s3)</option>
+    </select>
+    <input id="atk-duration" type="number" min="5" max="600" value="60" title="Duration in seconds">
+    <button id="atk-stop" class="warn-btn" title="Stop all currently running attacks">Stop All</button>
+  </div>
+  <div class="ctl-group">
+    <span class="ctl-title">SIM</span>
+    <button id="pause-btn" title="Pause or resume simulation clock">Pause</button>
+    <label class="slider-label">Speed <span id="speed-val">1.0x</span></label>
+    <input id="speed-slider" type="range" min="0.25" max="4" step="0.25" value="1" title="Adjust simulation tick speed">
+    <button id="reset-btn" class="warn-btn" title="Reset twin, detector and predictor state">Reset Twin</button>
+  </div>
+  <div class="ctl-group">
+    <span class="ctl-title">SCENARIOS</span>
+    <button id="whatif-toggle" title="Open What-If counterfactual scenario sandbox">What-If</button>
+    <button id="chat-toggle" title="Open AI / Rule Security Analyst chat">Analyst Chat</button>
+  </div>
+  <div class="ctl-group">
+    <span class="ctl-title">TWIN 3.0</span>
+    <button id="sync-toggle" title="Open real-world AWS synchronization status">Sync</button>
+    <button id="risk-toggle" title="Toggle attack graph compromise risk heatmap overlay">Risk Heat</button>
+    <button id="response-toggle" title="Open autonomous response bandit recommendations">Response <span id="resp-count" class="count hidden">0</span></button>
+    <button id="cloud-traffic-toggle" style="background:rgba(0,120,212,0.2); border:1px solid rgba(96,205,255,0.4); color:var(--win-blue-80);" title="Stream benchmark intrusion traffic directly from AWS S3 in memory ($0 cost, 0 MB local storage)">☁ AWS Traffic</button>
+  </div>
+</nav>
+
+<!-- ========= CLOUD TIER HEALTH STRIP (SPECIALIZED AWS 3-TIER) ========= -->
+<section id="tier-health-strip" class="tier-strip">
+  <div class="tier-badge" id="tier-ingress">
+    <span class="tier-dot healthy" id="dot-ingress"></span>
+    <span class="tier-name">Public Ingress</span>
+    <span class="tier-metric" id="tier-metric-ingress">HEALTHY (100)</span>
+  </div>
+  <div class="tier-sep">❯</div>
+  <div class="tier-badge" id="tier-web">
+    <span class="tier-dot healthy" id="dot-web"></span>
+    <span class="tier-name">Web Tier (ASG)</span>
+    <span class="tier-metric" id="tier-metric-web">HEALTHY (100)</span>
+  </div>
+  <div class="tier-sep">❯</div>
+  <div class="tier-badge" id="tier-app">
+    <span class="tier-dot healthy" id="dot-app"></span>
+    <span class="tier-name">App Tier (ECS)</span>
+    <span class="tier-metric" id="tier-metric-app">HEALTHY (100)</span>
+  </div>
+  <div class="tier-sep">❯</div>
+  <div class="tier-badge" id="tier-db">
+    <span class="tier-dot healthy" id="dot-db"></span>
+    <span class="tier-name">Database Tier (RDS)</span>
+    <span class="tier-metric" id="tier-metric-db">HEALTHY (100)</span>
+  </div>
+  <div class="tier-sep">❯</div>
+  <div class="tier-badge" id="tier-storage">
+    <span class="tier-dot healthy" id="dot-storage"></span>
+    <span class="tier-name">Storage (S3)</span>
+    <span class="tier-metric" id="tier-metric-storage">HEALTHY (100)</span>
+  </div>
+</section>
+
+<!-- ========= ACTIVE CAMPAIGN BANNER ========= -->
+<div id="active-campaign-banner" class="hidden">
+  <div class="banner-left">
+    <span class="pulse-icon">🔴</span>
+    <strong id="active-campaign-title">ACTIVE ATTACK CAMPAIGN:</strong>
+    <span id="active-campaign-desc">None</span>
+  </div>
+  <button id="banner-stop-btn" class="warn-btn small-btn">⏹ Stop Attack</button>
+</div>
+
+<!-- ========= RESEARCH METRICS STRIP ========= -->
+<section id="research-strip">
+  <div class="rs-box"><label>FIDELITY</label><canvas id="rs-fidelity"></canvas><span id="rs-fidelity-val">--</span></div>
+  <div class="rs-box"><label>COVERAGE (target 0.90)</label><canvas id="rs-coverage"></canvas><span id="rs-coverage-val">--</span></div>
+  <div class="rs-box"><label>AGREEMENT</label><span id="rs-agreement" class="rs-big">--</span></div>
+  <div class="rs-box"><label>DRIFT EVENTS</label><span id="rs-drift" class="rs-big">0</span></div>
+  <div class="rs-box"><label>CUM REWARD</label><canvas id="rs-reward"></canvas><span id="rs-reward-val">0</span></div>
+  <div class="rs-box"><label>DET LATENCY</label><span id="rs-latency" class="rs-big">--</span></div>
+</section>
+
+<!-- ========= MAIN GRID ========= -->
+<main id="main-grid">
+  <div id="topology-pane">
+    <canvas id="topology"></canvas>
+    <div id="topo-controls">
+      <button id="topo-zoom-in" title="Zoom In">+</button>
+      <button id="topo-zoom-out" title="Zoom Out">−</button>
+      <button id="topo-fit" title="Reset and Fit View">Fit</button>
+    </div>
+    <div id="pause-watermark" class="hidden"><span class="pause-icon">⏸</span> SIMULATION PAUSED</div>
+    <div id="tooltip" class="hidden"></div>
+    <div id="chart-tooltip" class="hidden"></div>
+    <div id="risk-paths" class="hidden">
+      <h4>TOP ATTACK PATHS <span id="risk-net"></span></h4>
+      <div id="risk-paths-list"></div>
+    </div>
+  </div>
+  <aside id="side-col">
+    <section id="inspector" class="panel">
+      <h3>INSPECTOR <span id="insp-id"></span></h3>
+      <div id="insp-body" class="insp-empty">Click a node or link on the topology to inspect</div>
+    </section>
+    <section id="alerts-pane" class="panel">
+      <h3>ALERTS <span id="alert-count" class="count">0</span></h3>
+      <div id="alerts-feed"></div>
+    </section>
+  </aside>
+</main>
+
+<!-- ========= CHARTS ========= -->
+<section id="charts-row">
+  <div class="chart-box"><h4>NETWORK THROUGHPUT + FORECAST</h4><canvas id="ch-tp"></canvas></div>
+  <div class="chart-box"><h4>AVG LINK LATENCY</h4><canvas id="ch-lat"></canvas></div>
+  <div class="chart-box"><h4>MAX ANOMALY SCORE</h4><canvas id="ch-anom"></canvas></div>
+  <div class="chart-box"><h4>AVG PACKET LOSS</h4><canvas id="ch-loss"></canvas></div>
+</section>
+
+<!-- ========= DRAWER: WHAT-IF ========= -->
+<div id="whatif-panel" class="drawer hidden">
+  <div class="drawer-head"><h3>WHAT-IF SCENARIO SANDBOX</h3><button class="close" data-close="whatif-panel">✕</button></div>
+  <div class="whatif-form">
+    <div class="wi-presets-row">
+      <span class="preset-label">AWS Drills:</span>
+      <button class="preset-btn" data-preset="ddos_alb">DDoS ALB</button>
+      <button class="preset-btn" data-preset="web1_crash">Web1 Crash</button>
+      <button class="preset-btn" data-preset="sqli_db1">SQLi DB1</button>
+      <button class="preset-btn" data-preset="iot_botnet">IoT Botnet</button>
+      <button class="preset-btn" data-preset="core_cut">ALB Cut</button>
+    </div>
+    <label>Kind
+      <select id="wi-kind">
+        <option value="link_failure">Link failure</option>
+        <option value="node_failure">Node failure</option>
+        <option value="surge">Traffic surge</option>
+        <option value="attack">Attack</option>
+      </select>
+    </label>
+    <label id="wi-link-row">Link <select id="wi-link"></select></label>
+    <label id="wi-node-row" class="hidden">Node <select id="wi-node"></select></label>
+    <label id="wi-mult-row" class="hidden">Multiplier <input id="wi-mult" type="number" min="1.5" max="20" step="0.5" value="3"></label>
+    <label id="wi-atk-row" class="hidden">Attack
+      <select id="wi-atk">
+        <option value="ddos">DDoS</option><option value="portscan">Port scan</option>
+        <option value="exfiltration">Exfiltration</option><option value="lateral">Lateral</option>
+        <option value="bruteforce">Brute force</option>
+      </select>
+    </label>
+    <label id="wi-target-row" class="hidden">Target <select id="wi-target"></select></label>
+    <label>Horizon (ticks) <input id="wi-horizon" type="number" min="5" max="200" value="30"></label>
+    <button id="wi-run" class="primary-btn">▶ Run Scenario Evaluation</button>
+  </div>
+  <div id="wi-results"></div>
+</div>
+
+<!-- ========= DRAWER: SYNC ========= -->
+<div id="sync-panel" class="drawer hidden">
+  <div class="drawer-head"><h3>REAL-WORLD SYNC <span id="sync-net-fid" class="badge ollama">--</span></h3><button class="close" data-close="sync-panel">✕</button></div>
+  <div id="sync-body">
+    <div id="sync-list"></div>
+    <div id="sync-detail" class="hidden">
+      <h4>REAL vs TWIN: <span id="sync-entity"></span></h4>
+      <canvas id="sync-chart" class="sync-canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- ========= DRAWER: AWS CLOUD TRAFFIC ========= -->
+<div id="cloud-traffic-panel" class="drawer hidden">
+  <div class="drawer-head">
+    <h3>AWS CLOUD TRAFFIC STREAMER <span id="cloud-stream-badge" class="badge fallback">0 MB LOCAL DISK</span></h3>
+    <button class="close" data-close="cloud-traffic-panel">✕</button>
+  </div>
+  <div style="padding:14px; font-size:13px; color:#8b9ec0;">
+    <p style="margin-bottom:12px; line-height:1.4;">
+      Stream benchmark intrusion datasets directly from <strong>AWS S3 &amp; AWS Open Data</strong> into the digital twin in-memory. Zero local disk space used, zero download wait time, and $0.00 cost for public datasets.
+    </p>
+
+    <div style="margin-bottom:12px;">
+      <label style="display:block; font-size:11px; font-weight:700; color:#556b8c; text-transform:uppercase; margin-bottom:4px;">Select Cloud Dataset</label>
+      <select id="cloud-dataset-select" style="width:100%; padding:8px; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.15); color:#fff; border-radius:6px;">
+        <option value="cse2018_ddos_loic_hoic">CSE-CIC-IDS2018: DDoS LOIC / HOIC (314 MB on S3)</option>
+        <option value="cse2018_dos_goldeneye_slowloris">CSE-CIC-IDS2018: DoS Slowloris / GoldenEye (358 MB on S3)</option>
+        <option value="cse2018_dos_hulk_slowhttp">CSE-CIC-IDS2018: DoS Hulk / SlowHTTPTest (318 MB on S3)</option>
+        <option value="cse2018_botnet">CSE-CIC-IDS2018: Botnet Ares (336 MB on S3)</option>
+        <option value="cse2018_bruteforce_ftp_ssh">CSE-CIC-IDS2018: BruteForce FTP / SSH (342 MB on S3)</option>
+        <option value="cse2018_web_attacks">CSE-CIC-IDS2018: Web Attacks &amp; SQLi (365 MB on S3)</option>
+        <option value="cse2018_infiltration">CSE-CIC-IDS2018: Infiltration Dropbox (103 MB on S3)</option>
+      </select>
+    </div>
+
+    <div style="display:flex; gap:10px; margin-bottom:12px;">
+      <div style="flex:1;">
+        <label style="display:block; font-size:11px; font-weight:700; color:#556b8c; text-transform:uppercase; margin-bottom:4px;">Replay Speed</label>
+        <select id="cloud-speed-select" style="width:100%; padding:8px; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.15); color:#fff; border-radius:6px;">
+          <option value="1.0">1x (Real-time)</option>
+          <option value="5.0" selected>5x (Accelerated)</option>
+          <option value="10.0">10x (High-throughput)</option>
+          <option value="50.0">50x (Max Stress Test)</option>
+        </select>
+      </div>
+      <div style="flex:1; display:flex; align-items:center; padding-top:16px;">
+        <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+          <input id="cloud-attack-only" type="checkbox"> Attacks Only
+        </label>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:8px; margin-bottom:16px;">
+      <button id="cloud-stream-start" style="flex:1; padding:10px; background:#0284c7; color:#fff; font-weight:700; border:none; border-radius:6px; cursor:pointer;">▶ Stream from AWS S3</button>
+      <button id="cloud-stream-stop" style="flex:1; padding:10px; background:rgba(239,68,68,0.2); color:#ef4444; border:1px solid rgba(239,68,68,0.4); font-weight:700; border-radius:6px; cursor:pointer;">⏹ Stop Stream</button>
+    </div>
+
+    <!-- Live Telemetry Monitor Card -->
+    <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px;">
+      <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+        <span style="color:#556b8c;">Status:</span>
+        <span id="cloud-stat-status" style="color:#10b981; font-weight:700;">IDLE</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+        <span style="color:#556b8c;">Streamed Records:</span>
+        <span id="cloud-stat-records" style="font-weight:700; color:#fff;">0</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+        <span style="color:#556b8c;">Throughput:</span>
+        <span id="cloud-stat-rate" style="color:#38bdf8;">0 eps</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+        <span style="color:#556b8c;">Current Attack Vector:</span>
+        <span id="cloud-stat-attack" style="color:#f59e0b; font-weight:600;">None</span>
+      </div>
+      <div style="display:flex; justify-content:space-between;">
+        <span style="color:#556b8c;">Local Storage Used:</span>
+        <span style="color:#10b981; font-weight:700;">0 MB (Zero Local Disk)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========= DRAWER: RESPONSE ========= -->
+<div id="response-panel" class="drawer hidden">
+  <div class="drawer-head"><h3>AUTONOMOUS RESPONSE</h3><button class="close" data-close="response-panel">✕</button></div>
+  <div class="resp-mode-row">
+    <label>Mode
+      <select id="resp-mode">
+        <option value="off">off</option>
+        <option value="approval">approval</option>
+        <option value="auto">auto</option>
+      </select>
+    </label>
+    <span class="resp-reward">cum reward <span id="resp-cum-reward">0</span></span>
+  </div>
+  <canvas id="resp-reward-chart" class="sync-canvas"></canvas>
+  <div id="resp-list"></div>
+</div>
+
+<!-- ========= DRAWER: CHAT ========= -->
+<div id="chat-panel" class="drawer hidden">
+  <div class="drawer-head"><h3>SECURITY ANALYST <span id="chat-mode" class="badge fallback">fallback</span></h3><button class="close" data-close="chat-panel">✕</button></div>
+  <div class="chat-pills">
+    <button class="pill-btn" data-query="What attacks or anomalies are currently active?">Threat Status</button>
+    <button class="pill-btn" data-query="Explain the highest anomaly and root cause">Top Anomaly</button>
+    <button class="pill-btn" data-query="Recommend response policies to mitigate current risks">Remediation</button>
+    <button class="pill-btn" data-query="Provide a comprehensive network health and forecast summary">Health Summary</button>
+  </div>
+  <div id="chat-messages"></div>
+  <div class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Ask about current threats, anomalies, incidents...">
+    <button id="chat-send">Send</button>
+  </div>
+</div>
+
+<script src="app.js?v=3.0.5"></script>
+</body>
+</html>

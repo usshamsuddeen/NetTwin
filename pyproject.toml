@@ -1,0 +1,119 @@
+[build-system]
+requires = ["setuptools>=70.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nettwin"
+version = "3.0.0"
+description = "Hybrid Real-Time Network Security Digital Twin"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "NetTwin Research Team"},
+]
+keywords = ["digital-twin", "network-security", "anomaly-detection", "simulation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "fastapi>=0.115,<0.120",
+    "uvicorn[standard]>=0.30,<0.35",
+    "numpy>=2.0,<3.0",
+    "pydantic>=2.7,<3.0",
+    "pytest>=8.0,<9.0",
+    "httpx>=0.27,<1.0",
+    "boto3>=1.35,<2.0",
+    "seaborn>=0.13,<1.0",
+    "scipy>=1.14,<2.0",
+    "pandas>=2.2,<3.0",
+    "matplotlib>=3.9,<4.0",
+    "scikit-learn>=1.5,<2.0",
+]
+
+[project.optional-dependencies]
+aws = [
+    "moto>=5.0",
+]
+pcap = [
+    "dpkt>=1.9",
+]
+snmp = [
+    "pysnmp>=4.4",
+]
+flow = [
+    "netaddr>=0.9",
+]
+llm-bedrock = [
+    "anthropic-bedrock",
+]
+dev = [
+    "ruff>=0.6.0",
+    "mypy>=1.10",
+    "bandit>=1.7",
+    "build>=1.2",
+]
+
+[project.scripts]
+nettwin = "run:main"
+
+[project.urls]
+Homepage = "https://github.com/nettwin/nettwin"
+Repository = "https://github.com/nettwin/nettwin"
+
+[tool.setuptools]
+py-modules = ["run"]
+packages = ["nettwin", "nettwin.actuation", "nettwin.api", "nettwin.ingestion",
+            "nettwin.ingestion.adapters", "nettwin.integrations", "nettwin.llm",
+            "nettwin.risk", "nettwin.scenario", "nettwin.simulator", "nettwin.response",
+            "nettwin.twin", "eval"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # Pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "C4",  # comprehensions
+    "SIM", # simplify
+]
+ignore = [
+    "E501",  # line length handled by formatter
+    "B008",  # function calls in argument defaults (FastAPI patterns)
+    "N802",  # mixed function naming from research code
+    "N803",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.bandit]
+exclude_dirs = ["tests", "eval"]
+skips = ["B101", "B311"]

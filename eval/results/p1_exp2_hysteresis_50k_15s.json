@@ -1,0 +1,110 @@
+[
+  {
+    "hybrid_after": 4,
+    "drop_after": 3,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 4,
+    "drop_after": 8,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 4,
+    "drop_after": 12,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 8,
+    "drop_after": 3,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 8,
+    "drop_after": 8,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 8,
+    "drop_after": 12,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 12,
+    "drop_after": 3,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 12,
+    "drop_after": 8,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  },
+  {
+    "hybrid_after": 12,
+    "drop_after": 12,
+    "health_mean": 99.37845,
+    "health_lo": 99.378325,
+    "health_hi": 99.37855833333333,
+    "health_raw": [
+      99.37837500000002,
+      99.378325,
+      99.37865
+    ]
+  }
+]

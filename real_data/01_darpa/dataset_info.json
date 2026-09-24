@@ -1,0 +1,8 @@
+{
+  "dataset_name": "DARPA 1998 Truth Week 1 Attack Labels",
+  "source_url": "https://archive.ll.mit.edu/ideval/data/1998/Truth_Week_1.llist.tar.gz",
+  "filename": "Truth_Week_1.llist.tar.gz",
+  "file_size_bytes": 14382725,
+  "download_timestamp": "2026-09-22T11:46:20Z",
+  "description": "MIT Lincoln Lab 1998 Week 1 authentic ground truth attack annotations"
+}

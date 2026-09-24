@@ -1,0 +1,70 @@
+{
+  "host": "127.0.0.1",
+  "port": 8000,
+  "tick_ms": 1000,
+  "db_path": "nettwin.db",
+  "history_len": 300,
+  "seed": 42,
+  "detector": {
+    "warmup_ticks": 25,
+    "ema_alpha": 0.06,
+    "z_warn": 4.5,
+    "z_alert": 7.0,
+    "alert_threshold": 0.72,
+    "warn_threshold": 0.5,
+    "iforest_enabled": true,
+    "iforest_trees": 40,
+    "iforest_sample": 128,
+    "iforest_retrain_ticks": 120,
+    "iforest_threshold": 0.62,
+    "iforest_window": 2000,
+    "persistence_ticks": 5
+  },
+  "alerts": {
+    "cooldown_ticks": 30,
+    "resolve_after_ticks": 15
+  },
+  "forecast": {
+    "default_horizon": 15,
+    "damping": 0.9,
+    "saturation_warn_pct": 55.0,
+    "saturation_horizon": 30
+  },
+  "llm": {
+    "ollama_url": "http://localhost:11434",
+    "model": "llama3.2",
+    "timeout_s": 60.0
+  },
+  "auto_attacks": false,
+  "snapshot_every_ticks": 10,
+  "sync": {
+    "enabled": true,
+    "udp_port": 5514,
+    "staleness_s": 8.0,
+    "hybrid_after_ticks": 8,
+    "fidelity_hybrid_min": 50.0,
+    "vpc_cidrs": ["10.0.1.0/24", "10.0.2.0/24"],
+    "sync_map": {
+      "10.0.1.11": "web1",
+      "10.0.1.12": "web2",
+      "10.0.1.13": "dns1",
+      "10.0.2.11": "app1",
+      "10.0.2.21": "db1",
+      "10.0.2.22": "db2",
+      "10.0.1.5": "ws1",
+      "10.0.1.1": "core1"
+    }
+  },
+  "response": { "mode": "approval" },
+  "aws": {
+    "enabled": false,
+    "region": "eu-north-1",
+    "flow_log_group": "/vpc/nettwin-flowlogs",
+    "poll_interval_s": 10.0,
+    "cloudwatch_metrics": true,
+    "cloudtrail_enabled": false,
+    "traffic_mirror_enabled": false,
+    "instance_tags": { "Project": "nettwin" },
+    "cost_limit_daily_usd": 50.0
+  }
+}

@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Runtime / local database state
+*.db
+*.db-wal
+*.db-shm
+.env
+.aws/
+nettwin.db
+bandit_state.json
+aws_sync_map.json
+profile_readme.md
+*.zip
+
+# IDEs & System
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.system_generated/
+scratch/
+
+# Terraform binaries & state
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/.terraform/
+infra/terraform/.terraform/
+**/.terraform/
+
+# Large Raw Datasets Archives & Binary Dumps (> 25MB)
+# Complete provenance, download URLs, schemas & SHA-256 hashes are anchored in real_data/manifest.json
+real_data/**/*.tar.gz
+real_data/**/*.gz
+real_data/**/*.zip
+real_data/**/*.pcap
+real_data/**/*.pcapng
+real_data/**/*.xml
+real_data/02_kddcup99/kddcup.data_10_percent_corrected
+real_data/08_kyoto/Kyoto2016/
+real_data/10_iscx2012/iscxids2012-master/
+real_data/12_cic_ids2017/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+real_data/12_cic_ids2017/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+real_data/13_cse_cic_ids2018/Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv
+real_data/16_ctu13/CTU-13-Scenario-10-Rbot.netflow.labeled
+real_data/17_iot23/CTU-IoT-Malware-Capture-1-1.pcap
+real_data/22_edge_iiot/DNN-EdgeIIoT-dataset.csv
+real_data/26_hikari2021/hikari2021_flows.csv

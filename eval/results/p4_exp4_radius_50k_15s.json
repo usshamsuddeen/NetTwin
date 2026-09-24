@@ -1,0 +1,38 @@
+[
+  {
+    "attack": "DDoS",
+    "radius": 1,
+    "mrr": 1.0,
+    "position_mean": 1.0
+  },
+  {
+    "attack": "DDoS",
+    "radius": 2,
+    "mrr": 1.0,
+    "position_mean": 1.0
+  },
+  {
+    "attack": "DDoS",
+    "radius": 3,
+    "mrr": 1.0,
+    "position_mean": 1.0
+  },
+  {
+    "attack": "Port Scan",
+    "radius": 1,
+    "mrr": 1.0,
+    "position_mean": 1.0
+  },
+  {
+    "attack": "Port Scan",
+    "radius": 2,
+    "mrr": 1.0,
+    "position_mean": 1.0
+  },
+  {
+    "attack": "Port Scan",
+    "radius": 3,
+    "mrr": 1.0,
+    "position_mean": 1.0
+  }
+]

@@ -1,0 +1,266 @@
+[
+  {
+    "config": "Full (ACI+Drift)",
+    "attack": "DDoS",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Full (ACI+Drift)",
+    "attack": "Port Scan",
+    "fpr_mean": 1.0,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Full (ACI+Drift)",
+    "attack": "Exfiltration",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "ACI only",
+    "attack": "DDoS",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "ACI only",
+    "attack": "Port Scan",
+    "fpr_mean": 1.0,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "ACI only",
+    "attack": "Exfiltration",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Drift only",
+    "attack": "DDoS",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Drift only",
+    "attack": "Port Scan",
+    "fpr_mean": 1.0,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Drift only",
+    "attack": "Exfiltration",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Baseline",
+    "attack": "DDoS",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Baseline",
+    "attack": "Port Scan",
+    "fpr_mean": 1.0,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "config": "Baseline",
+    "attack": "Exfiltration",
+    "fpr_mean": 2.5,
+    "fnr_mean": 8.0,
+    "latency_mean": 5.0,
+    "fpr_raw": [
+      2.5,
+      2.5,
+      2.5
+    ],
+    "fnr_raw": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "latency_raw": [
+      5,
+      5,
+      5
+    ]
+  }
+]

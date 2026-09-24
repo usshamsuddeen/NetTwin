@@ -1,0 +1,16 @@
+{
+  "dataset_name": "AFDA (ADFA-LD)",
+  "developed_by": "University of New South Wales (UNSW)",
+  "features": "System call traces",
+  "attack_types": [
+    "Zero-day attacks",
+    "Stealth attack",
+    "C100 Webshell attack"
+  ],
+  "description": "This dataset consists of 10 attacks vectors along with the traces of the other data instances but has a limited range of attacks.",
+  "source_url": "https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-IDS-Datasets/",
+  "files": [
+    "ADFA-LD",
+    "ADFA-LD.zip"
+  ]
+}

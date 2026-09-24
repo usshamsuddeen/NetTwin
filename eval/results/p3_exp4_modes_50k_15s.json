@@ -1,0 +1,56 @@
+[
+  {
+    "mode": "Off",
+    "health_integral": 79706.8,
+    "health_mean": 99.6335,
+    "seed": 42
+  },
+  {
+    "mode": "Off",
+    "health_integral": 79706.54000000001,
+    "health_mean": 99.63317500000001,
+    "seed": 101
+  },
+  {
+    "mode": "Off",
+    "health_integral": 79707.43,
+    "health_mean": 99.63428749999999,
+    "seed": 202
+  },
+  {
+    "mode": "Approval",
+    "health_integral": 79706.8,
+    "health_mean": 99.6335,
+    "seed": 42
+  },
+  {
+    "mode": "Approval",
+    "health_integral": 79706.54000000001,
+    "health_mean": 99.63317500000001,
+    "seed": 101
+  },
+  {
+    "mode": "Approval",
+    "health_integral": 79707.43,
+    "health_mean": 99.63428749999999,
+    "seed": 202
+  },
+  {
+    "mode": "Auto",
+    "health_integral": 79857.92000000001,
+    "health_mean": 99.82240000000002,
+    "seed": 42
+  },
+  {
+    "mode": "Auto",
+    "health_integral": 79857.68,
+    "health_mean": 99.82209999999999,
+    "seed": 101
+  },
+  {
+    "mode": "Auto",
+    "health_integral": 79858.55,
+    "health_mean": 99.8231875,
+    "seed": 202
+  }
+]

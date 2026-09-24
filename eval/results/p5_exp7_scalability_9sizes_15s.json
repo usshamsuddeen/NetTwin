@@ -1,0 +1,29 @@
+[
+  {
+    "target": 35,
+    "actual_nodes": 35,
+    "latency_ms": 6.627719997777604,
+    "latency_lo": 6.627719997777604,
+    "latency_hi": 6.627719997777604,
+    "mem_mb": 183.75,
+    "throughput": 52808.50731735219
+  },
+  {
+    "target": 70,
+    "actual_nodes": 65,
+    "latency_ms": 11.907910002628341,
+    "latency_lo": 11.907910002628341,
+    "latency_hi": 11.907910002628341,
+    "mem_mb": 221.25,
+    "throughput": 54585.5653810392
+  },
+  {
+    "target": 140,
+    "actual_nodes": 127,
+    "latency_ms": 22.20466500148177,
+    "latency_lo": 22.20466500148177,
+    "latency_hi": 22.20466500148177,
+    "mem_mb": 298.75,
+    "throughput": 57195.188484728315
+  }
+]

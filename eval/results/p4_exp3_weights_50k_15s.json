@@ -1,0 +1,74 @@
+[
+  {
+    "hops": "1 hop",
+    "max_hops": 1,
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "1 hop",
+    "max_hops": 1,
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "1 hop",
+    "max_hops": 1,
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "2 hops",
+    "max_hops": 2,
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "2 hops",
+    "max_hops": 2,
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "2 hops",
+    "max_hops": 2,
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "3 hops",
+    "max_hops": 3,
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "3 hops",
+    "max_hops": 3,
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  },
+  {
+    "hops": "3 hops",
+    "max_hops": 3,
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true
+  }
+]

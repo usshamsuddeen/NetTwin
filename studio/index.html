@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetTwin Scenario Studio</title>
+  <link rel="stylesheet" href="app.css?v=3.0.5">
+</head>
+<body>
+  <header>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <h1>NetTwin Scenario Studio</h1>
+        <p>Resilience drills &amp; counterfactual sandbox workbench</p>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a href="/" style="background:rgba(6,182,212,0.15); color:#22d3ee; border:1px solid rgba(6,182,212,0.3); padding:8px 14px; border-radius:8px; text-decoration:none; font-weight:600; font-size:13px; transition:all 200ms ease;">← Back to Live Twin Dashboard</a>
+        <a href="/docs" target="_blank" style="background:rgba(255,255,255,0.06); color:#8b9ec0; border:1px solid rgba(255,255,255,0.1); padding:8px 14px; border-radius:8px; text-decoration:none; font-weight:600; font-size:13px;">API Docs</a>
+      </div>
+    </div>
+    <!-- Quick Preset Drills Bar -->
+    <div style="display:flex; gap:8px; margin-top:14px; align-items:center; flex-wrap:wrap;">
+      <span style="font-size:11px; font-weight:700; color:#556b8c; text-transform:uppercase; letter-spacing:0.5px;">Templates:</span>
+      <button class="tpl-btn" data-tpl="ddos_web" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); color:#e8edf5; padding:4px 10px; border-radius:6px; font-size:12px; cursor:pointer;">DDoS Web Tier</button>
+      <button class="tpl-btn" data-tpl="link_cut" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); color:#e8edf5; padding:4px 10px; border-radius:6px; font-size:12px; cursor:pointer;">Core Link Cut</button>
+      <button class="tpl-btn" data-tpl="iot_surge" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); color:#e8edf5; padding:4px 10px; border-radius:6px; font-size:12px; cursor:pointer;">IoT Surge 4x</button>
+      <button class="tpl-btn" data-tpl="lateral_spread" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); color:#e8edf5; padding:4px 10px; border-radius:6px; font-size:12px; cursor:pointer;">Lateral Movement</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="builder">
+      <h2>Scenario Builder</h2>
+      <label>Name <input id="sc-name" type="text" value="DDoS on web tier"></label>
+      <label>Duration (ticks) <input id="sc-duration" type="number" value="30" min="5" max="200"></label>
+      <label>Description <textarea id="sc-desc" rows="2">Volumetric DDoS against web1; expect health drop &lt; 25.</textarea></label>
+
+      <h3>Injections</h3>
+      <div id="injections"></div>
+      <button id="add-injection" type="button">+ Add injection</button>
+
+      <h3>Expectations</h3>
+      <div id="expectations"></div>
+      <button id="add-expectation" type="button">+ Add expectation</button>
+
+      <div class="actions">
+        <button id="save-scenario" class="primary" type="button">Save scenario</button>
+        <button id="run-inline" class="primary" type="button">▶ Run Now</button>
+      </div>
+    </section>
+
+    <section id="library">
+      <h2>Saved Scenarios</h2>
+      <ul id="scenario-list"></ul>
+    </section>
+
+    <section id="results">
+      <h2>Latest Result</h2>
+      <div id="result-status-banner" style="margin-bottom:12px;"></div>
+      <canvas id="health-chart" width="600" height="160" style="width:100%; height:160px; background:rgba(0,0,0,0.25); border-radius:8px; margin-bottom:12px;"></canvas>
+      <pre id="result-view">Run a scenario to see counterfactual results.</pre>
+    </section>
+
+    <section id="scorecard">
+      <h2>Drill Scorecard</h2>
+      <div id="scorecard-summary" style="display:flex; gap:12px; margin-bottom:12px;"></div>
+      <pre id="scorecard-view">No drill results yet.</pre>
+    </section>
+  </main>
+
+  <div id="toast-container" style="position:fixed; bottom:20px; right:20px; z-index:9999; display:flex; flex-direction:column; gap:8px;"></div>
+
+  <script src="app.js?v=3.0.5"></script>
+</body>
+</html>

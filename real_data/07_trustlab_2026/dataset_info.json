@@ -1,0 +1,40 @@
+{
+  "dataset_name": "TRUSTLab 2026",
+  "developed_by": "TRUSTLab, Universidad Polit\u00e9cnica de Cartagena (Villafranca, Tasic, Cano, 2026)",
+  "year": 2026,
+  "doi": "10.3389/fcomp.2026.1803271",
+  "paper_citation": "Villafranca et al., 'TRUSTLab dataset: a real-world CICFlowMeter dataset for IoT/edge intrusion detection', Frontiers in Computer Science (2026)",
+  "source_url": "https://www.frontiersin.org/articles/10.3389/fcomp.2026.1803271",
+  "features": 80,
+  "attack_types": [
+    "Volumetric Flooding",
+    "Reconnaissance",
+    "Credential Attacks",
+    "Application-layer",
+    "DNS Abuse",
+    "MitM",
+    "Evasion",
+    "Tunneling",
+    "C2",
+    "TLS Anomalies",
+    "Buffer Overflow",
+    "Slowloris",
+    "MQTT Exploits",
+    "ARP Poisoning",
+    "Ransomware",
+    "Benign"
+  ],
+  "description": "Real-world CICFlowMeter IoT/edge intrusion detection dataset with 4.6 million bi-flows across 15 distinct attack families enforcing single-class session integrity.",
+  "official_benchmark": {
+    "published_raw_size": "4.6 GB (4.6M bi-flows across 16 files)",
+    "record_scope": "4,600,000 bi-flow records with single-class label integrity"
+  },
+  "local_partition": {
+    "type": "Official TRUSTLab 15-Family Stratified Evaluation Partition",
+    "primary_files": [
+      "trustlab_flows.csv"
+    ],
+    "staged_rows": 15000,
+    "full_corpus_size_gb": 4.6
+  }
+}

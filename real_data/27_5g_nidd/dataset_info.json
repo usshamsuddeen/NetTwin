@@ -1,0 +1,29 @@
+{
+  "dataset_name": "5G-NIDD 2022",
+  "developed_by": "University College Dublin & VTT Finland (5G-PPP)",
+  "year": 2022,
+  "features": 47,
+  "attack_types": [
+    "UDPFlood",
+    "HTTPFlood",
+    "SlowrateDoS",
+    "TCPConnectScan",
+    "SYNScan",
+    "UDPScan",
+    "SYNFlood",
+    "ICMPFlood",
+    "Benign"
+  ],
+  "description": "Intrusion detection dataset generated on an operational 5G testbed with Multi-Access Edge Computing (MEC).",
+  "source_url": "https://doi.org/10.1109/IEEEDATA.2025.3592888",
+  "official_benchmark": {
+    "published_raw_size": "2.3 GB",
+    "record_scope": "1,215,890 fully labeled 5G network flows"
+  },
+  "local_partition": {
+    "type": "Stratified 5G MEC Attack Benchmark",
+    "primary_files": [
+      "5g_nidd_flows.csv"
+    ]
+  }
+}

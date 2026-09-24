@@ -1,0 +1,122 @@
+[
+  {
+    "config": "Full",
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "config": "Full",
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "config": "Full",
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "config": "No Topology",
+    "seed": 42,
+    "position": "2",
+    "top1": "False",
+    "top3": "True",
+    "top5": "True"
+  },
+  {
+    "config": "No Topology",
+    "seed": 101,
+    "position": "2",
+    "top1": "False",
+    "top3": "True",
+    "top5": "True"
+  },
+  {
+    "config": "No Topology",
+    "seed": 202,
+    "position": "2",
+    "top1": "False",
+    "top3": "True",
+    "top5": "True"
+  },
+  {
+    "config": "No Correlation",
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "config": "No Correlation",
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "config": "No Correlation",
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "config": "No Propagation",
+    "seed": 42,
+    "position": "3",
+    "top1": "False",
+    "top3": "True",
+    "top5": "True"
+  },
+  {
+    "config": "No Propagation",
+    "seed": 101,
+    "position": "4",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  },
+  {
+    "config": "No Propagation",
+    "seed": 202,
+    "position": "3",
+    "top1": "False",
+    "top3": "True",
+    "top5": "True"
+  },
+  {
+    "config": "Score Only",
+    "seed": 42,
+    "position": "4",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  },
+  {
+    "config": "Score Only",
+    "seed": 101,
+    "position": "5",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  },
+  {
+    "config": "Score Only",
+    "seed": 202,
+    "position": "4",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "dataset_name": "CTU-13 Scenario 10 Labeled NetFlow (Rbot Botnet)",
+  "source_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-51/capture20110818.pcap.netflow.labeled",
+  "filename": "CTU-13-Scenario-10-Rbot.netflow.labeled",
+  "file_size_bytes": 512952178,
+  "download_timestamp": "2026-09-22T12:09:14Z",
+  "description": "Czech Technical University CTU-13 Scenario 10 Rbot Botnet labeled NetFlow (489 MB)"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "core_cut",
+  "name": "ALB Ingress Link Severance (AZ Cut)",
+  "description": "Physical link severance between ALB and Web Server 1 (alb-web1), testing multi-AZ dynamic path re-convergence and traffic preservation.",
+  "duration_ticks": 30,
+  "baseline": "live",
+  "injections": [
+    {
+      "kind": "link_failure",
+      "params": { "link_id": "alb-web1" },
+      "at_tick": 2
+    }
+  ],
+  "expectations": [
+    {
+      "metric": "health_drop_max",
+      "threshold": 30.0,
+      "operator": "lt"
+    },
+    {
+      "metric": "health_min",
+      "threshold": 60.0,
+      "operator": "gt"
+    }
+  ]
+}

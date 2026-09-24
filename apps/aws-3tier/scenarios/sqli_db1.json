@@ -1,0 +1,31 @@
+{
+  "id": "sqli_db1",
+  "name": "SQL Injection & Lateral Database Compromise",
+  "description": "Lateral exploitation from compromised web tier targeting Aurora RDS database (db1) with exfiltration patterns.",
+  "duration_ticks": 35,
+  "baseline": "live",
+  "injections": [
+    {
+      "kind": "attack",
+      "params": { "type": "lateral", "target_id": "db1", "duration_s": 25.0 },
+      "at_tick": 2
+    },
+    {
+      "kind": "attack",
+      "params": { "type": "exfiltration", "target_id": "db1", "duration_s": 20.0 },
+      "at_tick": 8
+    }
+  ],
+  "expectations": [
+    {
+      "metric": "health_drop_max",
+      "threshold": 40.0,
+      "operator": "lt"
+    },
+    {
+      "metric": "health_min",
+      "threshold": 45.0,
+      "operator": "gt"
+    }
+  ]
+}

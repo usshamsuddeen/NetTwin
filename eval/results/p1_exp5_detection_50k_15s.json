@@ -1,0 +1,182 @@
+[
+  {
+    "attack": "ddos",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "ddos",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "ddos",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "ddos",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "ddos",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "ddos",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "portscan",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "portscan",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "portscan",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "portscan",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "portscan",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "portscan",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "exfiltration",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "exfiltration",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "exfiltration",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "exfiltration",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "exfiltration",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "exfiltration",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "bruteforce",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "bruteforce",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "bruteforce",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "bruteforce",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "bruteforce",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "bruteforce",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "lateral",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "lateral",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 42
+  },
+  {
+    "attack": "lateral",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "lateral",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 101
+  },
+  {
+    "attack": "lateral",
+    "mode": "SIMULATED",
+    "latency": 5,
+    "seed": 202
+  },
+  {
+    "attack": "lateral",
+    "mode": "HYBRID",
+    "latency": 5,
+    "seed": 202
+  }
+]

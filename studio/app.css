@@ -1,0 +1,252 @@
+/* ============================================================
+   NetTwin 3.0 — Scenario Studio Design System
+   Matches main dashboard premium dark theme.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-base: #050a12;
+  --bg-1: #0a1020;
+  --bg-2: #0d1526;
+  --bg-3: #111d33;
+  --bg-4: #162540;
+  --glass-bg: rgba(13, 21, 38, 0.72);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --text-primary: #e8edf5;
+  --text-secondary: #8b9ec0;
+  --text-muted: #556b8c;
+  --text-inverse: #050a12;
+  --cyan: #06b6d4;
+  --cyan-light: #22d3ee;
+  --cyan-glow: rgba(6, 182, 212, 0.35);
+  --emerald: #10b981;
+  --emerald-light: #34d399;
+  --amber: #f59e0b;
+  --rose: #f43f5e;
+  --rose-light: #fb7185;
+  --violet: #a78bfa;
+  --grad-accent: linear-gradient(135deg, var(--cyan), #3b82f6);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms var(--ease-out);
+  --transition-normal: 250ms var(--ease-out);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: var(--radius-full); }
+
+header {
+  padding: 1.5rem 2rem 1.25rem;
+  border-bottom: 1px solid var(--border-default);
+  background: linear-gradient(135deg, #0a1020 0%, #0e1a30 50%, #0a1020 100%);
+  position: relative;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan-glow), transparent);
+}
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #e8edf5, var(--cyan-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+header p {
+  margin: .25rem 0 0;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+}
+
+section {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  backdrop-filter: blur(16px);
+  transition: border-color var(--transition-fast);
+}
+section:hover {
+  border-color: var(--border-strong);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.5px;
+}
+h3 {
+  font-size: .9rem;
+  margin: 1.25rem 0 .5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin-bottom: .75rem;
+  color: var(--text-muted);
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+input, textarea, select {
+  width: 100%;
+  margin-top: .25rem;
+  padding: .6rem .75rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+textarea {
+  resize: vertical;
+  font-family: var(--font-sans);
+}
+
+button {
+  cursor: pointer;
+  padding: .55rem 1rem;
+  background: var(--bg-3);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+button:hover {
+  border-color: var(--cyan);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.1);
+}
+
+button.primary {
+  background: var(--grad-accent);
+  color: var(--text-inverse);
+  border: none;
+  font-weight: 700;
+  padding: .65rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.2);
+}
+button.primary:hover {
+  box-shadow: 0 4px 20px var(--cyan-glow);
+  transform: translateY(-2px);
+}
+
+.actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: .75rem;
+}
+
+.injection, .expectation {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: .5rem;
+  align-items: end;
+  margin-bottom: .5rem;
+  padding: .65rem;
+  background: var(--bg-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--transition-fast);
+}
+.injection:hover, .expectation:hover {
+  border-color: var(--border-default);
+}
+
+.expectation { grid-template-columns: 1.3fr .7fr .7fr 1fr auto; }
+
+pre {
+  background: var(--bg-2);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  overflow: auto;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  max-height: 340px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+#scenario-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#scenario-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem .65rem;
+  border-bottom: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+#scenario-list li:hover {
+  background: var(--bg-2);
+}
+#scenario-list li:last-child { border-bottom: 0; }
+
+.status-pass {
+  color: var(--emerald-light);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.status-fail {
+  color: var(--rose-light);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; }
+  .injection, .expectation { grid-template-columns: 1fr; }
+}

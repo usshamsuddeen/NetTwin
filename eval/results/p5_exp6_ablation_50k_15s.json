@@ -1,0 +1,32 @@
+[
+  {
+    "component": "Full System",
+    "health": 99.69113333333334,
+    "seed": 42
+  },
+  {
+    "component": "No Sync (Divergence)",
+    "health": 99.69113333333334,
+    "seed": 42
+  },
+  {
+    "component": "No Subspace (PCA)",
+    "health": 99.69113333333334,
+    "seed": 42
+  },
+  {
+    "component": "No Conformal Guard",
+    "health": 99.69113333333334,
+    "seed": 42
+  },
+  {
+    "component": "No Drift Monitor",
+    "health": 99.69113333333334,
+    "seed": 42
+  },
+  {
+    "component": "No Response Agent",
+    "health": 98.28233333333334,
+    "seed": 42
+  }
+]

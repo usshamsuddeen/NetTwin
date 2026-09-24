@@ -1,0 +1,27 @@
+{
+  "dataset_name": "CAIDA",
+  "developed_by": "Center of Applied Internet Data Analysis (CAIDA)",
+  "year": 2007,
+  "features": 20,
+  "attack_types": [
+    "DDoS (SYN flood, ICMP flood, HTTP flood)"
+  ],
+  "description": "Authentic packet traces from the Distributed Denial-of-Service (DDoS) attack on August 4, 2007. Anonymized CryptoPAn prefix-preserving pcap traces covering attack onset, SYN flood, ICMP flood, and volumetric saturation.",
+  "source_url": "https://publicdata.caida.org/datasets/security/ddos-20070804/",
+  "files": [
+    "caida_ddos_2007_real_flows.csv",
+    "ddostrace.20070804_134936.pcap.gz",
+    "ddostrace.20070804_135436.pcap.gz",
+    "ddostrace.20070804_135936.pcap.gz",
+    "ddostrace.20070804_140436.pcap.gz",
+    "ddostrace.20070804_140936.pcap.gz",
+    "ddostrace.20070804_134936.pcap.stats",
+    "ddostrace.20070804_135436.pcap.stats",
+    "ddostrace.20070804_135936.pcap.stats",
+    "ddostrace.20070804_140436.pcap.stats",
+    "ddostrace.20070804_140936.pcap.stats",
+    "README",
+    "md5.md5",
+    "caida_ddos_2007_features.csv"
+  ]
+}

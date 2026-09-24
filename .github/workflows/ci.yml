@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    name: test (py ${{ matrix.python-version }} on ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install NetTwin + dev extras
+        run: pip install -e ".[dev,aws]"
+
+      - name: Lint with ruff
+        run: ruff check nettwin tests scripts
+
+      - name: Run tests
+        run: python -m pytest tests -q
+
+      - name: Eval module compile smoke
+        run: |
+          python -m py_compile eval/run_all.py eval/p1_sync.py eval/p2_conformal.py eval/p3_response.py eval/p4_rca.py eval/p5_system.py eval/runner.py
+
+      - name: Eval quick smoke (ubuntu only)
+        if: matrix.os == 'ubuntu-latest'
+        run: python -m eval.run_all --quick
+        timeout-minutes: 30
+
+  docker:
+    name: docker build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t nettwin:test .
+
+      - name: Verify no secrets shipped
+        run: |
+          docker run --rm nettwin:test sh -c 'ls /app | grep -E "(pem|key|tfstate)" && exit 1 || true'

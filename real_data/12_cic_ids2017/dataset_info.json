@@ -1,0 +1,21 @@
+{
+  "dataset_name": "CIC-IDS2017",
+  "developed_by": "Canadian Institute for Cybersecurity (CIC)",
+  "year": 2017,
+  "features": 80,
+  "attack_types": [
+    "Brute force",
+    "Portscan",
+    "Botnet",
+    "DoS",
+    "DDoS",
+    "Web",
+    "Infiltration"
+  ],
+  "description": "Network profiles are used to generate the dataset in a specific manner.",
+  "source_url": "https://www.unb.ca/cic/datasets/ids-2017.html",
+  "files": [
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv"
+  ]
+}

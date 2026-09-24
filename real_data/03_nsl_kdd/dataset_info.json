@@ -1,0 +1,20 @@
+{
+  "dataset_name": "NSL-KDD",
+  "developed_by": "University of California / University of New Brunswick",
+  "year": 2009,
+  "features": 41,
+  "attack_types": [
+    "DoS",
+    "R2L",
+    "U2R",
+    "Probe"
+  ],
+  "description": "Refined version of KDD CUP 99 dataset and consist of a limited number of attack types.",
+  "source_url": "https://github.com/defcom17/NSL_KDD",
+  "files": [
+    "KDDTrain+.txt",
+    "KDDTest+.txt",
+    "KDDTrain+_20Percent.txt",
+    "KDDTest-21.txt"
+  ]
+}

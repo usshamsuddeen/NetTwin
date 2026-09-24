@@ -1,0 +1,79 @@
+{
+  "timestamp": 1790072250.5679958,
+  "topology": "aws-3tier",
+  "nodes_count": 12,
+  "links_count": 15,
+  "tiers_count": 5,
+  "scenarios_evaluated": 5,
+  "average_health_drop": 3.14,
+  "mean_resilience_recovery_index": 0.961,
+  "total_affected_entities": 2,
+  "execution_time_seconds": 0.165,
+  "scenarios": [
+    {
+      "file": "ddos_alb.json",
+      "name": "DDoS Volumetric Surge on ALB",
+      "duration_ticks": 35,
+      "baseline_health": 82.2,
+      "scenario_health": 76.3,
+      "health_drop": 5.9,
+      "affected_entities_count": 0,
+      "saturation_events_count": 0,
+      "resilience_recovery_index": 0.928,
+      "status": "pass",
+      "summary": "Scenario 'DDoS Volumetric Surge on ALB' ran 35 ticks: health 82.2 -> 76.3 (drop 5.9), 0 affected, 0 saturation events, 2/2 expectations met."
+    },
+    {
+      "file": "web1_crash.json",
+      "name": "Web Server 1 Instance Crash (Auto-Scale)",
+      "duration_ticks": 30,
+      "baseline_health": 81.4,
+      "scenario_health": 81.7,
+      "health_drop": -0.2,
+      "affected_entities_count": 1,
+      "saturation_events_count": 0,
+      "resilience_recovery_index": 1.0,
+      "status": "pass",
+      "summary": "Scenario 'Web Server 1 Instance Crash (Auto-Scale)' ran 30 ticks: health 81.4 -> 81.7 (drop -0.2), 1 affected, 0 saturation events, 2/2 expectations met."
+    },
+    {
+      "file": "sqli_db1.json",
+      "name": "SQL Injection & Lateral Database Compromise",
+      "duration_ticks": 35,
+      "baseline_health": 82.2,
+      "scenario_health": 78.4,
+      "health_drop": 3.7,
+      "affected_entities_count": 0,
+      "saturation_events_count": 0,
+      "resilience_recovery_index": 0.955,
+      "status": "pass",
+      "summary": "Scenario 'SQL Injection & Lateral Database Compromise' ran 35 ticks: health 82.2 -> 78.4 (drop 3.7), 0 affected, 0 saturation events, 2/2 expectations met."
+    },
+    {
+      "file": "iot_botnet.json",
+      "name": "IoT Edge Botnet & S3 Storage Exfiltration",
+      "duration_ticks": 30,
+      "baseline_health": 81.4,
+      "scenario_health": 77.0,
+      "health_drop": 4.4,
+      "affected_entities_count": 0,
+      "saturation_events_count": 0,
+      "resilience_recovery_index": 0.946,
+      "status": "pass",
+      "summary": "Scenario 'IoT Edge Botnet & S3 Storage Exfiltration' ran 30 ticks: health 81.4 -> 77.0 (drop 4.4), 0 affected, 0 saturation events, 2/2 expectations met."
+    },
+    {
+      "file": "core_cut.json",
+      "name": "ALB Ingress Link Severance (AZ Cut)",
+      "duration_ticks": 30,
+      "baseline_health": 81.4,
+      "scenario_health": 79.5,
+      "health_drop": 1.9,
+      "affected_entities_count": 1,
+      "saturation_events_count": 0,
+      "resilience_recovery_index": 0.976,
+      "status": "pass",
+      "summary": "Scenario 'ALB Ingress Link Severance (AZ Cut)' ran 30 ticks: health 81.4 -> 79.5 (drop 1.9), 1 affected, 0 saturation events, 2/2 expectations met."
+    }
+  ]
+}

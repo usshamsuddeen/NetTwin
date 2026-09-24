@@ -1,0 +1,32 @@
+[
+  {
+    "attack": "DDoS",
+    "attack_raw": "ddos",
+    "latency_ticks": 5,
+    "seed": 42
+  },
+  {
+    "attack": "Port Scan",
+    "attack_raw": "portscan",
+    "latency_ticks": 2,
+    "seed": 42
+  },
+  {
+    "attack": "Exfiltration",
+    "attack_raw": "exfiltration",
+    "latency_ticks": 5,
+    "seed": 42
+  },
+  {
+    "attack": "Lateral Mvmt",
+    "attack_raw": "lateral",
+    "latency_ticks": 5,
+    "seed": 42
+  },
+  {
+    "attack": "Brute Force",
+    "attack_raw": "bruteforce",
+    "latency_ticks": 5,
+    "seed": 42
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "id": "iot_botnet",
+  "name": "IoT Edge Botnet & S3 Storage Exfiltration",
+  "description": "Compromised smart sensor iot1 floods IoT Gateway and attempts unauthorized data exfiltration to Amazon S3 lakehouse.",
+  "duration_ticks": 30,
+  "baseline": "live",
+  "injections": [
+    {
+      "kind": "attack",
+      "params": { "type": "exfiltration", "target_id": "s3", "duration_s": 25.0 },
+      "at_tick": 2
+    },
+    {
+      "kind": "attack",
+      "params": { "type": "ddos", "target_id": "iot-gw", "duration_s": 20.0 },
+      "at_tick": 5
+    }
+  ],
+  "expectations": [
+    {
+      "metric": "health_drop_max",
+      "threshold": 35.0,
+      "operator": "lt"
+    },
+    {
+      "metric": "health_min",
+      "threshold": 55.0,
+      "operator": "gt"
+    }
+  ]
+}

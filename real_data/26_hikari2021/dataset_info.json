@@ -1,0 +1,26 @@
+{
+  "dataset_name": "HIKARI-2021",
+  "developed_by": "Keio University & NICT Japan",
+  "year": 2021,
+  "features": 86,
+  "attack_types": [
+    "Probing",
+    "Bruteforce",
+    "Bruteforce-XML",
+    "XMRIGCC CryptoMiner",
+    "Background",
+    "Benign"
+  ],
+  "description": "Network intrusion detection dataset based on real and encrypted synthetic attack traffic.",
+  "source_url": "https://doi.org/10.5281/zenodo.5199540",
+  "official_benchmark": {
+    "published_raw_size": "1.1 GB",
+    "record_scope": "555,278 network flows with encrypted synthetic attack payloads"
+  },
+  "local_partition": {
+    "type": "Stratified Multi-Class Flow Benchmark",
+    "primary_files": [
+      "hikari2021_flows.csv"
+    ]
+  }
+}

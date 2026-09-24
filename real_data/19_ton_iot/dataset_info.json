@@ -1,0 +1,29 @@
+{
+  "dataset_name": "ToN_IoT",
+  "developed_by": "UNSW Canberra Cyber Range Lab",
+  "year": 2020,
+  "features": 12,
+  "attack_types": [
+    "injection",
+    "ddos",
+    "password",
+    "xss",
+    "scanning",
+    "backdoor",
+    "dos",
+    "mitm",
+    "ransomware"
+  ],
+  "description": "Large-scale telemetry dataset of IoT/IIoT networks with 22 million flows and multi-stage cyber attacks.",
+  "source_url": "https://research.unsw.edu.au/projects/toniot-datasets",
+  "official_benchmark": {
+    "published_raw_size": "2.1 GB",
+    "record_scope": "22,339,021 network flow records across 9 attack types"
+  },
+  "local_partition": {
+    "type": "Stratified Multi-Attack Flow Benchmark",
+    "primary_files": [
+      "Train_Test_Network.csv"
+    ]
+  }
+}

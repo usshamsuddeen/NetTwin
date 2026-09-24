@@ -1,0 +1,86 @@
+[
+  {
+    "attack": "DDoS",
+    "mode": "With Sandbox",
+    "health_mean": 99.85203750000001,
+    "health_min": 93.7,
+    "seed": 42
+  },
+  {
+    "attack": "DDoS",
+    "mode": "With Sandbox",
+    "health_mean": 99.85178750000001,
+    "health_min": 93.7,
+    "seed": 101
+  },
+  {
+    "attack": "DDoS",
+    "mode": "With Sandbox",
+    "health_mean": 99.85285,
+    "health_min": 93.7,
+    "seed": 202
+  },
+  {
+    "attack": "DDoS",
+    "mode": "Without Sandbox",
+    "health_mean": 97.75917689404253,
+    "health_min": 90.60178141695991,
+    "seed": 42
+  },
+  {
+    "attack": "DDoS",
+    "mode": "Without Sandbox",
+    "health_mean": 97.72184453750491,
+    "health_min": 90.11488372753024,
+    "seed": 101
+  },
+  {
+    "attack": "DDoS",
+    "mode": "Without Sandbox",
+    "health_mean": 97.72223679732939,
+    "health_min": 87.93943739454957,
+    "seed": 202
+  },
+  {
+    "attack": "Port Scan",
+    "mode": "With Sandbox",
+    "health_mean": 99.88924999999999,
+    "health_min": 99.86,
+    "seed": 42
+  },
+  {
+    "attack": "Port Scan",
+    "mode": "With Sandbox",
+    "health_mean": 99.889025,
+    "health_min": 99.86,
+    "seed": 101
+  },
+  {
+    "attack": "Port Scan",
+    "mode": "With Sandbox",
+    "health_mean": 99.89005000000002,
+    "health_min": 99.85,
+    "seed": 202
+  },
+  {
+    "attack": "Port Scan",
+    "mode": "Without Sandbox",
+    "health_mean": 97.79638939404252,
+    "health_min": 93.45320674323753,
+    "seed": 42
+  },
+  {
+    "attack": "Port Scan",
+    "mode": "Without Sandbox",
+    "health_mean": 97.75908203750492,
+    "health_min": 92.98083555964882,
+    "seed": 101
+  },
+  {
+    "attack": "Port Scan",
+    "mode": "Without Sandbox",
+    "health_mean": 97.7594367973294,
+    "health_min": 93.71106836985308,
+    "seed": 202
+  }
+]

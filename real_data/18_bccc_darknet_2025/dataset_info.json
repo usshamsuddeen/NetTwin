@@ -1,0 +1,34 @@
+{
+  "dataset_name": "BCCC-DarkNet-2025",
+  "developed_by": "Behavioral Cybersecurity & Communication Center (BCCC), York University (Arash Habibi Lashkari, 2025)",
+  "year": 2025,
+  "source_url": "https://www.yorku.ca/bccc/datasets/darknet-2025",
+  "features": 85,
+  "attack_types": [
+    "Tor",
+    "VPN",
+    "Non-Tor",
+    "Non-VPN",
+    "Audio-Streaming",
+    "Browsing",
+    "Chat",
+    "Email",
+    "File-Transfer",
+    "Video-Streaming",
+    "VOIP",
+    "P2P"
+  ],
+  "description": "Augmented 2025 darknet and encrypted tunnel flow benchmark capturing anonymized communication protocols, Tor hidden services, and covert channels.",
+  "official_benchmark": {
+    "published_raw_size": "2.2 GB",
+    "record_scope": "141,530 darknet and encrypted tunnel flow records"
+  },
+  "local_partition": {
+    "type": "Official BCCC DarkNet Stratified Evaluation Partition",
+    "primary_files": [
+      "bccc_darknet_flows.csv"
+    ],
+    "staged_rows": 15000,
+    "full_corpus_size_gb": 2.2
+  }
+}

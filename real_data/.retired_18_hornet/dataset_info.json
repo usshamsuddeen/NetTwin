@@ -1,0 +1,8 @@
+{
+  "dataset_name": "Hornet Honeypot Dataset Summary Table",
+  "source_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Hornet-65-Niner/Hornet65niner-Dataset-Summary-Table.csv",
+  "filename": "Hornet65niner-Dataset-Summary-Table.csv",
+  "file_size_bytes": 2004,
+  "download_timestamp": "2026-09-22T11:45:19Z",
+  "description": "Stratosphere Hornet Honeypot multi-country honeypot summary dataset"
+}

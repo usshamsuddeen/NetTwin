@@ -1,0 +1,20 @@
+{
+  "dataset_name": "CSE-CIC-IDS-2018",
+  "developed_by": "Canadian Institute for Cybersecurity (CIC) & AWS",
+  "year": 2018,
+  "features": 80,
+  "attack_types": [
+    "Brute force",
+    "Portscan",
+    "Botnet",
+    "DoS",
+    "DDoS",
+    "Web",
+    "Infiltration"
+  ],
+  "description": "Network profiles are used to generate the dataset in a specific manner.",
+  "source_url": "s3://cse-cic-ids2018/Processed Traffic Data for ML Algorithms/",
+  "files": [
+    "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv"
+  ]
+}

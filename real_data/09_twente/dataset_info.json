@@ -1,0 +1,17 @@
+{
+  "dataset_name": "Twente",
+  "developed_by": "Twente University",
+  "year": 2009,
+  "features": "IP flows",
+  "attack_types": [
+    "Malicious traffic",
+    "Side-effect traffic",
+    "Unknown traffic",
+    "Uncorrelated alerts"
+  ],
+  "description": "The size of the dataset is small and scope of attack types is limited.",
+  "source_url": "University of Twente SCS Research Group (Sperotto Dataset)",
+  "files": [
+    "twente_sperotto_flows.csv"
+  ]
+}

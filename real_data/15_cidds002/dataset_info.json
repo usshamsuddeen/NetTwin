@@ -1,0 +1,8 @@
+{
+  "dataset_name": "CIDDS-002 Coburg Intrusion Detection Dataset",
+  "source_url": "https://www.hs-coburg.de/wp-content/uploads/2024/11/CIDDS-002.zip",
+  "filename": "CIDDS-002.zip",
+  "file_size_bytes": 214257978,
+  "download_timestamp": "2026-09-22T11:53:48Z",
+  "description": "Hochschule Coburg CIDDS-002 authentic OpenStack NetFlow dataset (204.3 MB)"
+}

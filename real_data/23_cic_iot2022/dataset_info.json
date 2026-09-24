@@ -1,0 +1,26 @@
+{
+  "dataset_name": "CIC IoT Dataset 2022",
+  "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB",
+  "year": 2022,
+  "features": 46,
+  "attack_types": [
+    "RTSP Flood",
+    "MQTT Flood",
+    "DNS Flood",
+    "TCP Flood",
+    "UDP Flood",
+    "Benign"
+  ],
+  "description": "IoT profiling, device recognition, behavioral analysis, and vulnerability testing on 40 physical IoT devices.",
+  "source_url": "https://www.unb.ca/cic/datasets/iotdataset-2022.html",
+  "official_benchmark": {
+    "published_raw_size": "0.9 GB (compressed CSVs)",
+    "record_scope": "Comprehensive IoT device profile flows and targeted flood attacks"
+  },
+  "local_partition": {
+    "type": "Authentic Device Attack Flow Partition",
+    "primary_files": [
+      "cic_iot2022_flows.csv"
+    ]
+  }
+}

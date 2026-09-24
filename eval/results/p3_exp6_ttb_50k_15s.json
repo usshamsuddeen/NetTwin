@@ -1,0 +1,32 @@
+[
+  {
+    "attack": "DDoS",
+    "ttb": 100,
+    "seed": 42
+  },
+  {
+    "attack": "DDoS",
+    "ttb": 100,
+    "seed": 101
+  },
+  {
+    "attack": "DDoS",
+    "ttb": 100,
+    "seed": 202
+  },
+  {
+    "attack": "Port Scan",
+    "ttb": 100,
+    "seed": 42
+  },
+  {
+    "attack": "Port Scan",
+    "ttb": 100,
+    "seed": 101
+  },
+  {
+    "attack": "Port Scan",
+    "ttb": 100,
+    "seed": 202
+  }
+]

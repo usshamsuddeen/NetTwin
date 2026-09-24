@@ -1,0 +1,34 @@
+{
+  "dataset_name": "KDD CUP 99",
+  "developed_by": "University of California, Irvine (UCI)",
+  "year": 1999,
+  "features": 41,
+  "attack_types": [
+    "DoS",
+    "R2L",
+    "U2R",
+    "Probe"
+  ],
+  "description": "It consists of redundant and duplicate data samples.",
+  "source_url": "https://archive.ics.uci.edu/dataset/130/kdd+cup+1999+data",
+  "key_files": [
+    "corrected",
+    "corrected.gz",
+    "kddcup.data",
+    "kddcup.data.gz",
+    "kddcup.data_10_percent",
+    "kddcup.data_10_percent.gz",
+    "kddcup.names",
+    "kddcup.newtestdata_10_percent_unlabeled",
+    "kddcup.newtestdata_10_percent_unlabeled.gz",
+    "kddcup.testdata.unlabeled",
+    "kddcup.testdata.unlabeled.gz",
+    "kddcup.testdata.unlabeled_10_percent",
+    "kddcup.testdata.unlabeled_10_percent.gz",
+    "kddcup99.html",
+    "kdd_cup_1999_data.zip",
+    "task.html",
+    "training_attack_types",
+    "typo-correction.txt"
+  ]
+}

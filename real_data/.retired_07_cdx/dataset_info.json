@@ -1,0 +1,16 @@
+{
+  "dataset_name": "CDX",
+  "developed_by": "United States Military Academy (USMA)",
+  "year": 2009,
+  "features": 5,
+  "attack_types": [
+    "Buffer Overflow",
+    "Nikto Web Scans",
+    "Nessus Vulnerability Scans"
+  ],
+  "description": "This dataset utilized network tools Nikto and Nessus to capture the traffic and was used to evaluate the IDS alert rules.",
+  "source_url": "USMA Cyber Research Center (CDX 2009)",
+  "files": [
+    "cdx2009_buffer_overflow.csv"
+  ]
+}

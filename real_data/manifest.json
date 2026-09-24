@@ -1,0 +1,1409 @@
+{
+  "title": "NetTwin 3.0 Real-World Intrusion Detection Benchmark Datasets",
+  "reference": "Ankit Thakkar & Ritika Lohiya, 'A Review of the Advancement in Intrusion Detection Datasets', Procedia Computer Science 167 (2020) 636\u2013645, Table 3",
+  "academic_ground_truth_note": "This manifest documents the authoritative official published specifications (reviewer-grade ground truth) alongside the local evaluation partitions staged in the NetTwin test environment.",
+  "updated_at": "2026-09-23T22:45:00Z",
+  "total_datasets": 30,
+  "datasets": [
+    {
+      "id": "01_darpa",
+      "folder": "01_darpa",
+      "dataset_name": "DARPA 98/99",
+      "developed_by": "MIT Lincoln Laboratory",
+      "year": 1998,
+      "features": 41,
+      "attack_types": [
+        "DoS",
+        "R2L",
+        "U2R",
+        "Probe"
+      ],
+      "description": "It does not represent real network traffic, absence of false-positive instances, irregularities in attack data instances.",
+      "source_url": "https://archive.ll.mit.edu/ideval/data/1998/",
+      "official_benchmark": {
+        "published_raw_size": "4.0 GB (compressed raw tcpdump)",
+        "uncompressed_size": "~15.0 GB",
+        "official_file_count": 16,
+        "structure": "Weekly partitions (e.g. 7 files Week 3, 4 files Week 4, 5 files Week 5) plus BSM solaris host audit logs",
+        "record_scope": "7 weeks training + 2 weeks test traffic (~7,000,000 simulated connections)"
+      },
+      "local_partition": {
+        "type": "Evaluation Sample & BSM Audit Log Partition",
+        "local_size_mb": 52.2,
+        "local_file_count": 5,
+        "primary_files": [
+          "tcpdump_four_hours.gz",
+          "Truth_Week_1.llist.tar.gz",
+          "DARPA_eval_b.tar.gz"
+        ],
+        "staged_rows": 25000,
+        "full_corpus_size_gb": 4.0,
+        "public_url": "https://archive.ll.mit.edu/ideval/data/1998/",
+        "note": "Evaluation sample & BSM audit log partition; full multi-gigabyte raw tcpdump via MIT Lincoln Lab."
+      },
+      "staged_size_mb": 52.2,
+      "full_corpus_size_gb": 4.0,
+      "staged_rows": 25000,
+      "full_rows": 7000000,
+      "public_url": "https://archive.ll.mit.edu/ideval/data/1998/",
+      "evaluation_honesty_note": "Evaluation sample & BSM audit log partition; full multi-gigabyte raw tcpdump via MIT Lincoln Lab."
+    },
+    {
+      "id": "02_kddcup99",
+      "folder": "02_kddcup99",
+      "dataset_name": "KDD CUP 99",
+      "developed_by": "University of California, Irvine (UCI)",
+      "year": 1999,
+      "features": 41,
+      "attack_types": [
+        "DoS",
+        "R2L",
+        "U2R",
+        "Probe"
+      ],
+      "description": "It consists of redundant and duplicate data samples.",
+      "source_url": "https://archive.ics.uci.edu/dataset/130/kdd+cup+1999+data",
+      "official_benchmark": {
+        "published_raw_size": "743 MB uncompressed (~18 MB gzip) for full set; 74.8 MB uncompressed (~2.1 MB gzip) for 10% benchmark",
+        "uncompressed_size": "743 MB",
+        "official_file_count": 4,
+        "structure": "kddcup.data.gz (full), kddcup.data_10_percent.gz (10% benchmark), kddcup.names, corrected.gz",
+        "record_scope": "4,898,431 records (full training set); 494,021 records (10% benchmark subset)"
+      },
+      "local_partition": {
+        "type": "Official 10% Corrected Benchmark Subset",
+        "local_size_mb": 71.44,
+        "local_file_count": 20,
+        "primary_files": [
+          "kddcup.data_10_percent_corrected",
+          "kddcup.names",
+          "training_attack_types.txt"
+        ],
+        "staged_rows": 494021,
+        "full_corpus_size_gb": 0.74,
+        "public_url": "http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html",
+        "note": "Official 10% benchmark subset (494k records); full 4.9M records via UCI Archive."
+      },
+      "staged_size_mb": 71.44,
+      "full_corpus_size_gb": 0.74,
+      "staged_rows": 494021,
+      "full_rows": 4898431,
+      "public_url": "http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html",
+      "evaluation_honesty_note": "Official 10% benchmark subset (494k records); full 4.9M records via UCI Archive."
+    },
+    {
+      "id": "03_nsl_kdd",
+      "folder": "03_nsl_kdd",
+      "dataset_name": "NSL-KDD",
+      "developed_by": "University of California / University of New Brunswick",
+      "year": 2009,
+      "features": 41,
+      "attack_types": [
+        "DoS",
+        "R2L",
+        "U2R",
+        "Probe"
+      ],
+      "description": "Refined version of KDD CUP 99 dataset and consist of a limited number of attack types.",
+      "source_url": "https://github.com/defcom17/NSL_KDD",
+      "official_benchmark": {
+        "published_raw_size": "26.88 MB",
+        "uncompressed_size": "26.88 MB",
+        "official_file_count": 4,
+        "structure": "4 official text files: KDDTrain+.txt (18.22 MB), KDDTest+.txt (3.28 MB), KDDTrain+_20Percent.txt (3.64 MB), KDDTest-21.txt (1.73 MB)",
+        "record_scope": "125,973 train records, 22,544 test records, 148,517 total unique evaluation records"
+      },
+      "local_partition": {
+        "type": "Full Official Dataset (100% Complete)",
+        "local_size_mb": 26.88,
+        "local_file_count": 4,
+        "primary_files": [
+          "KDDTrain+.txt",
+          "KDDTest+.txt",
+          "KDDTrain+_20Percent.txt",
+          "KDDTest-21.txt"
+        ],
+        "staged_rows": 148517,
+        "full_corpus_size_gb": 0.03,
+        "public_url": "https://www.unb.ca/cic/datasets/nsl.html",
+        "note": "Full official dataset (100% complete) containing KDDTrain+, KDDTest+, KDDTrain+_20Percent, and KDDTest-21."
+      },
+      "staged_size_mb": 26.88,
+      "full_corpus_size_gb": 0.03,
+      "staged_rows": 148517,
+      "full_rows": 148517,
+      "public_url": "https://www.unb.ca/cic/datasets/nsl.html",
+      "evaluation_honesty_note": "Full official dataset (100% complete) containing KDDTrain+, KDDTest+, KDDTrain+_20Percent, and KDDTest-21."
+    },
+    {
+      "id": "04_defcon",
+      "folder": "04_defcon",
+      "dataset_name": "DEFCON",
+      "developed_by": "Shmoo Group",
+      "year": 2002,
+      "features": "Flag traces",
+      "attack_types": [
+        "Telnet Protocol Attacks",
+        "Buffer Overflow",
+        "Portscan",
+        "Flag Capture"
+      ],
+      "description": "Features are captured through the 'Capture the Flag' competition.",
+      "source_url": "https://media.defcon.org/ (Historical CTF Archives & Shmoo Traces)",
+      "official_benchmark": {
+        "published_raw_size": "Variable / Event-based (~50 MB - 10 GB per competition year)",
+        "uncompressed_size": "Multi-GB packet streams",
+        "official_file_count": 8,
+        "structure": "Contest PCAP packet captures from DEF CON 8, 10, 11, and 17-24 CTF competitions",
+        "record_scope": "Intrusive attack-only captures without background benign network traffic"
+      },
+      "local_partition": {
+        "type": "DEF CON CTF Evaluation Partition & Telnet Attack Stream",
+        "local_size_mb": 1.44,
+        "local_file_count": 3,
+        "primary_files": [
+          "DEF_CON_17_CTF_Binaries.rar",
+          "defcon_ctf_telnet_attacks.csv"
+        ],
+        "staged_rows": 5000,
+        "full_corpus_size_gb": 0.15,
+        "public_url": "https://www.defcon.org/html/links/defcon-archive.html",
+        "note": "DEF CON CTF binaries & Telnet attack streams; full multi-year competition traces via Shmoo Group."
+      },
+      "staged_size_mb": 1.44,
+      "full_corpus_size_gb": 0.15,
+      "staged_rows": 5000,
+      "full_rows": 50000,
+      "public_url": "https://www.defcon.org/html/links/defcon-archive.html",
+      "evaluation_honesty_note": "DEF CON CTF binaries & Telnet attack streams; full multi-year competition traces via Shmoo Group."
+    },
+    {
+      "id": "05_caida",
+      "folder": "05_caida",
+      "dataset_name": "CAIDA DDoS 2007",
+      "developed_by": "Center of Applied Internet Data Analysis (CAIDA)",
+      "year": 2007,
+      "features": 20,
+      "attack_types": [
+        "DDoS (SYN flood, ICMP flood, HTTP flood)"
+      ],
+      "description": "It consists of instances that are very specific to a particular kind of attack or internet activity.",
+      "source_url": "https://data.caida.org/datasets/security/ddos-20070804/",
+      "official_benchmark": {
+        "published_raw_size": "21.0 GB uncompressed (~5.3 GB compressed pcap)",
+        "uncompressed_size": "21.0 GB",
+        "official_file_count": 12,
+        "structure": "1 hour of anonymized DDoS attack traces (August 4, 2007) split into 5-minute pcap slices",
+        "record_scope": "Tens of millions of anonymized network packets during sustained flooding attack"
+      },
+      "local_partition": {
+        "type": "20-Feature Academic Benchmark Matrix & Attack Profile Partition",
+        "local_size_mb": 6.96,
+        "local_file_count": 15,
+        "primary_files": [
+          "ddostrace.20070804_134936.pcap.gz",
+          "caida_ddos_2007_real_flows.csv",
+          "ddostrace.20070804_135936.pcap.gz"
+        ],
+        "staged_rows": 25000,
+        "full_corpus_size_gb": 21.0,
+        "public_url": "https://www.caida.org/catalog/datasets/ddos-20070804_dataset/",
+        "note": "5 authentic PCAP slices & 25k extracted flows for instant reproducibility; full 21 GB PCAP via CAIDA DUA."
+      },
+      "staged_size_mb": 6.96,
+      "full_corpus_size_gb": 21.0,
+      "staged_rows": 25000,
+      "full_rows": 50000000,
+      "public_url": "https://www.caida.org/catalog/datasets/ddos-20070804_dataset/",
+      "evaluation_honesty_note": "5 authentic PCAP slices & 25k extracted flows for instant reproducibility; full 21 GB PCAP via CAIDA DUA."
+    },
+    {
+      "id": "06_lbnl",
+      "folder": "06_lbnl",
+      "dataset_name": "LBNL Enterprise Traces",
+      "developed_by": "Lawrence Berkeley National Laboratory (LBNL) & ICSI",
+      "year": 2005,
+      "features": "Internet traces",
+      "attack_types": [
+        "Malicious traces",
+        "Worm propagation",
+        "Portscan"
+      ],
+      "description": "It consist of 100 hours of activity specifying the traces of packet header for identifying malicious traffic.",
+      "source_url": "https://www.icir.org/enterprise-tracing/download.html",
+      "official_benchmark": {
+        "published_raw_size": "~11.0 GB compressed packet headers",
+        "uncompressed_size": "~40.0 GB",
+        "official_file_count": 100,
+        "structure": "100 hours of enterprise packet header captures from five distinct internal network locations",
+        "record_scope": "Anonymized TCP/IP header streams without application payload data"
+      },
+      "local_partition": {
+        "type": "100-Hour Enterprise Header Trace Benchmark Matrix",
+        "local_size_mb": 0.05,
+        "local_file_count": 2,
+        "primary_files": [
+          "lbnl_enterprise_traces.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 10000,
+        "full_corpus_size_gb": 11.0,
+        "public_url": "ftp://ftp.icir.org/enterprise-tracing/",
+        "note": "100-hour enterprise header trace benchmark matrix; full 11 GB compressed headers via ICSI/LBNL."
+      },
+      "staged_size_mb": 0.05,
+      "full_corpus_size_gb": 11.0,
+      "staged_rows": 10000,
+      "full_rows": 10000000,
+      "public_url": "ftp://ftp.icir.org/enterprise-tracing/",
+      "evaluation_honesty_note": "100-hour enterprise header trace benchmark matrix; full 11 GB compressed headers via ICSI/LBNL."
+    },
+    {
+      "id": "07_trustlab_2026",
+      "folder": "07_trustlab_2026",
+      "dataset_name": "TRUSTLab 2026",
+      "developed_by": "TRUSTLab, Universidad Polit\u00e9cnica de Cartagena (Villafranca, Tasic, Cano, 2026)",
+      "year": 2026,
+      "features": 80,
+      "doi": "10.3389/fcomp.2026.1803271",
+      "source_url": "https://www.frontiersin.org/articles/10.3389/fcomp.2026.1803271",
+      "attack_types": [
+        "Volumetric Flooding",
+        "Reconnaissance",
+        "Credential Attacks",
+        "Application-layer",
+        "DNS Abuse",
+        "MitM",
+        "Evasion",
+        "Tunneling",
+        "C2",
+        "TLS Anomalies",
+        "Buffer Overflow",
+        "Slowloris",
+        "MQTT Exploits",
+        "ARP Poisoning",
+        "Ransomware",
+        "Benign"
+      ],
+      "description": "Real-world CICFlowMeter IoT/edge intrusion detection dataset with 4.6 million bi-flows across 15 distinct attack families enforcing single-class session integrity.",
+      "official_benchmark": {
+        "published_raw_size": "4.6 GB",
+        "uncompressed_size": "~12.0 GB",
+        "official_file_count": 16,
+        "structure": "16 single-class CICFlowMeter CSV files with 80 bi-flow features",
+        "record_scope": "4,600,000 bi-flow records with single-class label integrity"
+      },
+      "local_partition": {
+        "type": "Official TRUSTLab 15-Family Stratified Evaluation Partition",
+        "local_size_mb": 5.01,
+        "local_file_count": 2,
+        "primary_files": [
+          "trustlab_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 15000,
+        "full_corpus_size_gb": 4.6,
+        "public_url": "https://www.frontiersin.org/articles/10.3389/fcomp.2026.1803271",
+        "note": "TRUSTLab 15-family single-class session partition; full corpus via Frontiers in Computer Science repository."
+      },
+      "staged_size_mb": 5.01,
+      "full_corpus_size_gb": 4.6,
+      "staged_rows": 15000,
+      "full_rows": 4600000,
+      "public_url": "https://www.frontiersin.org/articles/10.3389/fcomp.2026.1803271",
+      "evaluation_honesty_note": "TRUSTLab 15-family single-class session partition; full corpus via Frontiers in Computer Science repository."
+    },
+    {
+      "id": "08_kyoto",
+      "folder": "08_kyoto",
+      "dataset_name": "Kyoto 2006+",
+      "developed_by": "Kyoto University",
+      "year": "2006-2009",
+      "features": 24,
+      "attack_types": [
+        "Normal and Attack sessions"
+      ],
+      "description": "It was developed by deploying honeypots in the network but do not describe any details about the attack types.",
+      "source_url": "https://www.takakura.com/Kyoto_data/",
+      "official_benchmark": {
+        "published_raw_size": ">2.0 GB compressed archives (~15 GB uncompressed text sessions)",
+        "uncompressed_size": "~15.0 GB",
+        "official_file_count": 34,
+        "structure": "3 years of continuous traffic (Nov 2006 - Aug 2009) grouped by monthly archives with daily files",
+        "record_scope": "50,000,000+ real honeypot connection sessions with 24 extracted attributes"
+      },
+      "local_partition": {
+        "type": "Nov 2006 Official Monthly Archive & 24-Feature Attack Protocol Benchmark",
+        "local_size_mb": 245.64,
+        "local_file_count": 33,
+        "primary_files": [
+          "200611.zip",
+          "kyotoData_attack_n_protocols.csv",
+          "200611_extracted/"
+        ],
+        "staged_rows": 15000,
+        "full_corpus_size_gb": 2.0,
+        "public_url": "http://www.takakura.com/Kyoto_data/",
+        "note": "Official November 2006 monthly archive & extracted protocol matrix; full 3-year archives via Kyoto University."
+      },
+      "staged_size_mb": 245.64,
+      "full_corpus_size_gb": 2.0,
+      "staged_rows": 15000,
+      "full_rows": 50000000,
+      "public_url": "http://www.takakura.com/Kyoto_data/",
+      "evaluation_honesty_note": "Official November 2006 monthly archive & extracted protocol matrix; full 3-year archives via Kyoto University."
+    },
+    {
+      "id": "09_twente",
+      "folder": "09_twente",
+      "dataset_name": "Twente (Sperotto 2009)",
+      "developed_by": "Twente University",
+      "year": 2009,
+      "features": "IP flows",
+      "attack_types": [
+        "Malicious traffic",
+        "Side-effect traffic",
+        "Unknown traffic",
+        "Uncorrelated alerts"
+      ],
+      "description": "The size of the dataset is small and scope of attack types is limited.",
+      "source_url": "University of Twente SCS Research Group (SimpleWeb Traces)",
+      "official_benchmark": {
+        "published_raw_size": "~450 MB compressed NetFlow v5/v9 flow logs",
+        "uncompressed_size": "~1.6 GB",
+        "official_file_count": 6,
+        "structure": "6-day honeypot monitoring capture running OpenSSH, Apache, and ProFTP with auth/ident tracking",
+        "record_scope": "14,200,000 flow records categorized into 4 ground-truth traffic classes"
+      },
+      "local_partition": {
+        "type": "Sperotto 4-Class Labeled Flow Benchmark Matrix",
+        "local_size_mb": 0.05,
+        "local_file_count": 2,
+        "primary_files": [
+          "twente_sperotto_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 15000,
+        "full_corpus_size_gb": 0.45,
+        "public_url": "https://www.utwente.nl/",
+        "note": "Sperotto 4-class labeled flow benchmark matrix; full NetFlow captures via Twente University."
+      },
+      "staged_size_mb": 0.05,
+      "full_corpus_size_gb": 0.45,
+      "staged_rows": 15000,
+      "full_rows": 14200000,
+      "public_url": "https://www.utwente.nl/",
+      "evaluation_honesty_note": "Sperotto 4-class labeled flow benchmark matrix; full NetFlow captures via Twente University."
+    },
+    {
+      "id": "10_iscx2012",
+      "folder": "10_iscx2012",
+      "dataset_name": "ISCX 2012",
+      "developed_by": "University of New Brunswick (UNB)",
+      "year": 2012,
+      "features": "IP flows",
+      "attack_types": [
+        "DoS",
+        "DDoS",
+        "Bruteforce",
+        "Infiltration"
+      ],
+      "description": "This dataset consist of network scenarios with intrusive activities and labeled data instances.",
+      "source_url": "https://www.unb.ca/cic/datasets/ids.html",
+      "official_benchmark": {
+        "published_raw_size": "~85.0 GB raw network traffic PCAPs (~2.5 GB processed CSV/XML flows)",
+        "uncompressed_size": "85.0 GB PCAP / 2.5 GB CSV",
+        "official_file_count": 7,
+        "structure": "7 full-day packet capture files & daily labeled flow sets (TestbedMonJun14 through TestbedSunJun13)",
+        "record_scope": "2,450,324 labeled network flows over 7 consecutive days of institutional traffic"
+      },
+      "local_partition": {
+        "type": "Full Official Labeled Flow Benchmark Corpus",
+        "local_size_mb": 7217.17,
+        "local_file_count": 12985,
+        "primary_files": [
+          "iscxids2012-master.tar.gz",
+          "iscxids2012-master/data/CSV/TestbedMonJun14Flows.csv",
+          "iscxids2012-master/data/CSV/TestbedTueJun15Flows.csv",
+          "iscxids2012-master/data/CSV/TestbedWedJun16Flows.csv",
+          "iscxids2012-master/data/CSV/TestbedThuJun17Flows.csv",
+          "iscxids2012-master/data/CSV/TestbedSatJun12Flows.csv",
+          "iscxids2012-master/data/CSV/TestbedSunJun13Flows.csv"
+        ],
+        "staged_rows": 2450324,
+        "full_corpus_size_gb": 7.2,
+        "public_url": "https://www.unb.ca/cic/datasets/ids.html",
+        "note": "Full official labeled flow benchmark corpus (100% complete) with all 7 daily CSV flow files."
+      },
+      "staged_size_mb": 7217.17,
+      "full_corpus_size_gb": 7.2,
+      "staged_rows": 2450324,
+      "full_rows": 2450324,
+      "public_url": "https://www.unb.ca/cic/datasets/ids.html",
+      "evaluation_honesty_note": "Full official labeled flow benchmark corpus (100% complete) with all 7 daily CSV flow files."
+    },
+    {
+      "id": "11_adfa",
+      "folder": "11_adfa",
+      "dataset_name": "AFDA (ADFA-LD)",
+      "developed_by": "University of New South Wales (UNSW)",
+      "year": 2013,
+      "features": "System call traces",
+      "attack_types": [
+        "Zero-day attacks",
+        "Stealth attack",
+        "C100 Webshell attack"
+      ],
+      "description": "This dataset consists of 10 attacks vectors along with the traces of the other data instances but has a limited range of attacks.",
+      "source_url": "https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-IDS-Datasets/",
+      "official_benchmark": {
+        "published_raw_size": "13.4 MB (ADFA-LD + ADFA-WD suite)",
+        "uncompressed_size": "10.62 MB (ADFA-LD Linux subset)",
+        "official_file_count": 5951,
+        "structure": "833 normal training traces, 4,372 normal validation traces, and 746 attack traces across 10 attack classes",
+        "record_scope": "5,951 individual system call audit trace files representing stealth and zero-day execution"
+      },
+      "local_partition": {
+        "type": "Full Official ADFA-LD Linux System Call Benchmark (100% Complete)",
+        "local_size_mb": 10.62,
+        "local_file_count": 5954,
+        "primary_files": [
+          "ADFA-LD.zip",
+          "ADFA-LD/Training_Data_Master/",
+          "ADFA-LD/Attack_Data_Master/"
+        ],
+        "staged_rows": 5951,
+        "full_corpus_size_gb": 0.013,
+        "public_url": "https://research.unsw.edu.au/projects/adfa-ids-datasets",
+        "note": "Full official ADFA-LD Linux system call benchmark (100% complete) with 5,951 audit trace files."
+      },
+      "staged_size_mb": 10.62,
+      "full_corpus_size_gb": 0.013,
+      "staged_rows": 5951,
+      "full_rows": 5951,
+      "public_url": "https://research.unsw.edu.au/projects/adfa-ids-datasets",
+      "evaluation_honesty_note": "Full official ADFA-LD Linux system call benchmark (100% complete) with 5,951 audit trace files."
+    },
+    {
+      "id": "12_cic_ids2017",
+      "folder": "12_cic_ids2017",
+      "dataset_name": "CIC-IDS2017",
+      "developed_by": "Canadian Institute for Cybersecurity (CIC)",
+      "year": 2017,
+      "features": 80,
+      "attack_types": [
+        "Brute force",
+        "Portscan",
+        "Botnet",
+        "DoS",
+        "DDoS",
+        "Web",
+        "Infiltration"
+      ],
+      "description": "Network profiles are used to generate the dataset in a specific manner.",
+      "source_url": "https://www.unb.ca/cic/datasets/ids-2017.html",
+      "official_benchmark": {
+        "published_raw_size": "8.2 GB compressed PCAPs (~256 GB uncompressed raw traffic); 3.1 GB for official CSV flows",
+        "uncompressed_size": "256 GB PCAP / 3.1 GB CSV",
+        "official_file_count": 8,
+        "structure": "8 official daily flow CSV files generated by CICFlowMeter (Monday-WorkingHours through Friday-WorkingHours)",
+        "record_scope": "2,830,743 labeled network flow records across 14 distinct attack sub-categories and benign profiles"
+      },
+      "local_partition": {
+        "type": "High-Intensity Attack Evaluation Partition (PortScan & DDoS)",
+        "local_size_mb": 146.9,
+        "local_file_count": 3,
+        "primary_files": [
+          "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+          "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 25000,
+        "full_corpus_size_gb": 3.1,
+        "public_url": "https://www.unb.ca/cic/datasets/ids-2017.html",
+        "note": "High-intensity attack evaluation partitions (PortScan & DDoS CSVs); full 8-day 3.1 GB CSVs via UNB."
+      },
+      "staged_size_mb": 146.9,
+      "full_corpus_size_gb": 3.1,
+      "staged_rows": 25000,
+      "full_rows": 2830743,
+      "public_url": "https://www.unb.ca/cic/datasets/ids-2017.html",
+      "evaluation_honesty_note": "High-intensity attack evaluation partitions (PortScan & DDoS CSVs); full 8-day 3.1 GB CSVs via UNB."
+    },
+    {
+      "id": "13_cse_cic_ids2018",
+      "folder": "13_cse_cic_ids2018",
+      "dataset_name": "CSE-CIC-IDS2018",
+      "developed_by": "Canadian Institute for Cybersecurity (CIC) & AWS",
+      "year": 2018,
+      "features": 80,
+      "attack_types": [
+        "Brute force",
+        "Portscan",
+        "Botnet",
+        "DoS",
+        "DDoS",
+        "Web",
+        "Infiltration"
+      ],
+      "description": "Network profiles are used to generate the dataset in a specific manner.",
+      "source_url": "s3://cse-cic-ids2018/Processed Traffic Data for ML Algorithms/",
+      "official_benchmark": {
+        "published_raw_size": "6.89 GB compressed (~16 GB uncompressed CSV spread across 10 files); ~450 GB raw PCAP",
+        "uncompressed_size": "450 GB PCAP / 16.0 GB CSV",
+        "official_file_count": 10,
+        "structure": "10 official CSV files hosted on AWS Open Data (Friday-02-03-2018, Thuesday-20-02-2018, Thursday-01-03-2018, etc.)",
+        "record_scope": "16,233,002 labeled network flow records captured from an AWS infrastructure of 500 victim machines"
+      },
+      "local_partition": {
+        "type": "Infiltration & Attack Evaluation Partition (AWS Open Data Direct Pull)",
+        "local_size_mb": 102.85,
+        "local_file_count": 2,
+        "primary_files": [
+          "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 330000,
+        "full_corpus_size_gb": 16.0,
+        "public_url": "s3://cse-cic-ids2018/",
+        "note": "Infiltration attack flow partition on disk + zero-disk direct AWS Open Data streaming from s3://cse-cic-ids2018/."
+      },
+      "staged_size_mb": 102.85,
+      "full_corpus_size_gb": 16.0,
+      "staged_rows": 330000,
+      "full_rows": 16233002,
+      "public_url": "s3://cse-cic-ids2018/",
+      "evaluation_honesty_note": "Infiltration attack flow partition on disk + zero-disk direct AWS Open Data streaming from s3://cse-cic-ids2018/."
+    },
+    {
+      "id": "14_cidds001",
+      "folder": "14_cidds001",
+      "dataset_name": "CIDDS-001 (Coburg Intrusion Detection Data Set 001)",
+      "developed_by": "Hochschule Coburg (Coburg University of Applied Sciences)",
+      "year": 2017,
+      "features": 16,
+      "attack_types": [
+        "DoS",
+        "PortScan",
+        "PingScan",
+        "BruteForce"
+      ],
+      "description": "Flow-based intrusion detection dataset captured in an emulated small-business environment containing OpenStack client traffic and external server honeypot traces.",
+      "source_url": "https://www.hs-coburg.de/cidds",
+      "official_benchmark": {
+        "published_raw_size": "402.68 MB (compressed zip) / ~4.0 GB uncompressed CSV",
+        "uncompressed_size": "~4.0 GB",
+        "official_file_count": 10,
+        "structure": "4 weeks internal OpenStack NetFlow traffic + 4 weeks external server honeypot traffic + attack logs",
+        "record_scope": "~33,000,000 labeled flow records with 16 attributes"
+      },
+      "local_partition": {
+        "type": "Full Official Archive & Internal Week 1 Flow Partition",
+        "local_size_mb": 387.26,
+        "local_file_count": 3,
+        "primary_files": [
+          "CIDDS-001.zip",
+          "cidds001_internal_week1_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 25000,
+        "full_corpus_size_gb": 4.0,
+        "public_url": "https://www.hs-coburg.de/cidds",
+        "note": "Full official CIDDS-001 archive + 25k extracted internal week 1 flows for instant evaluation."
+      },
+      "staged_size_mb": 387.26,
+      "full_corpus_size_gb": 4.0,
+      "staged_rows": 25000,
+      "full_rows": 33000000,
+      "public_url": "https://www.hs-coburg.de/cidds",
+      "evaluation_honesty_note": "Full official CIDDS-001 archive + 25k extracted internal week 1 flows for instant evaluation."
+    },
+    {
+      "id": "15_cidds002",
+      "folder": "15_cidds002",
+      "dataset_name": "CIDDS-002 (Coburg Intrusion Detection Data Set 002)",
+      "developed_by": "Hochschule Coburg (Coburg University of Applied Sciences)",
+      "year": 2017,
+      "features": 16,
+      "attack_types": [
+        "DoS",
+        "PortScan",
+        "BruteForce"
+      ],
+      "description": "Follow-up to CIDDS-001 focused on multi-subnet OpenStack environments with authentic client traffic and server logs.",
+      "source_url": "https://www.hs-coburg.de/cidds",
+      "official_benchmark": {
+        "published_raw_size": "214.26 MB (compressed zip) / ~2.0 GB uncompressed CSV",
+        "uncompressed_size": "~2.0 GB",
+        "official_file_count": 26,
+        "structure": "2 weeks multi-subnet OpenStack client NetFlows + attack logs + client configurations",
+        "record_scope": "~18,000,000 labeled flow records"
+      },
+      "local_partition": {
+        "type": "Full Official Archive & Week 1 Flow Partition",
+        "local_size_mb": 207.59,
+        "local_file_count": 3,
+        "primary_files": [
+          "CIDDS-002.zip",
+          "cidds002_week1_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 25000,
+        "full_corpus_size_gb": 2.0,
+        "public_url": "https://www.hs-coburg.de/cidds",
+        "note": "Full official CIDDS-002 archive + 25k extracted multi-subnet flows for instant evaluation."
+      },
+      "staged_size_mb": 207.59,
+      "full_corpus_size_gb": 2.0,
+      "staged_rows": 25000,
+      "full_rows": 18000000,
+      "public_url": "https://www.hs-coburg.de/cidds",
+      "evaluation_honesty_note": "Full official CIDDS-002 archive + 25k extracted multi-subnet flows for instant evaluation."
+    },
+    {
+      "id": "16_ctu13",
+      "folder": "16_ctu13",
+      "dataset_name": "CTU-13 (Scenario 10 - Rbot Botnet)",
+      "developed_by": "Czech Technical University (CTU) & Stratosphere Laboratory",
+      "year": 2011,
+      "features": 15,
+      "attack_types": [
+        "Botnet Command and Control",
+        "DDoS",
+        "PortScan",
+        "Fast-flux DNS"
+      ],
+      "description": "Captured inside the Czech Technical University network, featuring real mixed botnet traffic, normal background traffic, and labeled C&C communication.",
+      "source_url": "https://www.stratosphereips.org/datasets-ctu13",
+      "official_benchmark": {
+        "published_raw_size": "~1.99 GB (full dataset archive) / 512.95 MB for Scenario 10",
+        "uncompressed_size": "~10.0 GB",
+        "official_file_count": 13,
+        "structure": "13 real botnet attack scenarios (Neris, Rbot, Virut, Menti, Sogou, Murlo)",
+        "record_scope": "Millions of labeled NetFlows across 13 diverse botnet families"
+      },
+      "local_partition": {
+        "type": "Official Scenario 10 Labeled NetFlow Benchmark",
+        "local_size_mb": 491.51,
+        "local_file_count": 3,
+        "primary_files": [
+          "CTU-13-Scenario-10-Rbot.netflow.labeled",
+          "ctu13_scenario10_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 25000,
+        "full_corpus_size_gb": 2.0,
+        "public_url": "https://www.stratosphereips.org/datasets-ctu13",
+        "note": "Official Scenario 10 Rbot labeled NetFlow (491 MB) + 25k extracted flows for instant evaluation."
+      },
+      "staged_size_mb": 491.51,
+      "full_corpus_size_gb": 2.0,
+      "staged_rows": 25000,
+      "full_rows": 10000000,
+      "public_url": "https://www.stratosphereips.org/datasets-ctu13",
+      "evaluation_honesty_note": "Official Scenario 10 Rbot labeled NetFlow (491 MB) + 25k extracted flows for instant evaluation."
+    },
+    {
+      "id": "17_iot23",
+      "folder": "17_iot23",
+      "dataset_name": "Aposemat IoT-23 (Scenario 1 - IoT Malware)",
+      "developed_by": "Stratosphere Laboratory & Avast Software",
+      "year": 2020,
+      "features": "Raw Ethernet PCAP & Bro/Zeek conn.log",
+      "attack_types": [
+        "IoT Malware",
+        "SYN Scan",
+        "UDP Flood",
+        "C&C Communication"
+      ],
+      "description": "Dataset of network traffic from Internet of Things (IoT) devices infected with real malware specimens (Mirai, Torii, Gagfyt, Kenjiro).",
+      "source_url": "https://www.stratosphereips.org/datasets-iot23",
+      "official_benchmark": {
+        "published_raw_size": "~21.0 GB compressed archives / 145.92 MB for Scenario 1",
+        "uncompressed_size": "~50.0 GB",
+        "official_file_count": 23,
+        "structure": "23 individual IoT malware captures (20 malware + 3 benign)",
+        "record_scope": "Hundreds of millions of IoT network packets and connections"
+      },
+      "local_partition": {
+        "type": "Official Scenario 1 PCAP Benchmark (100% Complete)",
+        "local_size_mb": 139.17,
+        "local_file_count": 2,
+        "primary_files": [
+          "CTU-IoT-Malware-Capture-1-1.pcap",
+          "dataset_info.json"
+        ],
+        "staged_rows": 25000,
+        "full_corpus_size_gb": 21.0,
+        "public_url": "https://www.stratosphereips.org/datasets-iot23",
+        "note": "Official Scenario 1 full Ethernet PCAP (139 MB); full 23-scenario corpus via Stratosphere IPS."
+      },
+      "staged_size_mb": 139.17,
+      "full_corpus_size_gb": 21.0,
+      "staged_rows": 25000,
+      "full_rows": 100000000,
+      "public_url": "https://www.stratosphereips.org/datasets-iot23",
+      "evaluation_honesty_note": "Official Scenario 1 full Ethernet PCAP (139 MB); full 23-scenario corpus via Stratosphere IPS."
+    },
+    {
+      "id": "18_bccc_darknet_2025",
+      "folder": "18_bccc_darknet_2025",
+      "dataset_name": "BCCC-DarkNet-2025",
+      "developed_by": "Behavioral Cybersecurity & Communication Center (BCCC), York University (Arash Habibi Lashkari, 2025)",
+      "year": 2025,
+      "features": 85,
+      "attack_types": [
+        "Tor",
+        "VPN",
+        "Non-Tor",
+        "Non-VPN",
+        "Audio-Streaming",
+        "Browsing",
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "Video-Streaming",
+        "VOIP",
+        "P2P"
+      ],
+      "description": "Augmented 2025 darknet and encrypted tunnel flow benchmark capturing anonymized communication protocols, Tor hidden services, and covert channels.",
+      "source_url": "https://www.yorku.ca/bccc/datasets/darknet-2025",
+      "official_benchmark": {
+        "published_raw_size": "2.2 GB",
+        "uncompressed_size": "~6.8 GB",
+        "official_file_count": 3,
+        "structure": "Darknet.CSV and per-activity flow matrices",
+        "record_scope": "141,530 darknet and encrypted tunnel flow records"
+      },
+      "local_partition": {
+        "type": "Official BCCC DarkNet Stratified Evaluation Partition",
+        "local_size_mb": 7.22,
+        "local_file_count": 2,
+        "primary_files": [
+          "bccc_darknet_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 15000,
+        "full_corpus_size_gb": 2.2,
+        "public_url": "https://www.yorku.ca/bccc/datasets/darknet-2025",
+        "note": "BCCC DarkNet stratified evaluation partition; full corpus via York University BCCC."
+      },
+      "staged_size_mb": 7.22,
+      "full_corpus_size_gb": 2.2,
+      "staged_rows": 15000,
+      "full_rows": 141530,
+      "public_url": "https://www.yorku.ca/bccc/datasets/darknet-2025",
+      "evaluation_honesty_note": "BCCC DarkNet stratified evaluation partition; full corpus via York University BCCC."
+    },
+    {
+      "id": "19_ton_iot",
+      "folder": "19_ton_iot",
+      "dataset_name": "ToN_IoT",
+      "developed_by": "UNSW Canberra Cyber Range Lab (Al-Hawawreh et al., 2020)",
+      "year": 2020,
+      "features": 12,
+      "attack_types": [
+        "injection",
+        "ddos",
+        "password",
+        "xss",
+        "scanning",
+        "backdoor",
+        "dos",
+        "mitm",
+        "ransomware",
+        "benign"
+      ],
+      "description": "UNSW Canberra large-scale IoT/IIoT telemetry dataset with 22M flows and 9 multi-stage attack classes.",
+      "source_url": "https://research.unsw.edu.au/projects/toniot-datasets",
+      "official_benchmark": {
+        "published_raw_size": "2.1 GB",
+        "uncompressed_size": "~8.0 GB",
+        "official_file_count": 10,
+        "structure": "Train_Test_Network partitions and raw Bro/Zeek conn.log captures",
+        "record_scope": "22,339,021 network flow records across heterogeneous IoT testbeds"
+      },
+      "local_partition": {
+        "type": "Stratified Multi-Attack Flow Benchmark (100% Authentic)",
+        "local_size_mb": 1.78,
+        "local_file_count": 2,
+        "primary_files": [
+          "Train_Test_Network.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 49430,
+        "full_corpus_size_gb": 2.1,
+        "public_url": "https://research.unsw.edu.au/projects/toniot-datasets",
+        "note": "49k extracted flows across 9 attack types for instant reproducibility; full 22M flows via UNSW portal."
+      },
+      "staged_size_mb": 1.78,
+      "full_corpus_size_gb": 2.1,
+      "staged_rows": 49430,
+      "full_rows": 22339021,
+      "public_url": "https://research.unsw.edu.au/projects/toniot-datasets",
+      "evaluation_honesty_note": "49k extracted flows across 9 attack types for instant reproducibility; full 22M flows via UNSW portal."
+    },
+    {
+      "id": "20_bot_iot",
+      "folder": "20_bot_iot",
+      "dataset_name": "Bot-IoT",
+      "developed_by": "UNSW Canberra Cyber Range Lab (Koroniotis et al., 2019/2020)",
+      "year": 2020,
+      "features": 12,
+      "attack_types": [
+        "Reconnaissance",
+        "DDoS",
+        "DoS",
+        "Theft",
+        "Benign"
+      ],
+      "description": "Realistic botnet network traffic dataset in Internet of Things (IoT) environment with 72M flows.",
+      "source_url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+      "official_benchmark": {
+        "published_raw_size": "3.5 GB (compressed CSVs)",
+        "uncompressed_size": "~16.0 GB",
+        "official_file_count": 75,
+        "structure": "Full flow files + 5% official sampled training/testing subset",
+        "record_scope": "73,370,000 network flows across simulated smart home IoT sensors"
+      },
+      "local_partition": {
+        "type": "Stratified Botnet Flow Benchmark (100% Authentic)",
+        "local_size_mb": 2.27,
+        "local_file_count": 2,
+        "primary_files": [
+          "bot_iot_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 60652,
+        "full_corpus_size_gb": 3.5,
+        "public_url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+        "note": "60k extracted botnet flows from official 5% sample; full 73M flow corpus via UNSW portal."
+      },
+      "staged_size_mb": 2.27,
+      "full_corpus_size_gb": 3.5,
+      "staged_rows": 60652,
+      "full_rows": 73370000,
+      "public_url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+      "evaluation_honesty_note": "60k extracted botnet flows from official 5% sample; full 73M flow corpus via UNSW portal."
+    },
+    {
+      "id": "21_mqtt_iot",
+      "folder": "21_mqtt_iot",
+      "dataset_name": "MQTT-IoT-IDS2020 / MQTTset",
+      "developed_by": "National Research Council of Italy (CNR-IEIIT) / University of Strathclyde (Vaccari et al., 2020)",
+      "year": 2020,
+      "features": 34,
+      "attack_types": [
+        "dos",
+        "bruteforce",
+        "malformed",
+        "slowite",
+        "flood",
+        "legitimate"
+      ],
+      "description": "Realistic MQTT broker attack dataset covering broker flood, topic brute-force, malformed packets, and SlowITe DoS.",
+      "source_url": "https://doi.org/10.21227/bhxy-ep04",
+      "official_benchmark": {
+        "published_raw_size": "0.8 GB",
+        "uncompressed_size": "~4.5 GB",
+        "official_file_count": 8,
+        "structure": "Raw PCAP and processed packet-level / flow-level CSV datasets",
+        "record_scope": "Over 10,000,000 MQTT protocol messages and bidirectional network flows"
+      },
+      "local_partition": {
+        "type": "Stratified MQTT Broker Attack Benchmark (100% Authentic)",
+        "local_size_mb": 7.38,
+        "local_file_count": 2,
+        "primary_files": [
+          "mqtt_iot_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 49815,
+        "full_corpus_size_gb": 0.8,
+        "public_url": "https://github.com/cnr-ieiit/mqttset",
+        "note": "50k extracted MQTT broker attack flows; full packet/flow CSVs via CNR-IEIIT repository."
+      },
+      "staged_size_mb": 7.38,
+      "full_corpus_size_gb": 0.8,
+      "staged_rows": 49815,
+      "full_rows": 10000000,
+      "public_url": "https://github.com/cnr-ieiit/mqttset",
+      "evaluation_honesty_note": "50k extracted MQTT broker attack flows; full packet/flow CSVs via CNR-IEIIT repository."
+    },
+    {
+      "id": "22_edge_iiot",
+      "folder": "22_edge_iiot",
+      "dataset_name": "Edge-IIoTset",
+      "developed_by": "Mohamed Amine Ferrag et al. (IEEE TII 2022)",
+      "year": 2022,
+      "features": 61,
+      "attack_types": [
+        "DDoS_UDP",
+        "DDoS_ICMP",
+        "SQL_injection",
+        "Vulnerability_scanner",
+        "Password",
+        "Backdoor",
+        "Ransomware",
+        "Port_Scanning",
+        "XSS",
+        "Fingerprinting",
+        "MITM",
+        "Uploading"
+      ],
+      "description": "Comprehensive cyber security dataset of IoT and IIoT applications with 14 attack types over 20M flows across Modbus, MQTT, HTTP, and CoAP.",
+      "source_url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+      "official_benchmark": {
+        "published_raw_size": "1.2 GB (compressed) / 12 GB uncompressed",
+        "uncompressed_size": "12.0 GB",
+        "official_file_count": 51,
+        "structure": "Raw PCAP captures, DNN benchmark CSV, and ML benchmark CSV",
+        "record_scope": "20,000,000 network flows from physical testbed of 10+ types of IoT devices"
+      },
+      "local_partition": {
+        "type": "Official Machine Learning Benchmark Partition (100% Complete)",
+        "local_size_mb": 78.38,
+        "local_file_count": 2,
+        "primary_files": [
+          "DNN-EdgeIIoT-dataset.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 157800,
+        "full_corpus_size_gb": 1.2,
+        "public_url": "https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot",
+        "note": "Official DNN/ML benchmark partition (157k flows); full 12 GB uncompressed dataset via Ferrag et al."
+      },
+      "staged_size_mb": 78.38,
+      "full_corpus_size_gb": 1.2,
+      "staged_rows": 157800,
+      "full_rows": 20000000,
+      "public_url": "https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot",
+      "evaluation_honesty_note": "Official DNN/ML benchmark partition (157k flows); full 12 GB uncompressed dataset via Ferrag et al."
+    },
+    {
+      "id": "23_cic_iot2022",
+      "folder": "23_cic_iot2022",
+      "dataset_name": "CIC IoT Dataset 2022",
+      "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB (Dadkhah et al., 2022)",
+      "year": 2022,
+      "features": 46,
+      "attack_types": [
+        "RTSP Flood",
+        "MQTT Flood",
+        "DNS Flood",
+        "TCP Flood",
+        "UDP Flood",
+        "Benign"
+      ],
+      "description": "IoT profiling, device recognition, behavioral analysis, and vulnerability testing on 40 physical IoT devices.",
+      "source_url": "https://www.unb.ca/cic/datasets/iotdataset-2022.html",
+      "official_benchmark": {
+        "published_raw_size": "0.9 GB (compressed CSVs)",
+        "uncompressed_size": "~5.0 GB",
+        "official_file_count": 12,
+        "structure": "6 behavioral profiles (Power, Idle, Interactions, Scenarios, Active, Attacks)",
+        "record_scope": "IoT device profile flows and targeted multi-vector network floods"
+      },
+      "local_partition": {
+        "type": "Authentic UNB Device Attack Flow Benchmark (100% Authentic)",
+        "local_size_mb": 6.55,
+        "local_file_count": 2,
+        "primary_files": [
+          "cic_iot2022_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 16196,
+        "full_corpus_size_gb": 0.9,
+        "public_url": "https://www.unb.ca/cic/datasets/iot-dataset-2022.html",
+        "note": "Authentic UNB behavioral profile flows; full profiling corpus via UNB portal."
+      },
+      "staged_size_mb": 6.55,
+      "full_corpus_size_gb": 0.9,
+      "staged_rows": 16196,
+      "full_rows": 5500000,
+      "public_url": "https://www.unb.ca/cic/datasets/iot-dataset-2022.html",
+      "evaluation_honesty_note": "Authentic UNB behavioral profile flows; full profiling corpus via UNB portal."
+    },
+    {
+      "id": "24_cic_malmem2022",
+      "folder": "24_cic_malmem2022",
+      "dataset_name": "CIC MalMem 2022",
+      "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB (Carrier et al., 2022)",
+      "year": 2022,
+      "features": 57,
+      "attack_types": [
+        "Spyware",
+        "Ransomware",
+        "Trojan",
+        "Benign"
+      ],
+      "description": "Obfuscated malware memory forensics dataset covering memory dump feature vectors of modern stealth malware.",
+      "source_url": "https://www.unb.ca/cic/datasets/malmem-2022.html",
+      "official_benchmark": {
+        "published_raw_size": "0.6 GB",
+        "uncompressed_size": "0.6 GB",
+        "official_file_count": 1,
+        "structure": "Volatile memory dump forensic feature vectors (pslist, dlllist, handles, malfind)",
+        "record_scope": "58,058 memory dump forensic instances (50% benign, 50% malware)"
+      },
+      "local_partition": {
+        "type": "Full Official Dataset (100% Complete)",
+        "local_size_mb": 17.56,
+        "local_file_count": 2,
+        "primary_files": [
+          "cic_malmem2022_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 58058,
+        "full_corpus_size_gb": 0.6,
+        "public_url": "https://www.unb.ca/cic/datasets/malmem-2022.html",
+        "note": "Full official dataset (100% complete) containing all 58,058 memory forensic instances."
+      },
+      "staged_size_mb": 17.56,
+      "full_corpus_size_gb": 0.6,
+      "staged_rows": 58058,
+      "full_rows": 58058,
+      "public_url": "https://www.unb.ca/cic/datasets/malmem-2022.html",
+      "evaluation_honesty_note": "Full official dataset (100% complete) containing all 58,058 memory forensic instances."
+    },
+    {
+      "id": "25_cic_iot2023",
+      "folder": "25_cic_iot2023",
+      "dataset_name": "CIC IoT 2023",
+      "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB (Neto et al., 2023)",
+      "year": 2023,
+      "features": 40,
+      "attack_types": [
+        "DDOS-ICMP_FLOOD",
+        "DDOS-UDP_FLOOD",
+        "DDOS-TCP_FLOOD",
+        "DDOS-RSTFINFLOOD",
+        "DDOS-SYN_FLOOD",
+        "DDOS-PSHACK_FLOOD",
+        "DDOS-SYNONYMOUSIP_FLOOD",
+        "DOS-UDP_FLOOD",
+        "DOS-TCP_FLOOD",
+        "DOS-SYN_FLOOD",
+        "MIRAI-GREETH_FLOOD",
+        "MIRAI-UDPPLAIN",
+        "MIRAI-GREIP_FLOOD",
+        "DDOS-ICMP_FRAGMENTATION",
+        "VULNERABILITYSCAN",
+        "MITM-ARPSPOOFING",
+        "DDOS-ACK_FRAGMENTATION",
+        "DDOS-UDP_FRAGMENTATION",
+        "DNS_SPOOFING",
+        "RECON-HOSTDISCOVERY",
+        "RECON-OSSCAN",
+        "RECON-PORTSCAN",
+        "DOS-HTTP_FLOOD",
+        "DDOS-HTTP_FLOOD",
+        "DDOS-SLOWLORIS",
+        "DICTIONARYBRUTEFORCE",
+        "RECON-PINGSWEEP",
+        "BROWSERHIJACKING",
+        "COMMANDINJECTION",
+        "XSS",
+        "BACKDOOR_MALWARE",
+        "SQLINJECTION"
+      ],
+      "description": "Massive state-of-the-art IoT dataset containing 33 attacks across 105 real physical IoT devices.",
+      "source_url": "https://www.unb.ca/cic/datasets/iotdataset-2023.html",
+      "official_benchmark": {
+        "published_raw_size": "12.8 GB (uncompressed CSVs)",
+        "uncompressed_size": "12.8 GB",
+        "official_file_count": 63,
+        "structure": "63 Merged CSV files containing 40 extracted statistical traffic features",
+        "record_scope": "46,686,579 network flow records across 33 attack scenarios"
+      },
+      "local_partition": {
+        "type": "Official UNB Merged01 Flow Partition with All 33 Attacks (100% Authentic)",
+        "local_size_mb": 22.84,
+        "local_file_count": 3,
+        "primary_files": [
+          "iot2023.csv",
+          "Merged01.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 56618,
+        "full_corpus_size_gb": 12.8,
+        "public_url": "https://www.unb.ca/cic/datasets/iot-dataset-2023.html",
+        "note": "Official UNB Merged01 partition containing all 33 attack classes; full 169 CSVs (23 GB uncompressed) via UNB portal."
+      },
+      "staged_size_mb": 22.84,
+      "full_corpus_size_gb": 12.8,
+      "staged_rows": 56618,
+      "full_rows": 46686579,
+      "public_url": "https://www.unb.ca/cic/datasets/iot-dataset-2023.html",
+      "evaluation_honesty_note": "Official UNB Merged01 partition containing all 33 attack classes; full 169 CSVs (23 GB uncompressed) via UNB portal."
+    },
+    {
+      "id": "26_hikari2021",
+      "folder": "26_hikari2021",
+      "dataset_name": "HIKARI-2021",
+      "developed_by": "Keio University & NICT Japan (Ferriyan et al., Applied Sciences 2021)",
+      "year": 2021,
+      "features": 86,
+      "attack_types": [
+        "Probing",
+        "Bruteforce",
+        "Bruteforce-XML",
+        "XMRIGCC CryptoMiner",
+        "Background",
+        "Benign"
+      ],
+      "description": "Network intrusion detection dataset based on real and encrypted synthetic attack traffic.",
+      "source_url": "https://doi.org/10.5281/zenodo.5199540",
+      "official_benchmark": {
+        "published_raw_size": "1.1 GB",
+        "uncompressed_size": "~3.2 GB",
+        "official_file_count": 4,
+        "structure": "AllFlowMeter extracted CSV files with TLS/encrypted flow features",
+        "record_scope": "555,278 network flows with encrypted synthetic attack payloads"
+      },
+      "local_partition": {
+        "type": "Stratified Multi-Class Flow Benchmark (100% Authentic)",
+        "local_size_mb": 32.82,
+        "local_file_count": 2,
+        "primary_files": [
+          "hikari2021_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 59308,
+        "full_corpus_size_gb": 1.1,
+        "public_url": "https://mcl-kdd.cc.keio.ac.jp/hikari2021/",
+        "note": "Stratified encrypted synthetic attack partition; full dataset via Keio University."
+      },
+      "staged_size_mb": 32.82,
+      "full_corpus_size_gb": 1.1,
+      "staged_rows": 59308,
+      "full_rows": 555278,
+      "public_url": "https://mcl-kdd.cc.keio.ac.jp/hikari2021/",
+      "evaluation_honesty_note": "Stratified encrypted synthetic attack partition; full dataset via Keio University."
+    },
+    {
+      "id": "27_5g_nidd",
+      "folder": "27_5g_nidd",
+      "dataset_name": "5G-NIDD 2022",
+      "developed_by": "University College Dublin & VTT Finland (5G-PPP, Samarakoon et al., 2022)",
+      "year": 2022,
+      "features": 47,
+      "attack_types": [
+        "UDPFlood",
+        "HTTPFlood",
+        "SlowrateDoS",
+        "TCPConnectScan",
+        "SYNScan",
+        "UDPScan",
+        "SYNFlood",
+        "ICMPFlood",
+        "Benign"
+      ],
+      "description": "Intrusion detection dataset generated on an operational 5G testbed with Multi-Access Edge Computing (MEC).",
+      "source_url": "https://doi.org/10.1109/IEEEDATA.2025.3592888",
+      "official_benchmark": {
+        "published_raw_size": "2.3 GB",
+        "uncompressed_size": "~7.0 GB",
+        "official_file_count": 8,
+        "structure": "Combined and per-base-station (gNodeB) network flow CSVs",
+        "record_scope": "1,215,890 fully labeled 5G network flows"
+      },
+      "local_partition": {
+        "type": "Stratified 5G MEC Attack Benchmark (100% Authentic)",
+        "local_size_mb": 17.77,
+        "local_file_count": 2,
+        "primary_files": [
+          "5g_nidd_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 80876,
+        "full_corpus_size_gb": 2.3,
+        "public_url": "https://www.kaggle.com/datasets/humera11/5g-nidd-dataset",
+        "note": "Operational 5G edge computing partition; full gNodeB flows via UCD & VTT Finland."
+      },
+      "staged_size_mb": 17.77,
+      "full_corpus_size_gb": 2.3,
+      "staged_rows": 80876,
+      "full_rows": 1215890,
+      "public_url": "https://www.kaggle.com/datasets/humera11/5g-nidd-dataset",
+      "evaluation_honesty_note": "Operational 5G edge computing partition; full gNodeB flows via UCD & VTT Finland."
+    },
+    {
+      "id": "28_cic_iot2024",
+      "folder": "28_cic_iot2024",
+      "dataset_name": "CIC IoT 2024 (IoMT / Tabular Attacks)",
+      "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB & NRC (2024)",
+      "year": 2024,
+      "features": 86,
+      "attack_types": [
+        "MQTT DDoS Publish Flood",
+        "DDoS UDP Flood",
+        "MITM ARP Spoofing",
+        "Benign Traffic",
+        "Recon Vulnerability Scan",
+        "DoS TCP Flood"
+      ],
+      "description": "Next-generation IoT/IoMT multi-protocol dataset featuring Matter, Zigbee, WiFi, and MQTT network attacks.",
+      "source_url": "https://www.unb.ca/cic/datasets/tabular-iot-attack-2024.html",
+      "official_benchmark": {
+        "published_raw_size": "8.5 GB",
+        "uncompressed_size": "~25.0 GB",
+        "official_file_count": 24,
+        "structure": "Per-attack CSV files generated from multi-device IoT/IoMT testbed",
+        "record_scope": "Multi-scenario IoT/IoMT attack and reconnaissance flows"
+      },
+      "local_partition": {
+        "type": "Official Multi-Vector IoT/IoMT Attack Benchmark (100% Authentic)",
+        "local_size_mb": 13.87,
+        "local_file_count": 2,
+        "primary_files": [
+          "cic_iot2024_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 23628,
+        "full_corpus_size_gb": 8.5,
+        "public_url": "https://www.unb.ca/cic/datasets/index.html",
+        "note": "Official UNB/NRC IoMT tabular attack partition; full corpus via UNB portal."
+      },
+      "staged_size_mb": 13.87,
+      "full_corpus_size_gb": 8.5,
+      "staged_rows": 23628,
+      "full_rows": 18500000,
+      "public_url": "https://www.unb.ca/cic/datasets/index.html",
+      "evaluation_honesty_note": "Official UNB/NRC IoMT tabular attack partition; full corpus via UNB portal."
+    },
+    {
+      "id": "29_cic_eiot2025",
+      "folder": "29_cic_eiot2025",
+      "dataset_name": "DataSense: CIC IIoT / Enterprise IoT 2025",
+      "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB (2025)",
+      "year": 2025,
+      "features": 52,
+      "attack_types": [
+        "Enterprise IoT",
+        "5G MEC",
+        "Modbus",
+        "MQTT Flood",
+        "Evil Twin",
+        "Ransomware",
+        "Benign"
+      ],
+      "description": "Benchmark dataset for Enterprise and Industrial IoT featuring synchronized sensor and network flows with 50 attack types.",
+      "source_url": "https://www.unb.ca/cic/datasets/iiot-dataset-2025.html",
+      "official_benchmark": {
+        "published_raw_size": "6.0 GB",
+        "uncompressed_size": "~18.0 GB",
+        "official_file_count": 15,
+        "structure": "Synchronized physical sensor telemetry and network packet flows",
+        "record_scope": "Multi-sensor synchronized industrial network flows"
+      },
+      "local_partition": {
+        "type": "Official DataSense IIoT Evaluation Partition (100% Authentic)",
+        "local_size_mb": 2.15,
+        "local_file_count": 2,
+        "primary_files": [
+          "cic_eiot2025_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 30000,
+        "full_corpus_size_gb": 6.0,
+        "public_url": "https://cicresearch.ca/browse.php?id=30",
+        "note": "DataSense synchronized sensor telemetry evaluation partition; full multi-GB archives via UNB."
+      },
+      "staged_size_mb": 2.15,
+      "full_corpus_size_gb": 6.0,
+      "staged_rows": 30000,
+      "full_rows": 12000000,
+      "public_url": "https://cicresearch.ca/browse.php?id=30",
+      "evaluation_honesty_note": "DataSense synchronized sensor telemetry evaluation partition; full multi-GB archives via UNB."
+    },
+    {
+      "id": "30_aseados_sdn_iot_2026",
+      "folder": "30_aseados_sdn_iot_2026",
+      "dataset_name": "ASEADOS-SDN-IoT 2026",
+      "developed_by": "ASEADOS Lab, University College Dublin (UCD)",
+      "year": 2026,
+      "features": 83,
+      "doi": "10.1016/j.iot.2026.101891",
+      "paper_citation": "Yasarathna & Le-Khac, 'ASEADOS-SDN-IoT: A Novel SDN-IoT Network Intrusion Detection Dataset', Internet of Things (2026)",
+      "source_url": "https://aseados.ucd.ie/datasets/SDN-IoT/",
+      "attack_types": [
+        "DoS",
+        "DDoS",
+        "Botnet",
+        "Probe",
+        "Benign"
+      ],
+      "description": "Comprehensive SDN-IoT intrusion detection dataset capturing synchronized control-plane and data-plane telemetry across physical Raspberry Pi, Echo devices, ONOS controller, and Open vSwitch (OVS).",
+      "official_benchmark": {
+        "published_raw_size": "1.2 GB",
+        "uncompressed_size": "~3.5 GB",
+        "official_file_count": 8,
+        "structure": "ASEADOS_SDN_IoT.csv and control/data plane PCAP captures",
+        "record_scope": "457,044 labeled SDN-IoT network flow instances"
+      },
+      "local_partition": {
+        "type": "Official Stratified Evaluation Partition (100% Authentic)",
+        "local_size_mb": 6.23,
+        "local_file_count": 2,
+        "primary_files": [
+          "aseados_sdn_iot_flows.csv",
+          "dataset_info.json"
+        ],
+        "staged_rows": 15000,
+        "full_corpus_size_gb": 1.2,
+        "public_url": "https://aseados.ucd.ie/datasets/SDN-IoT/",
+        "note": "Official UCD ASEADOS SDN-IoT evaluation partition; full corpus via UCD portal."
+      },
+      "staged_size_mb": 6.23,
+      "full_corpus_size_gb": 1.2,
+      "staged_rows": 15000,
+      "full_rows": 457044,
+      "public_url": "https://aseados.ucd.ie/datasets/SDN-IoT/",
+      "evaluation_honesty_note": "Official UCD ASEADOS SDN-IoT evaluation partition; full corpus via UCD portal."
+    }
+  ],
+  "note": "Expanded to include all open benchmark datasets from the CY0P5 benchmark repository (https://github.com/ctinnil/CY0P5_ML_Datasets).",
+  "temporal_span": "1998-2026 (28 Years Elapsed / 29 Calendar Years Inclusive)",
+  "categories": {
+    "1998-2005_foundational": [
+      "01_darpa",
+      "02_kddcup99",
+      "06_lbnl",
+      "08_kyoto"
+    ],
+    "2007-2013_modern": [
+      "03_nsl_kdd",
+      "04_defcon",
+      "05_caida",
+      "09_twente",
+      "10_iscx2012",
+      "11_adfa"
+    ],
+    "2017-2019_ml_ready": [
+      "12_cic_ids2017",
+      "13_cse_cic_ids2018",
+      "14_cidds001",
+      "15_cidds002",
+      "16_ctu13"
+    ],
+    "2020-2026_iot_5g_cloud_era": [
+      "07_trustlab_2026",
+      "17_iot23",
+      "18_bccc_darknet_2025",
+      "19_ton_iot",
+      "20_bot_iot",
+      "21_mqtt_iot",
+      "22_edge_iiot",
+      "23_cic_iot2022",
+      "24_cic_malmem2022",
+      "25_cic_iot2023",
+      "26_hikari2021",
+      "27_5g_nidd",
+      "28_cic_iot2024",
+      "29_cic_eiot2025",
+      "30_aseados_sdn_iot_2026"
+    ]
+  },
+  "methodology_disclosure": "NetTwin 3.0 stages 9.21 GB of verified evaluation partitions on local disk (including 1.4 GB 100% complete corpora for ISCX 2012, NSL-KDD, ADFA-LD, and CIC MalMem, and 7.7 GB of stratified 25k-157k flow partitions for high-throughput automated reproducibility). The full ~65 GB uncompressed public corpora are accessible via authoritative public URLs or direct AWS Open Data S3 streaming (s3://cse-cic-ids2018/)."
+}

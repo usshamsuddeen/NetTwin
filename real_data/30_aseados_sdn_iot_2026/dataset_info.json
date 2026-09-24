@@ -1,0 +1,29 @@
+{
+  "dataset_name": "ASEADOS-SDN-IoT 2026",
+  "developed_by": "ASEADOS Lab, University College Dublin (UCD)",
+  "year": 2026,
+  "doi": "10.1016/j.iot.2026.101891",
+  "paper_citation": "Yasarathna & Le-Khac, 'ASEADOS-SDN-IoT: A Novel SDN-IoT Network Intrusion Detection Dataset', Internet of Things (2026)",
+  "source_url": "https://aseados.ucd.ie/datasets/SDN-IoT/",
+  "features": 83,
+  "attack_types": [
+    "DoS",
+    "DDoS",
+    "Botnet",
+    "Probe",
+    "Benign"
+  ],
+  "description": "Comprehensive SDN-IoT intrusion detection dataset capturing synchronized control-plane and data-plane telemetry across physical Raspberry Pi, Echo devices, ONOS controller, and Open vSwitch (OVS).",
+  "official_benchmark": {
+    "published_raw_size": "1.2 GB (231 MB compressed CSV + full PCAPs)",
+    "record_scope": "457,044 labeled SDN-IoT network flow instances"
+  },
+  "local_partition": {
+    "type": "Official Stratified Evaluation Partition (100% Authentic)",
+    "primary_files": [
+      "aseados_sdn_iot_flows.csv"
+    ],
+    "staged_rows": 15000,
+    "full_corpus_size_gb": 1.2
+  }
+}

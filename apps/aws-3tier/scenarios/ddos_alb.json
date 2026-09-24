@@ -1,0 +1,31 @@
+{
+  "id": "ddos_alb",
+  "name": "DDoS Volumetric Surge on ALB",
+  "description": "5x Volumetric Layer-7 HTTP Flood targeting AWS Application Load Balancer, validating WAF mitigation and ALB target group resilience.",
+  "duration_ticks": 35,
+  "baseline": "live",
+  "injections": [
+    {
+      "kind": "surge",
+      "params": { "multiplier": 5.0 },
+      "at_tick": 2
+    },
+    {
+      "kind": "attack",
+      "params": { "type": "ddos", "target_id": "alb", "duration_s": 30.0 },
+      "at_tick": 3
+    }
+  ],
+  "expectations": [
+    {
+      "metric": "health_drop_max",
+      "threshold": 45.0,
+      "operator": "lt"
+    },
+    {
+      "metric": "health_min",
+      "threshold": 30.0,
+      "operator": "gt"
+    }
+  ]
+}

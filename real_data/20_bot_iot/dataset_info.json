@@ -1,0 +1,25 @@
+{
+  "dataset_name": "Bot-IoT",
+  "developed_by": "UNSW Canberra Cyber Range Lab",
+  "year": 2020,
+  "features": 12,
+  "attack_types": [
+    "Reconnaissance",
+    "DDoS",
+    "DoS",
+    "Theft",
+    "Benign"
+  ],
+  "description": "Realistic botnet network traffic dataset in Internet of Things (IoT) environment with 72M flows.",
+  "source_url": "https://research.unsw.edu.au/projects/bot-iot-dataset",
+  "official_benchmark": {
+    "published_raw_size": "3.5 GB (compressed CSVs)",
+    "record_scope": "72,000,000 total flows (5% labeled attack subset)"
+  },
+  "local_partition": {
+    "type": "Stratified Botnet Flow Benchmark",
+    "primary_files": [
+      "bot_iot_flows.csv"
+    ]
+  }
+}

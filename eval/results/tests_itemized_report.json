@@ -1,0 +1,927 @@
+{
+  "summary": {
+    "total_tests": 143,
+    "passed": 143,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": "100.0%",
+    "execution_duration_seconds": 80.02,
+    "python_version": "3.13.15",
+    "pytest_version": "9.1.1",
+    "modules_count": 28,
+    "timestamp": "2026-09-22 10:34:22 UTC"
+  },
+  "modules": {
+    "tests/test_aci_and_weights.py": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_aci_and_weights.py::test_aci_alpha_decreases_after_misses",
+          "test_function": "test_aci_alpha_decreases_after_misses",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aci_and_weights.py::test_aci_alpha_increases_after_coverage",
+          "test_function": "test_aci_alpha_increases_after_coverage",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aci_and_weights.py::test_aci_disabled_keeps_alpha_fixed",
+          "test_function": "test_aci_disabled_keeps_alpha_fixed",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aci_and_weights.py::test_aci_coverage_path_drives_alpha",
+          "test_function": "test_aci_coverage_path_drives_alpha",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aci_and_weights.py::test_aci_gamma_frozen_during_anomaly",
+          "test_function": "test_aci_gamma_frozen_during_anomaly",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aci_and_weights.py::test_divergence_weights_actually_change_divergence",
+          "test_function": "test_divergence_weights_actually_change_divergence",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aci_and_weights.py::test_sync_enabled_override_via_load_settings",
+          "test_function": "test_sync_enabled_override_via_load_settings",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aci_and_weights.py::test_config_unknown_keys_warn",
+          "test_function": "test_config_unknown_keys_warn",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_actuation.py": {
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_actuation.py::test_safety_blocks_disabled",
+          "test_function": "test_safety_blocks_disabled",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_safety_blocks_isolate_core",
+          "test_function": "test_safety_blocks_isolate_core",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_safety_allows_isolate_workstation",
+          "test_function": "test_safety_allows_isolate_workstation",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_safety_blocks_reroute",
+          "test_function": "test_safety_blocks_reroute",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_translator_isolate_creates_sg_and_modifies_instance",
+          "test_function": "test_translator_isolate_creates_sg_and_modifies_instance",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_translator_block_flow_creates_nacl_entry",
+          "test_function": "test_translator_block_flow_creates_nacl_entry",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_actuator_execute_dry_run_does_not_call_aws",
+          "test_function": "test_actuator_execute_dry_run_does_not_call_aws",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_actuator_rolls_back_on_failure",
+          "test_function": "test_actuator_rolls_back_on_failure",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_actuator_rate_limit_requires_mapped_entity",
+          "test_function": "test_actuator_rate_limit_requires_mapped_entity",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_actuator_lifecycle_state_machine",
+          "test_function": "test_actuator_lifecycle_state_machine",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_rate_limit_uses_tc_by_default",
+          "test_function": "test_rate_limit_uses_tc_by_default",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_rate_limit_waf_backend_requires_web_acl_id",
+          "test_function": "test_rate_limit_waf_backend_requires_web_acl_id",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_rate_limit_waf_backend_produces_rate_rule",
+          "test_function": "test_rate_limit_waf_backend_produces_rate_rule",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_actuation.py::test_block_flow_uses_nacl_deny_not_rate_limit",
+          "test_function": "test_block_flow_uses_nacl_deny_not_rate_limit",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_api.py": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_api.py::test_health_and_topology",
+          "test_function": "test_health_and_topology",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_api.py::test_attack_lifecycle_and_alerts",
+          "test_function": "test_attack_lifecycle_and_alerts",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_api.py::test_kpis_metrics_forecast_config_reset",
+          "test_function": "test_kpis_metrics_forecast_config_reset",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_attack_kb_update.py": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_attack_kb_update.py::test_parse_extracts_active_techniques",
+          "test_function": "test_parse_extracts_active_techniques",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_attack_kb_update.py::test_build_text_includes_description_and_tactics",
+          "test_function": "test_build_text_includes_description_and_tactics",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_aws_3tier_scenarios.py": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_aws_3tier_scenarios.py::test_scenario_files_exist_and_validate_schema",
+          "test_function": "test_scenario_files_exist_and_validate_schema",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_3tier_scenarios.py::test_run_aws_scenarios_on_engine",
+          "test_function": "test_run_aws_scenarios_on_engine",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_3tier_scenarios.py::test_scenario_auto_discovery_in_api",
+          "test_function": "test_scenario_auto_discovery_in_api",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_aws_3tier_topology.py": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_aws_3tier_topology.py::test_aws_3tier_topology_file_structure",
+          "test_function": "test_aws_3tier_topology_file_structure",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_3tier_topology.py::test_simulation_engine_initializes_with_aws_3tier",
+          "test_function": "test_simulation_engine_initializes_with_aws_3tier",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_3tier_topology.py::test_simulation_engine_switch_topology",
+          "test_function": "test_simulation_engine_switch_topology",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_3tier_topology.py::test_topology_api_list_and_switch",
+          "test_function": "test_topology_api_list_and_switch",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_aws_streamer.py": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_aws_streamer.py::test_streamer_normalizes_records_in_memory",
+          "test_function": "test_streamer_normalizes_records_in_memory",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_streamer.py::test_streamer_full_playback_mocked_s3",
+          "test_function": "test_streamer_full_playback_mocked_s3",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_streamer.py::test_streamer_attack_only_filter",
+          "test_function": "test_streamer_attack_only_filter",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_streamer.py::test_streamer_list_available_cloud_datasets",
+          "test_function": "test_streamer_list_available_cloud_datasets",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_aws_streamer.py::test_cloud_traffic_api_endpoints",
+          "test_function": "test_cloud_traffic_api_endpoints",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_causal.py": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_causal.py::test_root_cause_ranks_attack_path_top",
+          "test_function": "test_root_cause_ranks_attack_path_top",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_causal.py::test_granger_baseline_ranks_attack_path",
+          "test_function": "test_granger_baseline_ranks_attack_path",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_causal.py::test_pc_skeleton_baseline_ranks_attack_path",
+          "test_function": "test_pc_skeleton_baseline_ranks_attack_path",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_causal.py::test_notears_baseline_ranks_attack_path",
+          "test_function": "test_notears_baseline_ranks_attack_path",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_detector.py": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_detector.py::test_benign_traffic_stays_quiet",
+          "test_function": "test_benign_traffic_stays_quiet",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_detector.py::test_attack_detected_within_15_ticks[ddos-web1-web1]",
+          "test_function": "test_attack_detected_within_15_ticks[ddos-web1-web1]",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_detector.py::test_attack_detected_within_15_ticks[portscan-None-attacker]",
+          "test_function": "test_attack_detected_within_15_ticks[portscan-None-attacker]",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_detector.py::test_attack_detected_within_15_ticks[exfiltration-db1-db1]",
+          "test_function": "test_attack_detected_within_15_ticks[exfiltration-db1-db1]",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_detector.py::test_attack_detected_within_15_ticks[lateral-None-None]",
+          "test_function": "test_attack_detected_within_15_ticks[lateral-None-None]",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_detector.py::test_attack_detected_within_15_ticks[bruteforce-app1-attacker]",
+          "test_function": "test_attack_detected_within_15_ticks[bruteforce-app1-attacker]",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_detector.py::test_forecaster_tracks_trend",
+          "test_function": "test_forecaster_tracks_trend",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_detector.py::test_isolation_forest_scores_outliers_higher",
+          "test_function": "test_isolation_forest_scores_outliers_higher",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_fork.py": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_fork.py::test_clone_determinism",
+          "test_function": "test_clone_determinism",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_fork.py::test_clone_independence",
+          "test_function": "test_clone_independence",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_fork.py::test_clone_preserves_attacks_and_policies",
+          "test_function": "test_clone_preserves_attacks_and_policies",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_fork.py::test_counterfactual_baseline_matches_live",
+          "test_function": "test_counterfactual_baseline_matches_live",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_ingest_authenticity.py": {
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_ingest_authenticity.py::test_stolen_api_key_cannot_ingest",
+          "test_function": "test_stolen_api_key_cannot_ingest",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_missing_headers_rejected",
+          "test_function": "test_missing_headers_rejected",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_spoofed_hmac_rejected",
+          "test_function": "test_spoofed_hmac_rejected",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_valid_cloudwatch_hmac_accepted",
+          "test_function": "test_valid_cloudwatch_hmac_accepted",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_anti_replay_timestamp_skew_past",
+          "test_function": "test_anti_replay_timestamp_skew_past",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_anti_replay_timestamp_skew_future",
+          "test_function": "test_anti_replay_timestamp_skew_future",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_anti_replay_duplicate_transmission",
+          "test_function": "test_anti_replay_duplicate_transmission",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_on_prem_syslog_mtls_cert_fingerprint",
+          "test_function": "test_on_prem_syslog_mtls_cert_fingerprint",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_internal_token_bypass",
+          "test_function": "test_internal_token_bypass",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_source_ip_whitelist_enforcement",
+          "test_function": "test_source_ip_whitelist_enforcement",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_ingest_authenticity.py::test_ingestion_server_rfc5425_unit",
+          "test_function": "test_ingestion_server_rfc5425_unit",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_integrations.py": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_integrations.py::test_siem_cef_format",
+          "test_function": "test_siem_cef_format",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_integrations.py::test_siem_leef_format",
+          "test_function": "test_siem_leef_format",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_integrations.py::test_webhook_signs_payload",
+          "test_function": "test_webhook_signs_payload",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_integrations.py::test_prometheus_output_contains_metrics",
+          "test_function": "test_prometheus_output_contains_metrics",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_integrations.py::test_prom_endpoint_returns_metrics",
+          "test_function": "test_prom_endpoint_returns_metrics",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_integrations.py::test_siem_export_endpoint",
+          "test_function": "test_siem_export_endpoint",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_kb.py": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_kb.py::test_retrieval_returns_relevant_technique",
+          "test_function": "test_retrieval_returns_relevant_technique",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_kb.py::test_retrieval_empty_query_safe",
+          "test_function": "test_retrieval_empty_query_safe",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_llm.py": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_llm.py::test_ollama_provider_available_false_when_server_down",
+          "test_function": "test_ollama_provider_available_false_when_server_down",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_llm.py::test_bedrock_provider_available_requires_model",
+          "test_function": "test_bedrock_provider_available_requires_model",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_llm.py::test_auto_provider_falls_back_when_none_available",
+          "test_function": "test_auto_provider_falls_back_when_none_available",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_llm.py::test_analyst_uses_fallback_when_llm_unreachable",
+          "test_function": "test_analyst_uses_fallback_when_llm_unreachable",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_llm.py::test_analyst_conversation_memory_carries_across_questions",
+          "test_function": "test_analyst_conversation_memory_carries_across_questions",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_llm.py::test_ollama_embedder_shapes_and_normalizes",
+          "test_function": "test_ollama_embedder_shapes_and_normalizes",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_multi_region_infra.py": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_multi_region_infra.py::test_required_terraform_modules_exist",
+          "test_function": "test_required_terraform_modules_exist",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_multi_region_infra.py::test_providers_dynamic_caller_identity_and_no_hardcoded_accounts",
+          "test_function": "test_providers_dynamic_caller_identity_and_no_hardcoded_accounts",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_multi_region_infra.py::test_vpc_east_private_subnetting_and_endpoints",
+          "test_function": "test_vpc_east_private_subnetting_and_endpoints",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_multi_region_infra.py::test_alb_and_waf_security_isolation",
+          "test_function": "test_alb_and_waf_security_isolation",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_multi_region_infra.py::test_ec2_east_instances_and_containers",
+          "test_function": "test_ec2_east_instances_and_containers",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_multi_region_infra.py::test_rds_mysql_free_tier_and_dynamic_s3",
+          "test_function": "test_rds_mysql_free_tier_and_dynamic_s3",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_multi_region_infra.py::test_vpc_west_and_traffic_gen",
+          "test_function": "test_vpc_west_and_traffic_gen",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_org_onboarding.py": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_org_onboarding.py::test_org_endpoints_lifecycle",
+          "test_function": "test_org_endpoints_lifecycle",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_org_onboarding.py::test_org_fidelity_calculation",
+          "test_function": "test_org_fidelity_calculation",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_response.py": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_response.py::test_constraint_refusals",
+          "test_function": "test_constraint_refusals",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_response.py::test_recommend_sandbox_apply_changes_simulator",
+          "test_function": "test_recommend_sandbox_apply_changes_simulator",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_response.py::test_apply_refuses_unsafe_action",
+          "test_function": "test_apply_refuses_unsafe_action",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_response.py::test_bandit_learns_without_nan",
+          "test_function": "test_bandit_learns_without_nan",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_response.py::test_response_agent_bandit_class",
+          "test_function": "test_response_agent_bandit_class",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_risk.py": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_risk.py::test_risk_propagation_and_crown_jewel",
+          "test_function": "test_risk_propagation_and_crown_jewel",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_risk.py::test_seeds_raise_risk",
+          "test_function": "test_seeds_raise_risk",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_scenario.py": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_scenario.py::test_scenario_engine_runs_ddos_and_reports_drop",
+          "test_function": "test_scenario_engine_runs_ddos_and_reports_drop",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_scenario.py::test_scenario_expectation_health_min_lt_fails",
+          "test_function": "test_scenario_expectation_health_min_lt_fails",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_scenario.py::test_scenario_node_failure_affects_entities",
+          "test_function": "test_scenario_node_failure_affects_entities",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_scenario.py::test_scenario_api_create_and_run",
+          "test_function": "test_scenario_api_create_and_run",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_scenario.py::test_studio_static_files_served",
+          "test_function": "test_studio_static_files_served",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_security.py": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_security.py::test_api_key_required_for_data_endpoints",
+          "test_function": "test_api_key_required_for_data_endpoints",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_security.py::test_api_key_required_for_mutations",
+          "test_function": "test_api_key_required_for_mutations",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_security.py::test_rate_limit_blocks_spam",
+          "test_function": "test_rate_limit_blocks_spam",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_security.py::test_cors_headers_when_configured",
+          "test_function": "test_cors_headers_when_configured",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_security.py::test_no_api_key_by_default",
+          "test_function": "test_no_api_key_by_default",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_simulator.py": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_simulator.py::test_topology_connected_no_dupes",
+          "test_function": "test_topology_connected_no_dupes",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_simulator.py::test_engine_step_produces_finite_metrics",
+          "test_function": "test_engine_step_produces_finite_metrics",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_simulator.py::test_ddos_raises_target_throughput",
+          "test_function": "test_ddos_raises_target_throughput",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_storage.py": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_storage.py::test_alert_confidence_round_trip",
+          "test_function": "test_alert_confidence_round_trip",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_storage.py::test_alert_confidence_survives_manager_reload",
+          "test_function": "test_alert_confidence_survives_manager_reload",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_storage.py::test_migrate_adds_confidence_column",
+          "test_function": "test_migrate_adds_confidence_column",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_subspace_conformal.py": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_subspace_conformal.py::test_pca_spe_separates_injected_anomaly",
+          "test_function": "test_pca_spe_separates_injected_anomaly",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_subspace_conformal.py::test_conformal_pvalues_calibrated_on_benign",
+          "test_function": "test_conformal_pvalues_calibrated_on_benign",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_subspace_conformal.py::test_conformal_interval_empirical_coverage",
+          "test_function": "test_conformal_interval_empirical_coverage",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_sync.py": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_sync.py::test_normalize_records",
+          "test_function": "test_normalize_records",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_sync.py::test_shadow_hybrid_staleness_cycle",
+          "test_function": "test_shadow_hybrid_staleness_cycle",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_sync.py::test_divergent_feed_stays_shadow_and_flags_drift",
+          "test_function": "test_divergent_feed_stays_shadow_and_flags_drift",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_syslog.py": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_syslog.py::test_parse_rfc3164_gauge",
+          "test_function": "test_parse_rfc3164_gauge",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_syslog.py::test_parse_rfc5424_interface",
+          "test_function": "test_parse_rfc5424_interface",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_syslog.py::test_parse_flow_from_plain_kv",
+          "test_function": "test_parse_flow_from_plain_kv",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_syslog.py::test_parse_payload_mixed_json_and_syslog",
+          "test_function": "test_parse_payload_mixed_json_and_syslog",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_syslog.py::test_normalizer_accepts_syslog_records",
+          "test_function": "test_normalizer_accepts_syslog_records",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_syslog.py::test_normalizer_accepts_syslog_interface",
+          "test_function": "test_normalizer_accepts_syslog_interface",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_syslog.py::test_percent_values_are_coerced",
+          "test_function": "test_percent_values_are_coerced",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_traffic_mirror.py": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_traffic_mirror.py::test_parse_vxlan_packet_tcp",
+          "test_function": "test_parse_vxlan_packet_tcp",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_traffic_mirror.py::test_parse_vxlan_packet_udp",
+          "test_function": "test_parse_vxlan_packet_udp",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_traffic_mirror.py::test_parse_vxlan_packet_too_short",
+          "test_function": "test_parse_vxlan_packet_too_short",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_traffic_mirror.py::test_vxlan_handler_ingest",
+          "test_function": "test_vxlan_handler_ingest",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_traffic_mirror.py::test_parse_with_dpkt",
+          "test_function": "test_parse_with_dpkt",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_traffic_mirror.py::test_adapter_start_stop",
+          "test_function": "test_adapter_start_stop",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_west_generator.py": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_west_generator.py::test_hmac_signature_generation_and_verification",
+          "test_function": "test_hmac_signature_generation_and_verification",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_west_generator.py::test_stale_timestamp_rejected_by_anti_replay",
+          "test_function": "test_stale_timestamp_rejected_by_anti_replay",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_west_generator.py::test_stream_s3_dataset_records_in_memory",
+          "test_function": "test_stream_s3_dataset_records_in_memory",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_west_generator.py::test_latency_measurement_calculation",
+          "test_function": "test_latency_measurement_calculation",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_west_generator.py::test_dataset_map_contains_all_13_benchmarks",
+          "test_function": "test_dataset_map_contains_all_13_benchmarks",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_west_generator.py::test_run_phase_all_datasets_dry_run",
+          "test_function": "test_run_phase_all_datasets_dry_run",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_west_generator.py::test_p2_detect_eval_all_13_datasets",
+          "test_function": "test_p2_detect_eval_all_13_datasets",
+          "status": "PASSED"
+        }
+      ]
+    },
+    "tests/test_whatif.py": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "id": "tests/test_whatif.py::test_link_failure_report",
+          "test_function": "test_link_failure_report",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_whatif.py::test_node_failure_disconnects_downstream",
+          "test_function": "test_node_failure_disconnects_downstream",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_whatif.py::test_surge_and_attack_scenarios",
+          "test_function": "test_surge_and_attack_scenarios",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_whatif.py::test_unknown_scenario_rejected",
+          "test_function": "test_unknown_scenario_rejected",
+          "status": "PASSED"
+        },
+        {
+          "id": "tests/test_whatif.py::test_baseline_matches_live_rollout",
+          "test_function": "test_baseline_matches_live_rollout",
+          "status": "PASSED"
+        }
+      ]
+    }
+  }
+}

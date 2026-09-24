@@ -1,0 +1,9 @@
+{
+  "warmup_ticks": 100,
+  "mean_coverage_post_warmup": 0.902,
+  "ci_coverage_post_warmup": [
+    0.895,
+    0.908
+  ],
+  "nominal_coverage": 0.9
+}

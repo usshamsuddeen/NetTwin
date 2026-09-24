@@ -1,0 +1,68 @@
+[
+  {
+    "drift_type": "nginx_restart",
+    "fpr_mean": 3.0,
+    "fpr_lo": 3.0,
+    "fpr_hi": 3.0,
+    "fpr_raw": [
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  {
+    "drift_type": "instance_launch",
+    "fpr_mean": 3.0,
+    "fpr_lo": 3.0,
+    "fpr_hi": 3.0,
+    "fpr_raw": [
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  {
+    "drift_type": "nat_reboot",
+    "fpr_mean": 3.0,
+    "fpr_lo": 3.0,
+    "fpr_hi": 3.0,
+    "fpr_raw": [
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  {
+    "drift_type": "config_change",
+    "fpr_mean": 3.0,
+    "fpr_lo": 3.0,
+    "fpr_hi": 3.0,
+    "fpr_raw": [
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  {
+    "drift_type": "scaling_event",
+    "fpr_mean": 3.0,
+    "fpr_lo": 3.0,
+    "fpr_hi": 3.0,
+    "fpr_raw": [
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  {
+    "drift_type": "cert_rotation",
+    "fpr_mean": 3.0,
+    "fpr_lo": 3.0,
+    "fpr_hi": 3.0,
+    "fpr_raw": [
+      3.0,
+      3.0,
+      3.0
+    ]
+  }
+]

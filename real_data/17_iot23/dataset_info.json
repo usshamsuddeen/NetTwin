@@ -1,0 +1,8 @@
+{
+  "dataset_name": "Aposemat IoT-23 Scenario 1 PCAP Capture",
+  "source_url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-1-1/2018-05-09-192.168.100.103.pcap",
+  "filename": "CTU-IoT-Malware-Capture-1-1.pcap",
+  "file_size_bytes": 145928231,
+  "download_timestamp": "2026-09-22T11:49:34Z",
+  "description": "Stratosphere Aposemat IoT-23 malware traffic capture (139.2 MB)"
+}

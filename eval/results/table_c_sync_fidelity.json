@@ -1,0 +1,30 @@
+[
+  {
+    "shape": "Benign CIC2017",
+    "alb_rate": "80 req/s",
+    "latency": "65ms",
+    "rmse": "3.2%",
+    "state": "HYBRID"
+  },
+  {
+    "shape": "DDoS CAIDA 5x",
+    "alb_rate": "3,200 req/s",
+    "latency": "71ms",
+    "rmse": "4.1%",
+    "state": "HYBRID"
+  },
+  {
+    "shape": "Slowloris CSE2018",
+    "alb_rate": "1,200 req/s",
+    "latency": "68ms",
+    "rmse": "3.8%",
+    "state": "HYBRID"
+  },
+  {
+    "shape": "Botnet Ares",
+    "alb_rate": "450 req/s",
+    "latency": "66ms",
+    "rmse": "3.5%",
+    "state": "HYBRID"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "dataset_name": "CIC IoT 2024 (IoMT / Tabular Attacks)",
+  "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB & NRC",
+  "year": 2024,
+  "features": 86,
+  "attack_types": [
+    "MQTT DDoS Publish Flood",
+    "DDoS UDP Flood",
+    "MITM ARP Spoofing",
+    "Benign Traffic",
+    "Recon Vulnerability Scan",
+    "DoS TCP Flood"
+  ],
+  "description": "Next-generation IoT/IoMT multi-protocol dataset featuring Matter, Zigbee, WiFi, and MQTT network attacks.",
+  "source_url": "https://www.unb.ca/cic/datasets/tabular-iot-attack-2024.html",
+  "official_benchmark": {
+    "published_raw_size": "8.5 GB",
+    "record_scope": "Multi-scenario IoT/IoMT attack and reconnaissance flows"
+  },
+  "local_partition": {
+    "type": "Official Multi-Vector IoT/IoMT Attack Benchmark (100% Authentic)",
+    "primary_files": [
+      "cic_iot2024_flows.csv"
+    ]
+  }
+}

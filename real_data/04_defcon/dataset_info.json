@@ -1,0 +1,17 @@
+{
+  "dataset_name": "DEFCON",
+  "developed_by": "Shmoo Group",
+  "features": "Flag traces",
+  "attack_types": [
+    "Telnet Protocol Attacks",
+    "Buffer Overflow",
+    "Portscan",
+    "Flag Capture"
+  ],
+  "description": "Features are captured through the 'Capture the Flag' competition.",
+  "source_url": "https://media.defcon.org/ (DEF CON CTF Archives & Shmoo Traces)",
+  "files": [
+    "DEF_CON_17_CTF_Binaries.rar",
+    "defcon_ctf_telnet_attacks.csv"
+  ]
+}

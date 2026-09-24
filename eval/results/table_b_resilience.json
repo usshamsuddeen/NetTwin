@@ -1,0 +1,42 @@
+[
+  {
+    "family": "Volumetric DDoS",
+    "datasets": "CAIDA, CSE2018 LOIC, KDD",
+    "health_drop": "82.2 -> 76.3 [5.9]",
+    "rri": 0.928,
+    "recovery": "8 ticks",
+    "action": "rate_limit"
+  },
+  {
+    "family": "Infiltration",
+    "datasets": "ISCX, CSE2018 Ares",
+    "health_drop": "82.2 -> 78.4 [3.7]",
+    "rri": 0.954,
+    "recovery": "11 ticks",
+    "action": "isolate_node"
+  },
+  {
+    "family": "Web/SQLi",
+    "datasets": "CSE2018 Web, SQLi",
+    "health_drop": "81.4 -> 77.0 [4.4]",
+    "rri": 0.946,
+    "recovery": "9 ticks",
+    "action": "ACL block"
+  },
+  {
+    "family": "Probe/Scan",
+    "datasets": "DARPA, LBNL, Kyoto",
+    "health_drop": "81.4 -> 79.5 [1.9]",
+    "rri": 0.976,
+    "recovery": "4 ticks",
+    "action": "reroute"
+  },
+  {
+    "family": "Zero-day Syscall",
+    "datasets": "ADFA-LD, CDX",
+    "health_drop": "81.4 -> 81.7 [-0.2]",
+    "rri": 1.0,
+    "recovery": "2 ticks",
+    "action": "retrain"
+  }
+]

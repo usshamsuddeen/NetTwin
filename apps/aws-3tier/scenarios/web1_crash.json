@@ -1,0 +1,26 @@
+{
+  "id": "web1_crash",
+  "name": "Web Server 1 Instance Crash (Auto-Scale)",
+  "description": "Sudden failure of web1 in Availability Zone 1a. Simulates EC2 instance impairment and evaluates traffic failover to web2 in AZ-1b.",
+  "duration_ticks": 30,
+  "baseline": "live",
+  "injections": [
+    {
+      "kind": "node_failure",
+      "params": { "node_id": "web1" },
+      "at_tick": 2
+    }
+  ],
+  "expectations": [
+    {
+      "metric": "health_drop_max",
+      "threshold": 35.0,
+      "operator": "lt"
+    },
+    {
+      "metric": "health_min",
+      "threshold": 50.0,
+      "operator": "gt"
+    }
+  ]
+}

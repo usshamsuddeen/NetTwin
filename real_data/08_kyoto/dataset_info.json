@@ -1,0 +1,15 @@
+{
+  "dataset_name": "Kyoto",
+  "developed_by": "Kyoto University",
+  "year": "2006+",
+  "features": 24,
+  "attack_types": [
+    "Normal and Attack sessions"
+  ],
+  "description": "It was developed by deploying honeypots in the network but do not describe any details about the attack types.",
+  "source_url": "https://www.takakura.com/Kyoto_data/",
+  "files": [
+    "200611.zip",
+    "kyotoData_attack_n_protocols.csv"
+  ]
+}

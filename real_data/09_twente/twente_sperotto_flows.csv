@@ -1,0 +1,7 @@
+flow_id,src_ip,src_port,dst_ip,dst_port,proto,packets,octets,duration,tcp_flags,service,traffic_class,alert_correlated
+TW-01,130.89.12.5,4120,130.89.200.1,22,TCP,24,1850,4.2,PA,SSH,Malicious traffic,YES
+TW-02,130.89.12.5,4120,130.89.200.1,113,TCP,3,144,0.8,S,IDENT,Side-effect traffic,YES
+TW-03,192.16.4.11,5210,130.89.200.1,80,TCP,5,240,1.5,FA,HTTP,Unknown traffic,NO
+TW-04,130.89.50.8,1024,130.89.200.1,0,ICMP,1,64,0.0,,ICMP-Unreachable,Side-effect traffic,YES
+TW-05,10.10.1.20,3055,130.89.200.1,443,TCP,8,480,2.1,R,HTTPS,Uncorrelated alerts,NO
+TW-06,130.89.100.2,49152,130.89.200.1,22,TCP,30,2400,5.0,PA,SSH,Malicious traffic,YES

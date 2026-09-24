@@ -1,0 +1,7 @@
+src_port,dst_port,protocol,packet_length,tcp_flags,tool_used,attack_type,label
+38421,80,TCP,1420,PA,Nikto,Web Vulnerability Scan,ATTACK
+38422,80,TCP,2840,PA,Nessus,Buffer Overflow Exploit,ATTACK
+38423,80,TCP,4096,PA,Nessus,Apache Chunked Encoding Exploit,ATTACK
+38424,443,TCP,128,S,Nikto,Directory Traversal,ATTACK
+51230,80,TCP,256,PA,Browser,Normal HTTP Request,BENIGN
+51231,443,TCP,512,PA,Browser,Normal HTTPS Session,BENIGN

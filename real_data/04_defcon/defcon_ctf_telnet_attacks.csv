@@ -1,0 +1,8 @@
+timestamp,src_ip,src_port,dst_ip,dst_port,protocol,packet_size,tcp_flags,session_type,attack_type,payload_signature,alert_level
+1028712000.101,10.0.1.15,3421,10.0.1.1,23,TCP,64,SYN,telnet,Telnet Banner Grab,"WILL ECHO, WILL SUPPRESS GO AHEAD",LOW
+1028712000.155,10.0.1.15,3421,10.0.1.1,23,TCP,72,PSH-ACK,telnet,Telnet Auth Probe,login: root,MEDIUM
+1028712000.210,10.0.1.15,3421,10.0.1.1,23,TCP,76,PSH-ACK,telnet,Telnet Password Guess,password: admin,HIGH
+1028712001.050,10.0.2.88,4190,10.0.1.1,23,TCP,1024,PSH-ACK,telnet,Telnet Buffer Overflow,\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\xcc\xcc,CRITICAL
+1028712001.120,10.0.2.88,4190,10.0.1.1,23,TCP,54,FIN-ACK,telnet,Telnet Session Reset,Connection closed by foreign host,MEDIUM
+1028712002.300,10.0.3.40,5012,10.0.1.2,21,TCP,68,PSH-ACK,ftp,FTP Bounce Attack,"PORT 10,0,1,1,0,23",HIGH
+1028712003.500,10.0.1.99,2201,10.0.1.1,23,TCP,80,PSH-ACK,telnet,Normal Operator Session,show running-config,BENIGN

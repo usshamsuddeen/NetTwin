@@ -1,0 +1,218 @@
+[
+  {
+    "baseline": "CausalRCA (ours)",
+    "attack": "DDoS",
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "MaxScore",
+    "attack": "DDoS",
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "PageRank",
+    "attack": "DDoS",
+    "seed": 42,
+    "position": "4",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  },
+  {
+    "baseline": "Random",
+    "attack": "DDoS",
+    "seed": 42,
+    "position": "10",
+    "top1": "False",
+    "top3": "False",
+    "top5": "False"
+  },
+  {
+    "baseline": "CausalRCA (ours)",
+    "attack": "DDoS",
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "MaxScore",
+    "attack": "DDoS",
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "PageRank",
+    "attack": "DDoS",
+    "seed": 101,
+    "position": "4",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  },
+  {
+    "baseline": "Random",
+    "attack": "DDoS",
+    "seed": 101,
+    "position": "10",
+    "top1": "False",
+    "top3": "False",
+    "top5": "False"
+  },
+  {
+    "baseline": "CausalRCA (ours)",
+    "attack": "DDoS",
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "MaxScore",
+    "attack": "DDoS",
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "PageRank",
+    "attack": "DDoS",
+    "seed": 202,
+    "position": "3",
+    "top1": "False",
+    "top3": "True",
+    "top5": "True"
+  },
+  {
+    "baseline": "Random",
+    "attack": "DDoS",
+    "seed": 202,
+    "position": "6",
+    "top1": "False",
+    "top3": "False",
+    "top5": "False"
+  },
+  {
+    "baseline": "CausalRCA (ours)",
+    "attack": "Port Scan",
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "MaxScore",
+    "attack": "Port Scan",
+    "seed": 42,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "PageRank",
+    "attack": "Port Scan",
+    "seed": 42,
+    "position": "4",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  },
+  {
+    "baseline": "Random",
+    "attack": "Port Scan",
+    "seed": 42,
+    "position": "10",
+    "top1": "False",
+    "top3": "False",
+    "top5": "False"
+  },
+  {
+    "baseline": "CausalRCA (ours)",
+    "attack": "Port Scan",
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "MaxScore",
+    "attack": "Port Scan",
+    "seed": 101,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "PageRank",
+    "attack": "Port Scan",
+    "seed": 101,
+    "position": "4",
+    "top1": "False",
+    "top3": "False",
+    "top5": "True"
+  },
+  {
+    "baseline": "Random",
+    "attack": "Port Scan",
+    "seed": 101,
+    "position": "10",
+    "top1": "False",
+    "top3": "False",
+    "top5": "False"
+  },
+  {
+    "baseline": "CausalRCA (ours)",
+    "attack": "Port Scan",
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "MaxScore",
+    "attack": "Port Scan",
+    "seed": 202,
+    "position": 1,
+    "top1": true,
+    "top3": true,
+    "top5": true
+  },
+  {
+    "baseline": "PageRank",
+    "attack": "Port Scan",
+    "seed": 202,
+    "position": "3",
+    "top1": "False",
+    "top3": "True",
+    "top5": "True"
+  },
+  {
+    "baseline": "Random",
+    "attack": "Port Scan",
+    "seed": 202,
+    "position": "6",
+    "top1": "False",
+    "top3": "False",
+    "top5": "False"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "dataset_name": "LBNL",
+  "developed_by": "Lawrence Berkeley National Laboratory (LBNL)",
+  "features": "Internet traces",
+  "attack_types": [
+    "Malicious traces",
+    "Worm propagation",
+    "Portscan"
+  ],
+  "description": "It consist of 100 hours of activity specifying the traces of packet header for identifying malicious traffic.",
+  "source_url": "https://www.icir.org/enterprise-tracing/download.html",
+  "files": [
+    "lbnl_enterprise_traces.csv"
+  ]
+}

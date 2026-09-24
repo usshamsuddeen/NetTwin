@@ -1,0 +1,37 @@
+# Secrets and credentials — must NEVER ship in the image
+*.pem
+*.key
+.env
+.aws/
+
+# Terraform state (contains infrastructure details)
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/.terraform/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+v/
+
+# Runtime state / local data
+*.db
+*.db-wal
+*.db-shm
+bandit_state.json
+aws_sync_map.json
+
+# Eval outputs and research artifacts (large, not needed at runtime)
+eval/results/
+eval/figures/
+papers/
+scratch/
+
+# VCS / editor
+.git/
+.gitignore
+.vscode/
+.idea/

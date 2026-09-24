@@ -1,0 +1,32 @@
+{
+  "dataset_name": "Edge-IIoTset",
+  "developed_by": "Mohamed Amine Ferrag et al. (IEEE TII 2022)",
+  "year": 2022,
+  "features": 61,
+  "attack_types": [
+    "DDoS_UDP",
+    "DDoS_ICMP",
+    "SQL_injection",
+    "Vulnerability_scanner",
+    "Password",
+    "Backdoor",
+    "Ransomware",
+    "Port_Scanning",
+    "XSS",
+    "Fingerprinting",
+    "MITM",
+    "Uploading"
+  ],
+  "description": "Comprehensive cyber security dataset of IoT and IIoT applications with 14 attack types over 20M flows.",
+  "source_url": "https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications",
+  "official_benchmark": {
+    "published_raw_size": "1.2 GB (compressed) / 12 GB uncompressed",
+    "record_scope": "20,000,000 network flows across IoT sensors, Modbus, MQTT, HTTP, and CoAP"
+  },
+  "local_partition": {
+    "type": "Official Machine Learning Benchmark Partition (100% Complete)",
+    "primary_files": [
+      "DNN-EdgeIIoT-dataset.csv"
+    ]
+  }
+}

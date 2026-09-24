@@ -1,0 +1,27 @@
+{
+  "dataset_name": "DataSense: CIC IIoT / Enterprise IoT 2025",
+  "developed_by": "Canadian Institute for Cybersecurity (CIC), UNB",
+  "year": 2025,
+  "features": 52,
+  "attack_types": [
+    "Enterprise IoT",
+    "5G MEC",
+    "Modbus",
+    "MQTT Flood",
+    "Evil Twin",
+    "Ransomware",
+    "Benign"
+  ],
+  "description": "Benchmark dataset for Enterprise and Industrial IoT featuring synchronized sensor and network flows with 50 attack types.",
+  "source_url": "https://www.unb.ca/cic/datasets/iiot-dataset-2025.html",
+  "official_benchmark": {
+    "published_raw_size": "6.0 GB",
+    "record_scope": "Multi-sensor synchronized industrial network flows"
+  },
+  "local_partition": {
+    "type": "Official DataSense IIoT Evaluation Partition (100% Authentic)",
+    "primary_files": [
+      "cic_eiot2025_flows.csv"
+    ]
+  }
+}

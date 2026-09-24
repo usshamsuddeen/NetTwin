@@ -1,0 +1,50 @@
+[
+  {
+    "attack": "DDoS",
+    "seed": 42,
+    "top1": true,
+    "top3": true,
+    "top5": true,
+    "position": 1
+  },
+  {
+    "attack": "DDoS",
+    "seed": 101,
+    "top1": true,
+    "top3": true,
+    "top5": true,
+    "position": 1
+  },
+  {
+    "attack": "DDoS",
+    "seed": 202,
+    "top1": true,
+    "top3": true,
+    "top5": true,
+    "position": 1
+  },
+  {
+    "attack": "Port Scan",
+    "seed": 42,
+    "top1": true,
+    "top3": true,
+    "top5": true,
+    "position": 1
+  },
+  {
+    "attack": "Port Scan",
+    "seed": 101,
+    "top1": true,
+    "top3": true,
+    "top5": true,
+    "position": 1
+  },
+  {
+    "attack": "Port Scan",
+    "seed": 202,
+    "top1": true,
+    "top3": true,
+    "top5": true,
+    "position": 1
+  }
+]

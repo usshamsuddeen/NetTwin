@@ -1,0 +1,61 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "NetTwin Overview",
+    "tags": ["nettwin", "security", "digital-twin"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Network Health",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "nettwin_network_health",
+            "legendFormat": "health"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 6, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Throughput",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "nettwin_total_throughput_mbps",
+            "legendFormat": "Mbps"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 9, "x": 6, "y": 0}
+      },
+      {
+        "id": 3,
+        "title": "Active Alerts",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "nettwin_active_alerts",
+            "legendFormat": "alerts"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 4, "x": 15, "y": 0}
+      },
+      {
+        "id": 4,
+        "title": "Entity Anomaly Scores",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "nettwin_entity_anomaly_score",
+            "legendFormat": "{{entity}}"
+          }
+        ],
+        "gridPos": {"h": 10, "w": 24, "x": 0, "y": 8}
+      }
+    ],
+    "time": {"from": "now-1h", "to": "now"},
+    "refresh": "5s"
+  },
+  "overwrite": true
+}

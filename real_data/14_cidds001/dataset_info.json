@@ -1,0 +1,8 @@
+{
+  "dataset_name": "CIDDS-001 Coburg Intrusion Detection Dataset",
+  "source_url": "https://www.hs-coburg.de/wp-content/uploads/2024/11/CIDDS-001.zip",
+  "filename": "CIDDS-001.zip",
+  "file_size_bytes": 402679606,
+  "download_timestamp": "2026-09-22T12:02:54Z",
+  "description": "Hochschule Coburg CIDDS-001 authentic small-business NetFlow dataset (384 MB)"
+}

@@ -1,0 +1,17 @@
+{
+  "dataset_name": "ISCX2012",
+  "developed_by": "University of New Brunswick (UNB)",
+  "year": 2012,
+  "features": "IP flows",
+  "attack_types": [
+    "DoS",
+    "DDoS",
+    "Bruteforce",
+    "Infiltration"
+  ],
+  "description": "This dataset consist of network scenarios with intrusive activities and labeled data instances.",
+  "source_url": "https://www.unb.ca/cic/datasets/ids.html",
+  "files": [
+    "iscxids2012-master.tar.gz"
+  ]
+}
