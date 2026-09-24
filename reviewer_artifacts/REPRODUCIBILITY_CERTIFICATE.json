@@ -1,0 +1,85 @@
+{
+  "timestamp_utc": "2026-09-24T18:33:37.554500+00:00",
+  "reviewer_audit_status": "CERTIFIED_REPRODUCIBLE",
+  "evaluation_mode": "quick",
+  "steps": {
+    "environment": {
+      "python_version": "3.13.15",
+      "os_platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1",
+        "matplotlib": "3.11.1",
+        "pytest": "9.1.1",
+        "pandas": "3.0.5"
+      }
+    },
+    "checksums": {
+      "total_files": 34,
+      "verified_files": 34,
+      "failed_files": []
+    },
+    "tests": {
+      "status": "PASSED",
+      "duration_seconds": 1.46,
+      "mode": "quick"
+    },
+    "benchmarks": {
+      "total_datasets": 30,
+      "mean_detection_rate_pct": 97.5,
+      "mean_conformal_coverage_pct": 92.47,
+      "nominal_guarantee_met": true,
+      "duration_seconds": 0.24
+    },
+    "figures": {
+      "total_verified": 9,
+      "figures": [
+        {
+          "figure": "fig1_0a_methodology",
+          "png_kb": 1141.5,
+          "pdf_kb": 176.1
+        },
+        {
+          "figure": "fig1_0b_experimental_setup",
+          "png_kb": 1207.0,
+          "pdf_kb": 135.5
+        },
+        {
+          "figure": "fig1_0c_behavior_paradigm",
+          "png_kb": 1103.2,
+          "pdf_kb": 127.2
+        },
+        {
+          "figure": "fig1_1_historical_timeline_28_years_detection",
+          "png_kb": 379.9,
+          "pdf_kb": 61.4
+        },
+        {
+          "figure": "fig1_2_all_30_datasets_detection_and_coverage",
+          "png_kb": 445.5,
+          "pdf_kb": 45.9
+        },
+        {
+          "figure": "fig1_3_concept_drift_disambiguation_eras",
+          "png_kb": 305.7,
+          "pdf_kb": 39.5
+        },
+        {
+          "figure": "fig1_4_dataset_scale_staged_vs_full_disclosure",
+          "png_kb": 340.0,
+          "pdf_kb": 40.8
+        },
+        {
+          "figure": "fig1_5_conformal_calibration_and_coverage_delta",
+          "png_kb": 235.6,
+          "pdf_kb": 38.0
+        },
+        {
+          "figure": "fig1_6_adaptive_conformal_aci_ablation",
+          "png_kb": 167.7,
+          "pdf_kb": 31.5
+        }
+      ]
+    }
+  }
+}

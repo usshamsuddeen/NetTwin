@@ -1,6 +1,6 @@
-# Paper 1: 28 Years Elapsed [29 Years Inclusive] of Intrusion Detection: A Reproducible Evaluation of 30 Benchmarks from DARPA 1998 to ASEADOS-SDN-IoT 2026 with Conformal Guarantees
+# 28 Years Elapsed [29 Years Inclusive] of Intrusion Detection: A Reproducible Evaluation of 30 Benchmarks from DARPA 1998 to ASEADOS-SDN-IoT 2026 with Conformal Guarantees
 
-> **Paper Track:** 30 Benchmarks, 1998-2026 | **28 years elapsed / 29 years inclusive**  
+> **Study Scope:** 30 Benchmarks, 1998-2026 | **28 years elapsed / 29 years inclusive**  
 > **Evaluation:** 30 benchmarks | 430,951 flows | Mean DR 97.49% | Mean Cov 92.47% >=90%  
 > **Artifact:** 46 / 46 Tests PASSED | 9 Figures PNG+PDF | SHA-256 Verified  
 > **Expected Impact / Citations:** **500+ Citations** (Benchmark and measurement studies of this magnitude serve as standard field reference anchors)  
@@ -8,7 +8,7 @@
 > **Mathematical Guarantees:** **Finite-Sample Marginal Conformal Coverage ($1-\alpha \ge 90.0\%$) with Adaptive Conformal Inference (ACI)**  
 > **Empirical Results:** **Mean Detection Rate: 97.49%** | **Mean Conformal Coverage: 92.47%** | **Drift False Positive Rate: < 3.0%**  
 > **Artifact Disclosure:** **9.21 GB Staged Reproducible Partitions vs ~65 GB Full Uncompressed Published Corpora**  
-> **Test Suite:** **46 / 46 Tests PASSED (100% Green)** for Paper 1 across 5 test modules (Master Repository Suite: 169 / 169 Tests across all 5 papers)  
+> **Test Suite:** **46 / 46 Tests PASSED (100% Green)** across 5 formal test modules  
 > **Targeted Artifact Badges:** **Artifacts Available** | **Artifacts Evaluated – Functional** | **Results Reproduced**
 
 ```
@@ -293,7 +293,7 @@ python papers/paper1_usenix_sec_30datasets/reviewer_artifacts/verify_reproducibi
 ```
 
 ### Step 5.2: Running the 46-Test Formal Invariant Suite
-Execute the 46-test Paper 1 test suite directly:
+Execute the 46-test 30-Benchmark evaluation test suite directly:
 ```bash
 python papers/paper1_usenix_sec_30datasets/test_suite_paper1.py
 ```
